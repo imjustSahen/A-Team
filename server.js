@@ -1,5 +1,6 @@
 const path = require("path");
 const express = require("express");
+//import session
 const session = require("express-session");
 const exphbs = require("express-handlebars");
 
@@ -7,11 +8,11 @@ const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
 const routes = require("./controllers/routes");
 const sequelize = require("./config/connection");
-const helpers = require("./utils/auth");
+const helpers = require("./utils/helpers");
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-
+//set up sessions
 const sess = {
   secret: "Super secret secret",
   cookie: {
@@ -26,7 +27,7 @@ const sess = {
     db: sequelize,
   }),
 };
-
+//set as middleware
 app.use(session(sess));
 
 app.use(express.json());
