@@ -1,3 +1,5 @@
-DROP DATABASE IF EXISTS name_db;
+DROP DATABASE IF EXISTS beerdrinker_db;
 
-CREATE DATABASE name_db;
+CREATE DATABASE beerdrinker_db;
+
+USE beerdrinker_db;
