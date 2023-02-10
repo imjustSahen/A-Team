@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
         //serialize the data
         const users = await userData.map((user) => user.get({ plain: true }));
 
-        res.status(200).json(userData);
+        res.status(200).json(users);
     } catch (err) {
         res.status(500).json(err);
     }
@@ -31,7 +31,6 @@ router.post('/', async (req, res) => {
     }
 });
 
-// //get post by id
 router.get('/:id', async (req, res) => {
     try {
 
@@ -72,7 +71,7 @@ router.delete('/:id', async (req, res) => {
       });
   
       if (!userData) {
-        res.status(404).json({message: 'No post found with that id'});
+        res.status(404).json({message: 'No user found with that id'});
         return;
       };
   
