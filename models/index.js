@@ -4,15 +4,15 @@ const Pairing = require('./pairings');
 const Comment = require('./comment');
 
 //user associations
-User.hasmany(Comment, {
+User.hasMany(Comment, {
     foreignKey: 'user_id'
 });
 
-User.hasmany(Review, {
+User.hasMany(Review, {
     foreignKey: 'user_id'
 });
 
-User.hasmany(Pairing, {
+User.hasMany(Pairing, {
     foreignKey: 'user_id'
 });
 //pairing associations
@@ -22,7 +22,7 @@ Pairing.belongsToMany(User, {
     through: 'userPairing'
 });
 
-Pairing.hasmany(Review, {
+Pairing.hasMany(Review, {
     foreignKey: 'pairing_id',
     onDelete: 'CASCADE'
 });
@@ -35,7 +35,7 @@ Review.belongsTo(Pairing, {
     foreignKey: 'pairing_id'
 });
 
-Review.hasmany(Comment, {
+Review.hasMany(Comment, {
     foreignKey: 'review_id',
     onDelete: 'CASCADE'
 });
