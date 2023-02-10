@@ -11,6 +11,8 @@ Review.init(
         primaryKey: true,
         autoIncrement: true
       },
+      //this will ideally be the 5 star rating
+      //so not a string but an integer based on the client side js 
       review_text: {
         type: DataTypes.STRING,
         allowNull: false,
