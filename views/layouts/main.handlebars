@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hoppy Hour</title>
+
+  <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+</head>
+    <!-- {{!-- Navigation links --}} -->
+    <nav>
+      <h4>Login</h4>
+      <ul>
+        <li><a href="/views/layouts/main.handlebars">Home</a></li>
+        <li><a href="/views/login.handlebars">Login</a></li>
+      </ul>
+    </nav>
+
+<body>
+  <header>
+    <h1>Pair some Beers</h1>
+  </header>
+  <nav>
+    <a href="/views/homePage.handlebars">Home</a>
+    {{#if loggedIn}}
+    <button id="logout" class="btn-no-style">Logout</button>
+    {{else}}
+    <a href="/views/login.handlebars">Login</a>
+    {{/if}}
+  </nav>
+  <main>
+    <aside>
+      <h2>Have fun</h2>
+    </aside>
+    <div>
+      {{{body}}}
+    </div>
+  </main>
+  {{#if loggedIn}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>
