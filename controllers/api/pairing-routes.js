@@ -20,6 +20,8 @@ router.post('/', async (req, res) => {
     try {
         const pairingData = await Pairing.create({
           //pairing data (ideally id of beer and id associated with paired food)
+          beer_id: req.body.beer_id,
+          dish_id: req.body.dish_id
         });
         
         res.status(200).json(pairingData);
