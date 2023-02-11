@@ -11,9 +11,14 @@ Pairing.init(
           primaryKey: true,
           autoIncrement: true
         },
-
-        //we will need to decide what sort of information is being recieved from the user
-
+        beer_id: {
+          type: DataTypes.INTEGER,
+          allowNull: false
+        },
+        dish_id: {
+          type: DataTypes.INTEGER,
+          allowNull: false
+        },
         user_id: {
           type: DataTypes.INTEGER,
           references: {
