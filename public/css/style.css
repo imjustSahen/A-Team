@@ -2,10 +2,11 @@
 
 /* Card Hover Styling */
 .container {
-  width: 1000px;
-  position: relative;
+  /* width: 1000px; */
+  /* position: relative; */
+  flex-flow: row wrap;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .container .card {
@@ -14,7 +15,7 @@
 }
 
 .container .card .face {
-  width: 300px;
+  width: 400px;
   height: 200px;
   transition: 0.5s;
 }
@@ -30,7 +31,7 @@
 }
 
 .container .card:hover .face.face1 {
-  background: #ff0057;
+  background: #a44e29;
   transform: translateY(0);
 }
 
@@ -43,14 +44,19 @@
   opacity: 1;
 }
 
-.container .card .face.face1 .content img {
-  max-width: 100px;
+.beer-image img {
+  transform: rotate(55deg);
+  max-width: 80px;
 }
 
-.container .card .face.face1 .content h3 {
-  margin: 10px 0 0;
-  padding: 0;
-  color: #fff;
+.dish-image img {
+  max-width: 200px;
+}
+
+.container .card .face.face2 .content h3 {
+  margin: 0;
+  padding-bottom: 10px;
+  color: rgb(176, 54, 10);
   text-align: center;
   font-size: 1.5em;
 }
@@ -73,7 +79,13 @@
 
 .container .card .face.face2 .content p {
   margin: 0;
-  padding: 0;
+  padding: 2px 0px;
+}
+
+.beer-abv {
+  font-size: .9em;
+  font-weight: 800;
+  padding: 15px 0px;
 }
 
 .container .card .face.face2 .content a {
