@@ -5,7 +5,20 @@ const { User, Pairing, Review, Comment } = require('../../models');
 router.get('/', async (req, res) => {
     try {
         const userData = await User.findAll({
-            include: [Pairing, Review, Comment]
+            attributes: {exclude: ['password']},
+            include: [
+              {
+              model: Pairing
+              },
+              {
+              model: Review,
+              attributes: ['id', 'review_text', 'pairing_id']
+              },
+              {
+              model: Comment,
+              attributes: {exclude: ['user_id']}
+              }
+            ]
         });
 
         //serialize the data
@@ -79,6 +92,33 @@ router.delete('/:id', async (req, res) => {
     } catch (err) {
       res.status(500).json(err);
     }
+});
+
+//login route
+router.post('/login', async (req, res) => {
+  try{
+    const userData = await User.findOne({
+      where: {
+        email: req.body.email
+      }
+    });
+
+    if (!userData) {
+      res.status(400).json({message: 'Incorrect email or password. Please try again.'});
+      return;
+    };
+
+    const validatePassword = await userData.checkPassword(req.body.password);
+
+    if (!validatePassword) {
+      res.status(400).json({message: 'Incorrect email or password. Please try again.'});
+      return;
+    };
+
+    res.json({user: userData, message: 'You are now logged in!'});
+  }catch (err){
+    res.status(500).json(err);
+  }
 });
 
 module.exports = router ;
