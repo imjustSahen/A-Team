@@ -107,7 +107,7 @@ header ul li {
     background-size: cover;
     position:relative;
     padding: 50px;
-    background-image: url('/views/assets/Hero-bk.jpg');
+    background-image: url('../assets/Hero-bk.jpg');
     text-align: center;
     background-position: center center;
     padding-top: 120px;
