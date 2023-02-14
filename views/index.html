@@ -9,16 +9,14 @@
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins:300" rel="stylesheet">
     <title>Beer 'n' Bites</title>
 </head>
-
 <body>
-
     <header>
-        <h1 class="logo">Beer<span> 'n' </span>Bites</h2>
+        <a href="index.html" class="logoImg"><img src="../public/assets/BeerNBites-Logo.png" width="100%" alt="BeerNBites-Logo"></a>
             <nav>
                 <ul>
-                    <li><a href="#aboutUs"> About</a></li>
-                    <li><a href="#contactUs">Contact Us</a></li>
-                    <li><a href="#login">Log in</a></li>
+                    <li><a href="aboutUs.html" class="navLink"> About</a></li>
+                    <li><a href="contactUs.html" class="navLink">Contact Us</a></li>
+                    <li><a href="#login" class="navLink" id="login">Log in</a></li>
                 </ul>
             </nav>
     </header>
@@ -90,7 +88,7 @@
 </footer>
 <section class="loginOverlay">
 <div class="loginBox">
-    <a><img src="../public/assets/close-x.png" alt="exit" width="100%"></a>
+    <a id="modalClose"><img src="../public/assets/close-x.png" alt="exit" width="100%"></a>
     <div class="loginTxt">LOGIN</div>
     <input placeholder="Username"></input>
     <input placeholder="Password"></input>
@@ -103,4 +101,5 @@
 <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
 <script defer src="../public/js/index.js"></script>
+
 </html>
