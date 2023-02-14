@@ -1,7 +1,6 @@
 const router = require('express').Router();
-const { User, Pairing, Review, Comment } = require('../../models')
+const { User, Review, Comment } = require('../../models')
 
-//get all posts
 //localhost:3001/api/comment
 router.get('/', async (req, res) => {
     try {
