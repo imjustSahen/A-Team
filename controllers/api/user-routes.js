@@ -111,11 +111,7 @@ router.delete('/:id', async (req, res) => {
 //login route
 router.post('/login', async (req, res) => {
   try{
-    const userData = await User.findOne({
-      where: {
-        email: req.body.email
-      }
-    });
+    const userData = await User.findOne({ where: {email: req.body.email}});
 
     if (!userData) {
       res.status(400).json({message: 'Incorrect email or password. Please try again.'});
@@ -124,7 +120,7 @@ router.post('/login', async (req, res) => {
 
     const validatePassword = await userData.checkPassword(req.body.password);
 
-    if (!validatePassword) {
+    if (validatePassword) {
       res.status(400).json({message: '**invalid pass. Incorrect email or password. Please try again.'});
       return;
     };
