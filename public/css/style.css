@@ -18,6 +18,7 @@
     --font-abril: 'Abril Fatface', Cursive;
     --main-dinlineB: inline-block;
     --colorBlack: black;   
+    --margin-auto: auto;
 }
 
 h1 {
@@ -69,7 +70,7 @@ header nav {
     Font-Family: var(--font-poppins);
 }
 
-header a {
+header .navLink {
     text-decoration: none; 
     color: var(--colorBlack);
     padding-top: 8px;
@@ -83,16 +84,15 @@ header a {
     transition: all ease 250ms;
 }
 
-header a:hover {
+header .navLink:hover {
     background-color: var(--main-color-beer);
     color:var(--colorBlack);
 }
 
-.logo {
-    color: white;
-    padding-top: 20px;
-    display: var(--main-dinlineB);
-    font-size: 42px;
+.logoImg {
+    width: 300px;
+    padding-top: 20px;   
+    display: inline-block;
 }
 
 /* Navigation list */
@@ -103,7 +103,7 @@ header ul li {
 }
 
 .heroPic {
-    height: 799px;
+    /* height: 799px; */
     width: 100%;
     background-color: rgb(0, 0, 0);
     background-size: cover;
@@ -113,6 +113,7 @@ header ul li {
     text-align: center;
     background-position: center center;
     padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 .heroPicDarker {
@@ -142,7 +143,7 @@ header ul li {
 .heroTxt {
     font-size: 72px;
     color: #eee0cc;
-    margin: auto;
+    margin: var(--margin-auto);
     width: 766px;
     font-weight: normal;
     line-height: 82px;
@@ -154,7 +155,7 @@ header ul li {
     background:var(--main-color-beer);      
     padding: 30px; 
     border-radius: 50px;
-    margin: auto;
+    margin: var(--margin-auto);
     margin-top: 70px;
 }
 
@@ -172,6 +173,7 @@ header ul li {
 .cheersTxt {
     max-width: 360px;
     padding-top: 110px;
+    padding-left: 20px;
 }
 
 .cheersBlock h2 {
@@ -199,7 +201,7 @@ header ul li {
 }
 
 .combosTxt {
-    margin: auto;
+    margin: var(--margin-auto);
     max-width: 450px;
     padding-top: 200px;
     text-align: center; 
@@ -217,7 +219,7 @@ footer {
     justify-content: center;
     max-width: 1000px;
     align-items: center;
-    margin: auto;
+    margin: var(--margin-auto);
     position: relative;
     padding: 10px;
 }
@@ -243,7 +245,7 @@ footer {
 
 .pairMsg {
     font-family: var(--font-abril);
-    margin: auto;
+    margin: var(--margin-auto);
     font-size: 40px;
     color: #eee0cc;
     padding-bottom: 20px;
@@ -252,7 +254,7 @@ footer {
 /* ---buttons for pairing page----- */
 .comboBtnBox {
     max-width: 900px;
-    margin: auto;
+    margin: var(--margin-auto);
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -291,14 +293,14 @@ footer {
 .loginOverlay {
     background-color: rgba(0,0,0,0.80);
     position: absolute;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     top: 0;
     z-index: 10;
     display: flex;
     justify-content: center;
     align-items: center;
-    visibility: hidden;
+    /* visibility: hidden; */
 
 }
 
@@ -316,6 +318,7 @@ footer {
     text-align: center;
     padding: 10px;  
     font-size: 25px;
+    
 }
 
 .loginBox input {
@@ -329,6 +332,7 @@ footer {
     padding-left: 20px;
     border: none;
     font-size: 20px;
+    color: var(--colorBlack);
 }
 
 #loginBtn {
@@ -339,7 +343,7 @@ footer {
     align-items: center;
     margin-top: 20px !important;
     display: block;
-    margin: auto;
+    margin: var(--margin-auto);
 }
 
  #loginBtn h2 {
@@ -452,31 +456,61 @@ footer {
 /* End of Card Hover Styling */
 
 /* ----Contact Us---- */
-
-.contactUs {
-    font-family: var(--font-abril);
-    margin: auto;
-    font-size: 50px;
-    color: #eee0cc;
-    padding-bottom: 20px; 
+#contactUs, .aboutUs{
+    position: relative;
 }
 
-.contactUs h3 {
+.cntc, .aboutSmllMsg{
+    font-family: var(--font-abril);
+    margin: var(--margin-auto);
+    font-size: 72px;
+    color: #eee0cc;
+    margin-top: -31px;
+    
+}
+
+.msgCU, .msgAu{
     font-family: var(--font-poppins);
-    margin:auto;
     font-size: 25px;  
     color: var(--main-color-beer);
+    margin-bottom: 25px;
 }
 
-.contInput {
-    border-radius: 10px;    
-    font-family: var(--font-poppins); 
-    padding-top: 14px;
-    padding-bottom: 14px;
-    margin-top: 10px;
-    /* width: 50px; */
-    border-radius: 15px;
-    padding-left: 20px; 
-    border: none;
-    font-size: 20px; 
+.contInput, input {
+    width: 491px;
+    margin: var(--margin-auto);
+    height: 77px;
+    border-radius: 20px;
+    border: 2px solid #eee0cc;
+    font-size: 20px;
+    margin-bottom: 16px;
+    padding-left: 44px; 
+    color: white;
+    font-family: var(--font-poppins);
+    background-color: var(--colorBlack);
+}
+.ontInput, .msg {
+    height: 157px;
+
+}
+
+.subBtn {
+    width: 213px;
+    height: 66px;
+    font-size: 20px;
+    border-radius: 44px;
+    margin-top: 15px;
+    
+}
+#aboutUs {
+    position: relative;
+    max-width: 800px;
+    margin: var(--margin-auto);
+}
+
+.aboutUsTxt {
+    display: block;
+    font-size: 25px;
+    font-family: var(--font-poppins);
+
 }
