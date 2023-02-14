@@ -6,14 +6,12 @@ const sequelize = require('sequelize');
 router.get('/', async (req, res) => {
   try {
       const pairingData = await Pairing.findAll({
+        attributes: {exclude: ['id', 'user_id']},
           include: [
             {
-              model: User,
-              attributes: {exclude: ['password']}
-            },
-            {
               model: Review,
-              attributes: {exclude: ['id']}
+              attributes: {exclude: ['pairing_id', 'user_id']},
+              include: [{model: User, attributes: {exclude: ['id']}}]
             }
           ]
       });
