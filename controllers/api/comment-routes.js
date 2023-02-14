@@ -30,7 +30,6 @@ router.post('/', async (req, res) => {
     }
 });
 
-//get post by id
 router.get('/:id', async (req, res) => {
     try {
         const commentData = await Comment.findByPk(req.params.id);
