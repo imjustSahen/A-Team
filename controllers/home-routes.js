@@ -1,5 +1,8 @@
 const router = require("express").Router();
 const path = require("path");
+const { User, Pairing, Comment, Review } = require('../models');
+const sequelize = require('sequelize');
+
 
 // This is the 'get' route
 router.get("/", async (req, res) => {
