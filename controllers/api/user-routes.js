@@ -5,7 +5,7 @@ const { User, Pairing, Review, Comment } = require('../../models');
 router.get('/', async (req, res) => {
     try {
         const userData = await User.findAll({
-            attributes: {exclude: ['password']},
+            // attributes: {exclude: ['password']},
             include: [
               {
               model: Pairing
@@ -21,7 +21,6 @@ router.get('/', async (req, res) => {
             ]
         });
 
-        //serialize the data
         const users = await userData.map((user) => user.get({ plain: true }));
 
         res.status(200).json(users);
@@ -36,7 +35,7 @@ router.post('/', async (req, res) => {
             username: req.body.username,
             email: req.body.email,
             password: req.body.password
-        });
+    });
 
         res.status(200).json(userData);
     } catch(err) {
@@ -47,7 +46,22 @@ router.post('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
     try {
 
-        const userData = await User.findByPk(req.params.id);
+        const userData = await User.findByPk(req.params.id, {
+          attributes: {exclude: ['password']},
+          include: [
+            {
+            model: Pairing
+            },
+            {
+            model: Review,
+            attributes: ['id', 'review_text', 'pairing_id']
+            },
+            {
+            model: Comment,
+            attributes: {exclude: ['user_id']}
+            }
+          ]
+        });
 
         if (!userData) {
             res.status(404).json({ message: 'No user found with that id' });
@@ -111,7 +125,7 @@ router.post('/login', async (req, res) => {
     const validatePassword = await userData.checkPassword(req.body.password);
 
     if (!validatePassword) {
-      res.status(400).json({message: 'Incorrect email or password. Please try again.'});
+      res.status(400).json({message: '**invalid pass. Incorrect email or password. Please try again.'});
       return;
     };
 
