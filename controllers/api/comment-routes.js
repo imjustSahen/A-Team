@@ -6,10 +6,19 @@ const { User, Pairing, Review, Comment } = require('../../models')
 router.get('/', async (req, res) => {
     try {
         const commentData = await Comment.findAll({
-            include: [ User, Pairing, Review ]
+            attributes: {exclude: ['user_id']},
+            include: [
+              {
+              model: Review,
+              attributes: {exclude: ['pairing_id', 'user_id']}
+              },
+              {
+              model: User,
+              attributes: {exclude: ['id', 'password']}
+              },
+            ]
         });
 
-        //serialize the data
         const comments = await commentData.map((comment) => comment.get({ plain: true }));
 
         res.status(200).json(comments)
