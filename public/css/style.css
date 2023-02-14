@@ -41,6 +41,8 @@ body {
 }
 button {
     border: none;
+    background-color: var(--main-color-beer);
+    border-radius: 50px;
 }
 
 img {
@@ -146,6 +148,7 @@ header ul li {
     line-height: 82px;
     
 }
+
 #GenBtn {
     display: var(--main-dp);
     background:var(--main-color-beer);      
@@ -154,10 +157,12 @@ header ul li {
     margin: auto;
     margin-top: 70px;
 }
+
 #GenBtn img {
    display: inline;
    margin-bottom: -10px; 
 }
+
 .cheersBlock {
     background: #ded1b9;
     display: flex;
@@ -178,7 +183,7 @@ header ul li {
 }
 
 .cheersBlock p {
-    font-size: 18px;
+    font-size: 25px;
     font-family: var(--font-poppins); 
 }
 
@@ -186,6 +191,7 @@ header ul li {
     max-width: 700px;
     padding-top: 70px;
 }
+
 .combos {
     height: 450px;
     width: 100%;
@@ -219,8 +225,7 @@ footer {
 .contentCard {
     background-color: #ffffff;
     padding: 20px;
-    min-width: 400px;
-    max-width: 500px;
+    width: 400px;
     min-height: 400px;
     Font-Family: var(--font-abril); 
     font-size: 35px;
@@ -235,6 +240,7 @@ footer {
     margin-right: -20px;
     z-index: 20
 }
+
 .pairMsg {
     font-family: var(--font-abril);
     margin: auto;
@@ -444,3 +450,33 @@ footer {
 }
 
 /* End of Card Hover Styling */
+
+/* ----Contact Us---- */
+
+.contactUs {
+    font-family: var(--font-abril);
+    margin: auto;
+    font-size: 50px;
+    color: #eee0cc;
+    padding-bottom: 20px; 
+}
+
+.contactUs h3 {
+    font-family: var(--font-poppins);
+    margin:auto;
+    font-size: 25px;  
+    color: var(--main-color-beer);
+}
+
+.contInput {
+    border-radius: 10px;    
+    font-family: var(--font-poppins); 
+    padding-top: 14px;
+    padding-bottom: 14px;
+    margin-top: 10px;
+    /* width: 50px; */
+    border-radius: 15px;
+    padding-left: 20px; 
+    border: none;
+    font-size: 20px; 
+}
