@@ -5,7 +5,16 @@ const { User, Pairing, Review, Comment } = require('../../models');
 router.get('/', async (req, res) => {
     try {
         const pairingData = await Pairing.findAll({
-            include: [User, Review, Comment]
+            include: [
+              {
+                model: User,
+                attributes: {exclude: ['password']}
+              },
+              {
+                model: Review,
+                attributes: {exclude: ['id']}
+              }
+            ]
         });
 
         const pairings = await pairingData.map((pairing) => pairing.get({ plain: true}));
@@ -19,9 +28,11 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
     try {
         const pairingData = await Pairing.create({
-          //pairing data (ideally id of beer and id associated with paired food)
           beer_id: req.body.beer_id,
-          dish_id: req.body.dish_id
+          dish_id: req.body.dish_id,
+          //--------->
+          user_id: req.body.user_id
+          //user_id: req.session.user_id
         });
         
         res.status(200).json(pairingData);
