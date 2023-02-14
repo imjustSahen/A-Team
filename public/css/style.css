@@ -1,0 +1,343 @@
+/* Page reset */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+        /*  ----Variables---- */
+
+:root {
+    --main-bg-color: white;
+    --main-dp: block;
+    --main-tx-align: left;
+    --main-pad: 20px;
+    --main-bg-size: cover;
+    --main-fontsize: 20px;
+    --main-color-beer: #ffbf43;
+    --font-poppins: 'Poppins', Sans-Serif;
+    --font-abril: 'Abril Fatface', Cursive;
+    --main-dinlineB: inline-block;
+    --colorBlack: black;   
+}
+
+h1 {
+    Font-Family: var(--font-abril);
+}
+
+h2, h3 {
+    Font-Family: var(--font-poppins);
+    Font-Size: 25px;
+}
+
+h3 {
+    color: var(--main-color-beer);
+    padding: var(--main-pad);
+}
+
+body {
+    background-color: #f6f6f6;
+    display: var(--main-dp);
+    position: relative;
+}
+button {
+    border: none;
+}
+
+img {
+    display: block;
+}
+/* ----website container----- */
+
+header {
+    padding-left: 20px;
+    display: var(--main-dp);
+    position: absolute;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+}
+
+header nav {
+    text-align: right;
+    display: var(--main-dinlineB);
+    padding: 20px;
+    padding-top: 30px;
+    margin-right: 20px;
+    float: right;
+    Font-Family: var(--font-poppins);
+}
+
+header a {
+    text-decoration: none; 
+    color: var(--colorBlack);
+    padding-top: 8px;
+    font-size: 20px;   
+    color: white;
+    border-radius: 50px;
+    line-height: 25px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: all ease 250ms;
+}
+
+header a:hover {
+    background-color: var(--main-color-beer);
+    color:var(--colorBlack);
+}
+
+.logo {
+    color: white;
+    padding-top: 20px;
+    display: var(--main-dinlineB);
+    font-size: 42px;
+}
+
+/* Navigation list */
+header ul li {
+    display: var(--main-dinlineB);
+    margin-left: 15px;
+    
+}
+
+.heroPic {
+    height: 799px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    background-size: cover;
+    position:relative;
+    padding: 50px;
+    background-image: url('/views/assets/Hero-bk.jpg');
+    text-align: center;
+    background-position: center center;
+    padding-top: 120px;
+}
+
+.heroPicDarker {
+    background-blend-mode: luminosity;
+}
+
+.heroPicDarker::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.30);
+}
+
+.heroPic  {
+    color: white;
+    font-size: 10px;
+}
+
+.smallTle {
+    font-size: 38px;
+    color: var(--main-color-beer);
+}
+
+.heroTxt {
+    font-size: 72px;
+    color: #eee0cc;
+    margin: auto;
+    width: 766px;
+    font-weight: normal;
+    line-height: 82px;
+    
+}
+#GenBtn {
+    display: var(--main-dp);
+    background:var(--main-color-beer);      
+    padding: 30px; 
+    border-radius: 50px;
+    margin: auto;
+    margin-top: 70px;
+}
+#GenBtn img {
+   display: inline;
+   margin-bottom: -10px; 
+}
+.cheersBlock {
+    background: #ded1b9;
+    display: flex;
+    justify-content: space-around;
+}
+
+.cheersTxt {
+    max-width: 360px;
+    padding-top: 110px;
+}
+
+.cheersBlock h2 {
+    Font-Family: var(--font-abril);
+    font-size: 56px;
+    font-weight: normal;
+    line-height: 62px;
+    margin-bottom: 40px;
+}
+
+.cheersBlock p {
+    font-size: 18px;
+    font-family: var(--font-poppins); 
+}
+
+.cheersImg {
+    max-width: 700px;
+    padding-top: 70px;
+}
+.combos {
+    height: 450px;
+    width: 100%;
+    background-color: rgb(204, 204, 204);
+}
+
+.combosTxt {
+    margin: auto;
+    max-width: 450px;
+    padding-top: 200px;
+    text-align: center; 
+}
+
+footer {
+    padding: 30px;
+    text-align: center;
+    font-family: var(--font-poppins); 
+}
+/* pairing page */
+
+.pairContainer {
+    display: flex;
+    justify-content: center;
+    max-width: 1000px;
+    align-items: center;
+    margin: auto;
+    position: relative;
+    padding: 10px;
+}
+
+.contentCard {
+    background-color: #ffffff;
+    padding: 20px;
+    min-width: 400px;
+    max-width: 500px;
+    min-height: 400px;
+    Font-Family: var(--font-abril); 
+    font-size: 35px;
+    color: var(--colorBlack);
+}
+
+.circlePlus {
+    padding: 10px;
+    color: #ffffff;
+    border-radius: 100px;
+    margin-left: -20px;
+    margin-right: -20px;
+    z-index: 20
+}
+.pairMsg {
+    font-family: var(--font-abril);
+    margin: auto;
+    font-size: 40px;
+    color: #eee0cc;
+    padding-bottom: 20px;
+
+}
+/* ---buttons for pairing page----- */
+.comboBtnBox {
+    max-width: 900px;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.gntAgain, .save {
+    background:#ffbf43;   
+    border-radius: 50px;
+    margin-top: 70px;
+    text-align: center;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.gntAgain, .save, h3 {
+    color: var(--colorBlack);
+}
+
+.gntAgain {
+    float:left;
+}
+
+.save {
+    float: right;
+}
+
+/* --- Log in --- */
+.loginBox a {
+   width: 25px;
+   position: absolute;
+   top: 20px;
+   right: 20px;
+   
+}
+
+.loginOverlay {
+    background-color: rgba(0,0,0,0.80);
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+
+}
+
+.loginBox {
+    padding: 50px;
+    max-width: 400px;
+    background-color: #ffffff;
+    max-height: 420px;
+    Font-Family: var(--font-abril); 
+    font-size: 20px;
+    position: relative;
+}
+
+
+
+.loginTxt {
+    text-align: center;
+    padding: 10px;  
+    font-size: 25px;
+}
+
+.loginBox input {
+    background-color: rgb(228, 228, 228);
+    font-family: var(--font-poppins); 
+    padding-top: 14px;
+    padding-bottom: 14px;
+    margin-top: 10px;
+    width: 300px;
+    border-radius: 15px;
+    padding-left: 20px;
+    border: none;
+    font-size: 20px;
+}
+
+#loginBtn {
+    color: var(--colorBlack);
+    background-color: var(--main-color-beer);
+    border-radius: 50px;
+    width: 150px;
+    align-items: center;
+    margin-top: 20px !important;
+    display: block;
+    margin: auto;
+}
+
+ #loginBtn h2 {
+    align-items: center;
+ }

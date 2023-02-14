@@ -1,12 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../public/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins:300" rel="stylesheet">
+    <title>Beer 'n' Bites</title>
 </head>
+
 <body>
-    
+
+    <header>
+        <h1 class="logo">Beer<span> 'n' </span>Bites</h2>
+            <nav>
+                <ul>
+                    <li><a href="#aboutUs"> About</a></li>
+                    <li><a href="#contactUs">Contact Us</a></li>
+                    <li><a href="#login">Log in</a></li>
+                </ul>
+            </nav>
+    </header>
+
+    <section class="heroPic">
+        <div class="'heroPic-label">
+            <h3 class="smallTle">EAT, DRINK, ENJOY</h3><br>
+            <h1 class="heroTxt">Explore enticing combinations of eats and brews.</h1>
+        </div>
+        <button id="GenBtn">
+            <h2>Generate your combo <img src="./assets/BeerIcon.png" width="30px" alt="beerIcon"> + <img src="./assets/FoodIcon.png" width="30px" alt="foodIcon"></h2>
+        </button>
+    </section>
+    <section class="cheersBlock">
+        <div class="cheersTxt">
+            <h2>We love beer and food.</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam hendrerit accumsan augue, luctus suscipit nunc facilisis ut. Donec nec pellentesque massa, id condimentum quam.</p>
+        </div>
+        <div class="cheersImg">
+            <img src="./assets/cheers-pic.jpg" alt="cheers-pic" width="100%">
+        </div>
+    </section>
+    <section class="combos">
+        <div class="combosTxt">
+        <h2>Random Combos</h2>
+        </div>
+    </section>
 </body>
+<footer class="footer">
+    <div>
+        <h4>Thanks for visiting!</h4> 
+    </div>
+    
+</footer>
+<section class="loginOverlay">
+<div class="loginBox">
+    <a><img src="./assets/close-x.png" alt="exit" width="100%"></a>
+    <div class="loginTxt">LOGIN</div>
+    <input placeholder="Username"></input>
+    <input placeholder="Password"></input>
+     <button id="loginBtn">
+        <h2>Login</h2>
+    </button>
+</div>
+</section>
 </html>
