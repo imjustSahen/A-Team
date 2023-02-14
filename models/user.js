@@ -3,7 +3,6 @@ const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
 class User extends Model {
-    //checking to make sure that the hashed user password matches the user entered password
     checkPassword(userPassword) {
     return bcrypt.compare(userPassword, this.password);
     }
@@ -44,7 +43,6 @@ User.init(
             newUserData.password = await bcrypt.hash(newUserData.password, 10);
             return newUserData;
           },
-            //make all of the characters lower case in an updated email address, before updating the database.
           beforeUpdate: async (updatedUserData) => {
             updatedUserData.email = await updatedUserData.email.toLowerCase();
             newUserData.password = await bcrypt.hash(newUserData.password, 10);

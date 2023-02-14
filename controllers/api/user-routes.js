@@ -1,11 +1,10 @@
 const router = require('express').Router();
 const { User, Pairing, Review, Comment } = require('../../models');
 
-//localhost:3001/api/user
 router.get('/', async (req, res) => {
     try {
         const userData = await User.findAll({
-            // attributes: {exclude: ['password']},
+            attributes: {exclude: ['password']},
             include: [
               {
               model: Pairing
@@ -108,7 +107,6 @@ router.delete('/:id', async (req, res) => {
     }
 });
 
-//login route
 router.post('/login', async (req, res) => {
   try{
     const userData = await User.findOne({ where: {email: req.body.email}});
@@ -131,7 +129,6 @@ router.post('/login', async (req, res) => {
   }
 });
 
-//logout route
 router.post('/logout', (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
