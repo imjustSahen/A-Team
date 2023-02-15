@@ -5,10 +5,13 @@ const randomBeerAPI = "https://api.punkapi.com/v2/beers/random";
 // ----Login ----
 $(document).ready(function() {
   $(".loginOverlay").hide();
+
+
 });
 
 $("#login").click(function(){
   $(".loginOverlay").toggle();
+
 });
 
 $("#modalClose").click(function(){

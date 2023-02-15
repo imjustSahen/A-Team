@@ -58,6 +58,7 @@ header {
     top: 0px;
     z-index: 10;
     width: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
 }
 
 header nav {
@@ -153,10 +154,22 @@ header ul li {
 #GenBtn {
     display: var(--main-dp);
     background:var(--main-color-beer);      
-    padding: 30px; 
+    padding: 24px; 
     border-radius: 50px;
     margin: var(--margin-auto);
     margin-top: 70px;
+    padding-left: 40px;
+    padding-right: 40px;
+    box-shadow: 0px 7px 15px 5px rgba(22, 17, 4, 0.66);
+    cursor: pointer;
+    transition: all ease 200ms;
+}
+
+#GenBtn:hover {
+    background-color: #ffffff;
+    transform: scale(1.05); 
+    box-shadow: 0px 7px 15px 3px rgba(110, 92, 46, 0.66);
+   
 }
 
 #GenBtn img {
@@ -303,6 +316,7 @@ footer {
     /* visibility: hidden; */
 
 }
+
 
 .loginBox {
     padding: 50px;
