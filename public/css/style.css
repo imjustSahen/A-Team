@@ -54,7 +54,7 @@ img {
 header {
     padding-left: 20px;
     display: var(--main-dp);
-    position: absolute;
+    position: fixed;
     top: 0px;
     z-index: 10;
     width: 100%;
@@ -65,7 +65,7 @@ header nav {
     text-align: right;
     display: var(--main-dinlineB);
     padding: 20px;
-    padding-top: 30px;
+    padding-top: 44px;
     margin-right: 20px;
     float: right;
     Font-Family: var(--font-poppins);
