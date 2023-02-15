@@ -2,6 +2,20 @@ const spoonacularKey = "";
 
 const randomBeerAPI = "https://api.punkapi.com/v2/beers/random";
 
+// ----Login ----
+$(document).ready(function() {
+  $(".loginOverlay").hide();
+});
+
+$("#login").click(function(){
+  $(".loginOverlay").toggle();
+});
+
+$("#modalClose").click(function(){
+  $(".loginOverlay").toggle();
+});
+
+
 fetch(randomBeerAPI)
   .then(function (response) {
     return response.json();
@@ -61,3 +75,4 @@ function getRecipe(recipeId) {
       console.log(data);
     });
 }
+

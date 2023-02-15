@@ -42,7 +42,7 @@ h3 {
 }
 
 button {
-  border: none;
+    border: none;
 }
 
 /* ---- Header Section ---- */
@@ -89,6 +89,30 @@ nav a:hover {
   background-position: center;
   background-blend-mode: luminosity;
 }
+header .navLink {
+    text-decoration: none; 
+    color: var(--colorBlack);
+    padding-top: 8px;
+    font-size: 20px;   
+    color: white;
+    border-radius: 50px;
+    line-height: 25px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: all ease 250ms;
+}
+
+header .navLink:hover {
+    background-color: var(--main-color-beer);
+    color:var(--colorBlack);
+}
+
+.logoImg {
+    width: 300px;
+    padding-top: 20px;   
+    display: inline-block;
+}
 
 .pair-intro {
   font-family: var(--font-abril);
@@ -99,25 +123,24 @@ nav a:hover {
   padding-bottom: 20px;
 }
 
-/*  EPrevious Hero Classes */
+/*  Previous Hero Classes */
 .heroPic {
   color: white;
   font-size: 10px;
 }
 
 .heroPic {
-  color: white;
-  font-size: 10px;
-  height: 799px;
-  width: 100%;
-  background-color: rgb(0, 0, 0);
-  background-size: cover;
-  position: relative;
-  padding: 50px;
-  background-image: url("/views/assets/Hero-bk.jpg");
-  text-align: center;
-  background-position: center center;
-  padding-top: 120px;
+    /* height: 799px; */
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    background-size: cover;
+    position:relative;
+    padding: 50px;
+    background-image: url('../assets/Hero-bk.jpg');
+    text-align: center;
+    background-position: center center;
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 .heroPicDarker {
@@ -158,17 +181,28 @@ nav a:hover {
 }
 
 #GenBtn {
-  display: var(--main-dp);
-  background: var(--main-color-beer);
-  padding: 30px;
-  border-radius: 50px;
-  margin: auto;
-  margin-top: 70px;
+    font-size: 72px;
+    color: #eee0cc;
+    margin: var(--margin-auto);
+    width: 766px;
+    font-weight: normal;
+    line-height: 82px;
 }
+
+#GenBtn {
+    display: var(--main-dp);
+    background:var(--main-color-beer);      
+    padding: 30px; 
+    border-radius: 50px;
+    margin: var(--margin-auto);
+    margin-top: 70px;
+}
+
 #GenBtn img {
   display: inline;
   margin-bottom: -10px;
 }
+
 .cheersBlock {
   background: #ded1b9;
   display: flex;
@@ -176,8 +210,9 @@ nav a:hover {
 }
 
 .cheersTxt {
-  max-width: 360px;
-  padding-top: 110px;
+    max-width: 360px;
+    padding-top: 110px;
+    padding-left: 20px;
 }
 
 .cheersBlock h2 {
@@ -189,14 +224,15 @@ nav a:hover {
 }
 
 .cheersBlock p {
-  font-size: 18px;
-  font-family: var(--font-poppins);
+    font-size: 25px;
+    font-family: var(--font-poppins); 
 }
 
 .cheersImg {
   max-width: 700px;
   padding-top: 70px;
 }
+
 .combos {
   height: 450px;
   width: 100%;
@@ -204,10 +240,10 @@ nav a:hover {
 }
 
 .combosTxt {
-  margin: auto;
-  max-width: 450px;
-  padding-top: 200px;
-  text-align: center;
+    margin: var(--margin-auto);
+    max-width: 450px;
+    padding-top: 200px;
+    text-align: center; 
 }
 
 /* pairing page */
@@ -215,22 +251,21 @@ nav a:hover {
 .pairContainer {
   display: flex;
   justify-content: center;
-  max-width: 1000px;
-  align-items: center;
-  margin: auto;
-  position: relative;
-  padding: 10px;
+   max-width: 1000px;
+   align-items: center;
+   margin: var(--margin-auto);
+   position: relative;
+   padding: 10px;
 }
 
 .contentCard {
-  background-color: #ffffff;
-  padding: 20px;
-  min-width: 400px;
-  max-width: 500px;
-  min-height: 400px;
-  font-family: var(--font-abril);
-  font-size: 35px;
-  color: var(--colorBlack);
+    background-color: #ffffff;
+    padding: 20px;
+    width: 400px;
+    min-height: 400px;
+    Font-Family: var(--font-abril); 
+    font-size: 35px;
+    color: var(--colorBlack);
 }
 
 /* Previous circle class (now card-circle) */
@@ -243,12 +278,19 @@ nav a:hover {
   /* z-index: 20; */
 }
 
+.pairMsg {
+    font-family: var(--font-abril);
+    margin: var(--margin-auto);
+    font-size: 40px;
+    color: #eee0cc;
+    padding-bottom: 20px;
+
 /* ---buttons for pairing page----- */
 .comboBtnBox {
-  /* max-width: 900px; */
-  margin: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+    max-width: 900px;
+    margin: var(--margin-auto);
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .gntAgain,
@@ -285,16 +327,16 @@ h3 {
 }
 
 .loginOverlay {
-  background-color: rgba(0, 0, 0, 0.8);
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  z-index: 10;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  visibility: hidden;
+    background-color: rgba(0,0,0,0.80);
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* visibility: hidden; */
 }
 
 .loginBox {
@@ -308,33 +350,35 @@ h3 {
 }
 
 .loginTxt {
-  text-align: center;
-  padding: 10px;
-  font-size: 25px;
+    text-align: center;
+    padding: 10px;  
+    font-size: 25px;
+    
 }
 
 .loginBox input {
-  background-color: rgb(228, 228, 228);
-  font-family: var(--font-poppins);
-  padding-top: 14px;
-  padding-bottom: 14px;
-  margin-top: 10px;
-  width: 300px;
-  border-radius: 15px;
-  padding-left: 20px;
-  border: none;
-  font-size: 20px;
+    background-color: rgb(228, 228, 228);
+    font-family: var(--font-poppins); 
+    padding-top: 14px;
+    padding-bottom: 14px;
+    margin-top: 10px;
+    width: 300px;
+    border-radius: 15px;
+    padding-left: 20px;
+    border: none;
+    font-size: 20px;
+    color: var(--colorBlack);
 }
 
 #loginBtn {
-  color: var(--colorBlack);
-  background-color: var(--main-color-beer);
-  border-radius: 50px;
-  width: 150px;
-  align-items: center;
-  margin-top: 20px !important;
-  display: block;
-  margin: auto;
+    color: var(--colorBlack);
+    background-color: var(--main-color-beer);
+    border-radius: 50px;
+    width: 150px;
+    align-items: center;
+    margin-top: 20px !important;
+    display: block;
+    margin: var(--margin-auto);
 }
 
 #loginBtn h2 {
@@ -452,6 +496,66 @@ h3 {
   color: #fff;
 }
 
+/* ----Contact Us---- */
+#contactUs, .aboutUs{
+    position: relative;
+}
+
+.cntc, .aboutSmllMsg{
+    font-family: var(--font-abril);
+    margin: var(--margin-auto);
+    font-size: 72px;
+    color: #eee0cc;
+    margin-top: -31px;
+    
+}
+
+.msgCU, .msgAu{
+    font-family: var(--font-poppins);
+    font-size: 25px;  
+    color: var(--main-color-beer);
+    margin-bottom: 25px;
+}
+
+.contInput, input {
+    width: 491px;
+    margin: var(--margin-auto);
+    height: 77px;
+    border-radius: 20px;
+    border: 2px solid #eee0cc;
+    font-size: 20px;
+    margin-bottom: 16px;
+    padding-left: 44px; 
+    color: white;
+    font-family: var(--font-poppins);
+    background-color: var(--colorBlack);
+}
+
+.ontInput, .msg {
+    height: 157px;
+
+}
+
+.subBtn {
+    width: 213px;
+    height: 66px;
+    font-size: 20px;
+    border-radius: 44px;
+    margin-top: 15px;
+    
+}
+#aboutUs {
+    position: relative;
+    max-width: 800px;
+    margin: var(--margin-auto);
+}
+
+.aboutUsTxt {
+    display: block;
+    font-size: 25px;
+    font-family: var(--font-poppins);
+}
+
 /* Footer Section */
 footer {
   padding: 30px;
@@ -495,4 +599,3 @@ footer a {
     width: 100%;
     text-align: center;
   }
-}

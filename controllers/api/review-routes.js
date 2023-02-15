@@ -5,7 +5,21 @@ const { User, Pairing, Review, Comment } = require('../../models');
 router.get('/', async (req, res) => {
     try {
         const reviewData = await Review.findAll({
-            include: [User, Pairing, Comment]
+            attributes: {exclude: ['pairing_id', 'user_id']},
+            include: [
+             {
+              model: Pairing,
+              attributes: {exclude: ['id']}
+              },
+              {
+              model: User,
+              attributes: {exclude: ['id', 'password']}
+              },
+              {
+              model: Comment,
+              attributes: {exclude: ['user_id']}
+              }
+            ]
         });
 
         const reviews = await reviewData.map((review) => review.get({ plain: true}));
@@ -19,7 +33,9 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
     try {
         const reviewData = await Review.create({
-          review_text: req.body.review_text
+          rating: req.body.rating,
+          review_text: req.body.review_text,
+          user_id: req.body.user_id
         });
         
         res.status(200).json(reviewData);
