@@ -22,6 +22,7 @@
 
 body {
   min-height: 100vh;
+  position: relative;
   background-color: #f6f6f6;
 }
 
@@ -42,7 +43,7 @@ h3 {
 }
 
 button {
-    border: none;
+  border: none;
 }
 
 /* ---- Header Section ---- */
@@ -64,9 +65,8 @@ header nav {
 
 nav a {
   text-decoration: none;
-  color: var(--colorBlack);
   font-size: 20px;
-  color: rgb(255, 0, 0);
+  color: white;
   border-radius: 50px;
   line-height: 25px;
   padding: 20px 20px;
@@ -85,33 +85,35 @@ nav a:hover {
   position: relative;
   padding: 50px 100px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.555)),
-    url("/views/assets/Hero-bk.jpg");
+    url("../assets/Hero-bk.jpg");
   background-position: center;
   background-blend-mode: luminosity;
 }
+
+/* Previous nav class (changed to nav a) */
 header .navLink {
-    text-decoration: none; 
-    color: var(--colorBlack);
-    padding-top: 8px;
-    font-size: 20px;   
-    color: white;
-    border-radius: 50px;
-    line-height: 25px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    transition: all ease 250ms;
+  text-decoration: none;
+  color: var(--colorBlack);
+  padding-top: 8px;
+  font-size: 20px;
+  color: white;
+  border-radius: 50px;
+  line-height: 25px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  transition: all ease 250ms;
 }
 
 header .navLink:hover {
-    background-color: var(--main-color-beer);
-    color:var(--colorBlack);
+  background-color: var(--main-color-beer);
+  color: var(--colorBlack);
 }
 
 .logoImg {
-    width: 300px;
-    padding-top: 20px;   
-    display: inline-block;
+  width: 300px;
+  padding-top: 20px;
+  display: inline-block;
 }
 
 .pair-intro {
@@ -119,7 +121,7 @@ header .navLink:hover {
   text-align: center;
   font-size: 40px;
   color: #eee0cc;
-  padding-top: 50px;
+  padding-top: 70px;
   padding-bottom: 20px;
 }
 
@@ -130,17 +132,17 @@ header .navLink:hover {
 }
 
 .heroPic {
-    /* height: 799px; */
-    width: 100%;
-    background-color: rgb(0, 0, 0);
-    background-size: cover;
-    position:relative;
-    padding: 50px;
-    background-image: url('../assets/Hero-bk.jpg');
-    text-align: center;
-    background-position: center center;
-    padding-top: 120px;
-    padding-bottom: 120px;
+  /* height: 799px; */
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  background-size: cover;
+  position: relative;
+  padding: 50px;
+  background-image: url("../assets/Hero-bk.jpg");
+  text-align: center;
+  background-position: center center;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .heroPicDarker {
@@ -181,21 +183,21 @@ header .navLink:hover {
 }
 
 #GenBtn {
-    font-size: 72px;
-    color: #eee0cc;
-    margin: var(--margin-auto);
-    width: 766px;
-    font-weight: normal;
-    line-height: 82px;
+  font-size: 72px;
+  color: #eee0cc;
+  margin: var(--margin-auto);
+  width: 766px;
+  font-weight: normal;
+  line-height: 82px;
 }
 
 #GenBtn {
-    display: var(--main-dp);
-    background:var(--main-color-beer);      
-    padding: 30px; 
-    border-radius: 50px;
-    margin: var(--margin-auto);
-    margin-top: 70px;
+  display: var(--main-dp);
+  background: var(--main-color-beer);
+  padding: 30px;
+  border-radius: 50px;
+  margin: var(--margin-auto);
+  margin-top: 70px;
 }
 
 #GenBtn img {
@@ -210,9 +212,9 @@ header .navLink:hover {
 }
 
 .cheersTxt {
-    max-width: 360px;
-    padding-top: 110px;
-    padding-left: 20px;
+  max-width: 360px;
+  padding-top: 110px;
+  padding-left: 20px;
 }
 
 .cheersBlock h2 {
@@ -224,8 +226,8 @@ header .navLink:hover {
 }
 
 .cheersBlock p {
-    font-size: 25px;
-    font-family: var(--font-poppins); 
+  font-size: 25px;
+  font-family: var(--font-poppins);
 }
 
 .cheersImg {
@@ -240,10 +242,10 @@ header .navLink:hover {
 }
 
 .combosTxt {
-    margin: var(--margin-auto);
-    max-width: 450px;
-    padding-top: 200px;
-    text-align: center; 
+  margin: var(--margin-auto);
+  max-width: 450px;
+  padding-top: 200px;
+  text-align: center;
 }
 
 /* pairing page */
@@ -251,21 +253,21 @@ header .navLink:hover {
 .pairContainer {
   display: flex;
   justify-content: center;
-   max-width: 1000px;
-   align-items: center;
-   margin: var(--margin-auto);
-   position: relative;
-   padding: 10px;
+  max-width: 1000px;
+  align-items: center;
+  margin: var(--margin-auto);
+  position: relative;
+  padding: 10px;
 }
 
 .contentCard {
-    background-color: #ffffff;
-    padding: 20px;
-    width: 400px;
-    min-height: 400px;
-    Font-Family: var(--font-abril); 
-    font-size: 35px;
-    color: var(--colorBlack);
+  background-color: #ffffff;
+  padding: 20px;
+  width: 400px;
+  min-height: 400px;
+  font-family: var(--font-abril);
+  font-size: 35px;
+  color: var(--colorBlack);
 }
 
 /* Previous circle class (now card-circle) */
@@ -279,18 +281,19 @@ header .navLink:hover {
 }
 
 .pairMsg {
-    font-family: var(--font-abril);
-    margin: var(--margin-auto);
-    font-size: 40px;
-    color: #eee0cc;
-    padding-bottom: 20px;
+  font-family: var(--font-abril);
+  margin: var(--margin-auto);
+  font-size: 40px;
+  color: #eee0cc;
+  padding-bottom: 20px;
+}
 
 /* ---buttons for pairing page----- */
 .comboBtnBox {
-    max-width: 900px;
-    margin: var(--margin-auto);
-    padding-left: 15px;
-    padding-right: 15px;
+  max-width: 900px;
+  margin: var(--margin-auto);
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .gntAgain,
@@ -327,16 +330,16 @@ h3 {
 }
 
 .loginOverlay {
-    background-color: rgba(0,0,0,0.80);
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    z-index: 10;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* visibility: hidden; */
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* visibility: hidden; */
 }
 
 .loginBox {
@@ -350,35 +353,34 @@ h3 {
 }
 
 .loginTxt {
-    text-align: center;
-    padding: 10px;  
-    font-size: 25px;
-    
+  text-align: center;
+  padding: 10px;
+  font-size: 25px;
 }
 
 .loginBox input {
-    background-color: rgb(228, 228, 228);
-    font-family: var(--font-poppins); 
-    padding-top: 14px;
-    padding-bottom: 14px;
-    margin-top: 10px;
-    width: 300px;
-    border-radius: 15px;
-    padding-left: 20px;
-    border: none;
-    font-size: 20px;
-    color: var(--colorBlack);
+  background-color: rgb(228, 228, 228);
+  font-family: var(--font-poppins);
+  padding-top: 14px;
+  padding-bottom: 14px;
+  margin-top: 10px;
+  width: 300px;
+  border-radius: 15px;
+  padding-left: 20px;
+  border: none;
+  font-size: 20px;
+  color: var(--colorBlack);
 }
 
 #loginBtn {
-    color: var(--colorBlack);
-    background-color: var(--main-color-beer);
-    border-radius: 50px;
-    width: 150px;
-    align-items: center;
-    margin-top: 20px !important;
-    display: block;
-    margin: var(--margin-auto);
+  color: var(--colorBlack);
+  background-color: var(--main-color-beer);
+  border-radius: 50px;
+  width: 150px;
+  align-items: center;
+  margin-top: 20px !important;
+  display: block;
+  margin: var(--margin-auto);
 }
 
 #loginBtn h2 {
@@ -497,63 +499,65 @@ h3 {
 }
 
 /* ----Contact Us---- */
-#contactUs, .aboutUs{
-    position: relative;
+#contactUs,
+.aboutUs {
+  position: relative;
 }
 
-.cntc, .aboutSmllMsg{
-    font-family: var(--font-abril);
-    margin: var(--margin-auto);
-    font-size: 72px;
-    color: #eee0cc;
-    margin-top: -31px;
-    
+.cntc,
+.aboutSmllMsg {
+  font-family: var(--font-abril);
+  margin: var(--margin-auto);
+  font-size: 72px;
+  color: #eee0cc;
+  margin-top: -31px;
 }
 
-.msgCU, .msgAu{
-    font-family: var(--font-poppins);
-    font-size: 25px;  
-    color: var(--main-color-beer);
-    margin-bottom: 25px;
+.msgCU,
+.msgAu {
+  font-family: var(--font-poppins);
+  font-size: 25px;
+  color: var(--main-color-beer);
+  margin-bottom: 25px;
 }
 
-.contInput, input {
-    width: 491px;
-    margin: var(--margin-auto);
-    height: 77px;
-    border-radius: 20px;
-    border: 2px solid #eee0cc;
-    font-size: 20px;
-    margin-bottom: 16px;
-    padding-left: 44px; 
-    color: white;
-    font-family: var(--font-poppins);
-    background-color: var(--colorBlack);
+.contInput,
+input {
+  width: 491px;
+  margin: var(--margin-auto);
+  height: 77px;
+  border-radius: 20px;
+  border: 2px solid #eee0cc;
+  font-size: 20px;
+  margin-bottom: 16px;
+  padding-left: 44px;
+  color: white;
+  font-family: var(--font-poppins);
+  background-color: var(--colorBlack);
 }
 
-.ontInput, .msg {
-    height: 157px;
-
+.ontInput,
+.msg {
+  height: 157px;
 }
 
 .subBtn {
-    width: 213px;
-    height: 66px;
-    font-size: 20px;
-    border-radius: 44px;
-    margin-top: 15px;
-    
+  width: 213px;
+  height: 66px;
+  font-size: 20px;
+  border-radius: 44px;
+  margin-top: 15px;
 }
 #aboutUs {
-    position: relative;
-    max-width: 800px;
-    margin: var(--margin-auto);
+  position: relative;
+  max-width: 800px;
+  margin: var(--margin-auto);
 }
 
 .aboutUsTxt {
-    display: block;
-    font-size: 25px;
-    font-family: var(--font-poppins);
+  display: block;
+  font-size: 25px;
+  font-family: var(--font-poppins);
 }
 
 /* Footer Section */
@@ -567,7 +571,7 @@ footer {
   justify-content: center;
   color: #cfcc21;
   height: 4rem;
-  /* position: fixed; */
+  position: absolute;
   bottom: 0;
   width: 100%;
   box-shadow: 1px -2px 8px 2px rgba(0, 0, 0, 0.322);
@@ -599,3 +603,4 @@ footer a {
     width: 100%;
     text-align: center;
   }
+}
