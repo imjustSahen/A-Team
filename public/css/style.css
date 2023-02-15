@@ -1,75 +1,94 @@
 /* Page reset */
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-        /*  ----Variables---- */
 
+/*  ---- Global Variables ---- */
 :root {
-    --main-bg-color: white;
-    --main-dp: block;
-    --main-tx-align: left;
-    --main-pad: 20px;
-    --main-bg-size: cover;
-    --main-fontsize: 20px;
-    --main-color-beer: #ffbf43;
-    --font-poppins: 'Poppins', Sans-Serif;
-    --font-abril: 'Abril Fatface', Cursive;
-    --main-dinlineB: inline-block;
-    --colorBlack: black;   
-    --margin-auto: auto;
-}
-
-h1 {
-    Font-Family: var(--font-abril);
-}
-
-h2, h3 {
-    Font-Family: var(--font-poppins);
-    Font-Size: 25px;
-}
-
-h3 {
-    color: var(--main-color-beer);
-    padding: var(--main-pad);
+  --main-bg-color: white;
+  --main-dp: block;
+  --main-tx-align: left;
+  --main-pad: 20px;
+  --main-bg-size: cover;
+  --main-fontsize: 20px;
+  --main-color-beer: #ffbf43;
+  --font-poppins: "Poppins", Sans-Serif;
+  --font-abril: "Abril Fatface", Cursive;
+  --main-dinlineB: inline-block;
+  --colorBlack: black;
 }
 
 body {
-    background-color: #f6f6f6;
-    display: var(--main-dp);
-    position: relative;
+  min-height: 100vh;
+  background-color: #f6f6f6;
 }
+
+h1 {
+  font-family: var(--font-abril);
+  font-size: 42px;
+  color: white;
+}
+
+h2 {
+  font-family: var(--font-poppins);
+  font-size: 25px;
+}
+
+h3 {
+  font-family: var(--font-poppins);
+  color: var(--main-color-beer);
+}
+
 button {
     border: none;
-    background-color: var(--main-color-beer);
-    border-radius: 50px;
 }
 
-img {
-    display: block;
-}
-/* ----website container----- */
-
+/* ---- Header Section ---- */
 header {
-    padding-left: 20px;
-    display: var(--main-dp);
-    position: absolute;
-    top: 0px;
-    z-index: 10;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  padding: 20px 20px;
+  top: 0px;
+  z-index: 20;
+  width: 100%;
 }
 
 header nav {
-    text-align: right;
-    display: var(--main-dinlineB);
-    padding: 20px;
-    padding-top: 30px;
-    margin-right: 20px;
-    float: right;
-    Font-Family: var(--font-poppins);
+  margin-right: 20px;
+  font-family: var(--font-poppins);
 }
 
+nav a {
+  text-decoration: none;
+  color: var(--colorBlack);
+  font-size: 20px;
+  color: rgb(255, 0, 0);
+  border-radius: 50px;
+  line-height: 25px;
+  padding: 20px 20px;
+  transition: all ease 250ms;
+}
+
+nav a:hover {
+  background-color: var(--main-color-beer);
+  color: var(--colorBlack);
+}
+
+/* New Hero Class */
+.hero-content {
+  background-color: rgb(0, 0, 0);
+  background-size: cover;
+  position: relative;
+  padding: 50px 100px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.555)),
+    url("/views/assets/Hero-bk.jpg");
+  background-position: center;
+  background-blend-mode: luminosity;
+}
 header .navLink {
     text-decoration: none; 
     color: var(--colorBlack);
@@ -95,11 +114,19 @@ header .navLink:hover {
     display: inline-block;
 }
 
-/* Navigation list */
-header ul li {
-    display: var(--main-dinlineB);
-    margin-left: 15px;
-    
+.pair-intro {
+  font-family: var(--font-abril);
+  text-align: center;
+  font-size: 40px;
+  color: #eee0cc;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+/*  Previous Hero Classes */
+.heroPic {
+  color: white;
+  font-size: 10px;
 }
 
 .heroPic {
@@ -117,37 +144,49 @@ header ul li {
 }
 
 .heroPicDarker {
-    background-blend-mode: luminosity;
+  background-blend-mode: luminosity;
 }
 
 .heroPicDarker::before {
-    content: "";
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    background-color: rgba(0,0,0,0.30);
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
-.heroPic  {
-    color: white;
-    font-size: 10px;
+/* Previous Pair msg (changed to pair-intro) */
+.pairMsg {
+  font-family: var(--font-abril);
+  margin: auto;
+  font-size: 40px;
+  color: #eee0cc;
+  padding-bottom: 20px;
 }
 
 .smallTle {
-    font-size: 38px;
-    color: var(--main-color-beer);
+  font-size: 38px;
+  color: var(--main-color-beer);
 }
 
 .heroTxt {
+  font-size: 72px;
+  color: #eee0cc;
+  margin: auto;
+  width: 766px;
+  font-weight: normal;
+  line-height: 82px;
+}
+
+#GenBtn {
     font-size: 72px;
     color: #eee0cc;
     margin: var(--margin-auto);
     width: 766px;
     font-weight: normal;
     line-height: 82px;
-    
 }
 
 #GenBtn {
@@ -160,14 +199,14 @@ header ul li {
 }
 
 #GenBtn img {
-   display: inline;
-   margin-bottom: -10px; 
+  display: inline;
+  margin-bottom: -10px;
 }
 
 .cheersBlock {
-    background: #ded1b9;
-    display: flex;
-    justify-content: space-around;
+  background: #ded1b9;
+  display: flex;
+  justify-content: space-around;
 }
 
 .cheersTxt {
@@ -177,11 +216,11 @@ header ul li {
 }
 
 .cheersBlock h2 {
-    Font-Family: var(--font-abril);
-    font-size: 56px;
-    font-weight: normal;
-    line-height: 62px;
-    margin-bottom: 40px;
+  font-family: var(--font-abril);
+  font-size: 56px;
+  font-weight: normal;
+  line-height: 62px;
+  margin-bottom: 40px;
 }
 
 .cheersBlock p {
@@ -190,14 +229,14 @@ header ul li {
 }
 
 .cheersImg {
-    max-width: 700px;
-    padding-top: 70px;
+  max-width: 700px;
+  padding-top: 70px;
 }
 
 .combos {
-    height: 450px;
-    width: 100%;
-    background-color: rgb(204, 204, 204);
+  height: 450px;
+  width: 100%;
+  background-color: rgb(204, 204, 204);
 }
 
 .combosTxt {
@@ -207,21 +246,16 @@ header ul li {
     text-align: center; 
 }
 
-footer {
-    padding: 30px;
-    text-align: center;
-    font-family: var(--font-poppins); 
-}
 /* pairing page */
 
 .pairContainer {
-    display: flex;
-    justify-content: center;
-    max-width: 1000px;
-    align-items: center;
-    margin: var(--margin-auto);
-    position: relative;
-    padding: 10px;
+  display: flex;
+  justify-content: center;
+   max-width: 1000px;
+   align-items: center;
+   margin: var(--margin-auto);
+   position: relative;
+   padding: 10px;
 }
 
 .contentCard {
@@ -234,13 +268,14 @@ footer {
     color: var(--colorBlack);
 }
 
+/* Previous circle class (now card-circle) */
 .circlePlus {
-    padding: 10px;
-    color: #ffffff;
-    border-radius: 100px;
-    margin-left: -20px;
-    margin-right: -20px;
-    z-index: 20
+  padding: 10px;
+  color: #ffffff;
+  border-radius: 100px;
+  margin-left: -20px;
+  margin-right: -20px;
+  /* z-index: 20; */
 }
 
 .pairMsg {
@@ -250,7 +285,6 @@ footer {
     color: #eee0cc;
     padding-bottom: 20px;
 
-}
 /* ---buttons for pairing page----- */
 .comboBtnBox {
     max-width: 900px;
@@ -259,35 +293,37 @@ footer {
     padding-right: 15px;
 }
 
-.gntAgain, .save {
-    background:#ffbf43;   
-    border-radius: 50px;
-    margin-top: 70px;
-    text-align: center;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
+.gntAgain,
+.save {
+  background: #ffbf43;
+  border-radius: 50px;
+  margin-top: 70px;
+  text-align: center;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-.gntAgain, .save, h3 {
-    color: var(--colorBlack);
+.gntAgain,
+.save,
+h3 {
+  color: var(--colorBlack);
 }
 
 .gntAgain {
-    float:left;
+  float: left;
 }
 
 .save {
-    float: right;
+  float: right;
 }
 
 /* --- Log in --- */
 .loginBox a {
-   width: 25px;
-   position: absolute;
-   top: 20px;
-   right: 20px;
-   
+  width: 25px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 .loginOverlay {
@@ -301,17 +337,16 @@ footer {
     justify-content: center;
     align-items: center;
     /* visibility: hidden; */
-
 }
 
 .loginBox {
-    padding: 50px;
-    max-width: 400px;
-    background-color: #ffffff;
-    max-height: 420px;
-    Font-Family: var(--font-abril); 
-    font-size: 20px;
-    position: relative;
+  padding: 50px;
+  max-width: 400px;
+  background-color: #ffffff;
+  max-height: 420px;
+  font-family: var(--font-abril);
+  font-size: 20px;
+  position: relative;
 }
 
 .loginTxt {
@@ -346,17 +381,25 @@ footer {
     margin: var(--margin-auto);
 }
 
- #loginBtn h2 {
-    align-items: center;
- }
+#loginBtn h2 {
+  align-items: center;
+}
+
+.card-circle {
+  padding: 10px;
+  color: #ffffff;
+  border-radius: 100px;
+  margin-left: -20px;
+  margin-right: -20px;
+  z-index: 10;
+}
 
 /* Card Hover Styling */
 .container {
-  /* width: 1000px; */
-  /* position: relative; */
   flex-flow: row wrap;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
 }
 
 .container .card {
@@ -376,7 +419,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1;
+  z-index: 5;
   transform: translateY(100px);
 }
 
@@ -433,7 +476,7 @@ footer {
 }
 
 .beer-abv {
-  font-size: .9em;
+  font-size: 0.9em;
   font-weight: 800;
   padding: 15px 0px;
 }
@@ -452,8 +495,6 @@ footer {
   background: #333;
   color: #fff;
 }
-
-/* End of Card Hover Styling */
 
 /* ----Contact Us---- */
 #contactUs, .aboutUs{
@@ -489,6 +530,7 @@ footer {
     font-family: var(--font-poppins);
     background-color: var(--colorBlack);
 }
+
 .ontInput, .msg {
     height: 157px;
 
@@ -512,5 +554,48 @@ footer {
     display: block;
     font-size: 25px;
     font-family: var(--font-poppins);
-
 }
+
+/* Footer Section */
+footer {
+  padding: 30px;
+  text-align: center;
+  font-family: var(--font-poppins);
+  background-color: #2c2c2c;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  color: #cfcc21;
+  height: 4rem;
+  /* position: fixed; */
+  bottom: 0;
+  width: 100%;
+  box-shadow: 1px -2px 8px 2px rgba(0, 0, 0, 0.322);
+}
+
+footer h3,
+footer p {
+  padding: 0rem 0.25rem;
+  align-self: center;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+/* Screen Sizing */
+
+@media screen and (max-width: 768px) {
+  header,
+  main {
+    flex-direction: column;
+  }
+
+  section {
+    padding-right: 0;
+  }
+
+  aside {
+    width: 100%;
+    text-align: center;
+  }
