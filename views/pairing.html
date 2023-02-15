@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,45 +9,79 @@
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins:300" rel="stylesheet">
     <title>Try this pair</title>
 </head>
+
 <body>
     <header>
-        <a href="index.html" class="logoImg"><img src="../public/assets/BeerNBites-Logo.png" width="100%" alt="BeerNBites-Logo"></a>
+        <h1 class="logo"><a href="index.html" class="logoImg"><img src="../public/assets/BeerNBites-Logo.png" width="100%" alt="BeerNBites-Logo"></a></h1>
             <nav>
-                <ul>
-                    <li><a href="aboutUs.html" class="navLink"> About</a></li>
-                    <li><a href="contactUs.html" class="navLink">Contact Us</a></li>
-                    <li><a href="#login" class="navLink">Log in</a></li>
-                </ul>
+                <a href="aboutUs.html">About</a>
+                <a href="contactUs.html">Contact Us</a>
+                <a href="#login">Log in</a>
             </nav>
     </header>
 
-    <section class="heroPic heroPicDarker">
-        <div class="pairMsg">Try this pair</div>
-        <div class="pairContainer">
-            <div class="contentCard">Beer</div>
-            <div class="circlePlus">
-                <svg xmlns="http://www.w3.org/2000/svg" width="98" height="98" viewBox="0 0 98 98"
-                    fill="none">
+    <main class="hero-content">
+        <h2 class="pair-intro">Try this pair</h2>
+        <div class="container">
+            <div class="card">
+                <div class="face face1" id="beer-face">
+                    <div class="content beer-image">
+                        <img src="" alt="beer">
+                    </div>
+                </div>
+                <div class="face face2" id="beer-content">
+                    <div class="content">
+                        <h3 class="beer-name"></h3>
+                        <p class="beer-tagline"></p>
+                        <p class="beer-abv"></p>
+                        <p class="beer-description"></p>
+                        <button class="get-beer" type="button">Get New Beer</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="98" height="98" viewBox="0 0 98 98" fill="none">
                     <circle cx="49" cy="49" r="49" fill="#AF4636" />
-                    <path d="M64.8804 49.93H50.1104V64.56H47.4504V49.93H33.1004V47.62H47.4504V33.9H50.1104V47.62H64.8804V49.93Z"
-                        fill="#EEE1CC"/>
+                    <path
+                        d="M64.8804 49.93H50.1104V64.56H47.4504V49.93H33.1004V47.62H47.4504V33.9H50.1104V47.62H64.8804V49.93Z"
+                        fill="#EEE1CC" />
                 </svg>
             </div>
-            <div class="contentCard">Food</div>
+            <div class="card">
+                <div class="face face1" id="food-face">
+                    <div class="content dish-image">
+                        <img src="">
+                    </div>
+                </div>
+                <div class="face face2" id="food-content">
+                    <div class="content">
+                        <h3 class="dish-name"></h3>
+                        <p class="dish-summary"></p>
+                        <a id="recipe-link" href="" target="_blank" rel="noopener noreferrer">Get Recipe</a>
+                        <button class="get-dish" type="button">Get New Dish</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comboBtnBox">
+                <button class="gntAgain">
+                    Generate Again
+                </button>
+                <button class="save">
+                    Save
+                </button>
+            </div>
         </div>
-    <div class="comboBtnBox">
-        <button class="gntAgain">
-            <h3>Generate Again</h3>
-        </button>
-        <button class="save">
-            <h3>Save</h3>
-        </button>
-    </div>
-    </section>
+    </main>
+    <footer class="footer">
+        <div>
+            <h4>Thanks for visiting!</h4>
+        </div>
+    </footer>
 </body>
-<footer class="footer">
-    <div>
-        <h4>Thanks for visiting!</h4>
-    </div>
-</footer>
+
+<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<script defer src="../public/js/index.js"></script>
+
 </html>
