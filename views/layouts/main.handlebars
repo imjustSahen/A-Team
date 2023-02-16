@@ -1,45 +1,40 @@
+{{!-- This is our main html template that we put the items we want to show on every page. ie. header,footer,hero. --}}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hoppy Hour</title>
-
-  <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../public/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins:300" rel="stylesheet">
+    <title>Beer 'n' Bites</title>
 </head>
-    <!-- {{!-- Navigation links --}} -->
-    <nav>
-      <h4>Login</h4>
-      <ul>
-        <li><a href="/views/layouts/main.handlebars">Home</a></li>
-        <li><a href="/views/login.handlebars">Login</a></li>
-      </ul>
-    </nav>
-
 <body>
-  <header>
-    <h1>Pair some Beers</h1>
-  </header>
-  <nav>
-    <a href="/views/homePage.handlebars">Home</a>
-    {{#if loggedIn}}
-    <button id="logout" class="btn-no-style">Logout</button>
-    {{else}}
-    <a href="/views/login.handlebars">Login</a>
-    {{/if}}
-  </nav>
-  <main>
-    <aside>
-      <h2>Have fun</h2>
-    </aside>
-    <div>
-      {{{body}}}
-    </div>
-  </main>
-  {{#if loggedIn}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
-</body>
+  {{!-- header --}}
+    <header>
+        <a href="/" class="logoImg"><img src="../../public/assets/BeerNBites-Logo.png" width="100%" alt="BeerNBites-Logo"></a>
+            <nav>
+                <ul>
+                    <li><a href="/views/aboutUs" class="navLink"> About</a></li>
+                    <li><a href="/views/contactUs" class="navLink">Contact Us</a></li>
+                    <li><a href="#login" class="navLink" id="login">Log in</a></li>
+                </ul>
+            </nav>
+    </header>
 
+
+{{!-- This is where the handlebars will be injected --}}
+{{{body}}}
+
+
+
+{{!-- Footer --}}
+<footer class="footer">
+    <div>
+        <h4>Thanks for visiting!</h4> 
+    </div>
+    
+</footer>
+</body>
 </html>

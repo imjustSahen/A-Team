@@ -373,11 +373,11 @@ h3 {
 
 /* Card Hover Styling */
 .container {
-    /* width: 1000px; */
-    /* position: relative; */
-    flex-flow: row wrap;
-    display: flex;
-    justify-content: space-around;
+  flex-flow: row wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
 }
 
 .container .card {
