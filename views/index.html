@@ -9,27 +9,31 @@
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins:300" rel="stylesheet">
     <title>Beer 'n' Bites</title>
 </head>
+
 <body>
     <header>
-        <a href="index.html" class="logoImg"><img src="../public/assets/BeerNBites-Logo.png" width="100%" alt="BeerNBites-Logo"></a>
-            <nav>
-                <ul>
-                    <li><a href="/views/aboutUs" class="navLink"> About</a></li>
-                    <li><a href="contactUs.html" class="navLink">Contact Us</a></li>
-                    <li><a href="#login" class="navLink" id="login">Log in</a></li>
-                </ul>
-            </nav>
+        <a href="index.html" class="logoImg"><img src="../public/assets/BeerNBites-Logo.png" width="100%"
+                alt="BeerNBites-Logo"></a>
+        <nav>
+            <ul>
+                <li><a href="aboutUs.html" class="navLink"> About</a></li>
+                <li><a href="contactUs.html" class="navLink">Contact Us</a></li>
+                <li><a href="#login" class="navLink" id="login">Log in</a></li>
+            </ul>
+        </nav>
     </header>
-
+<!-- Hero Pic Section -->
     <section class="heroPic">
         <div class="'heroPic-label">
             <h3 class="smallTle">EAT, DRINK, ENJOY</h3><br>
             <h1 class="heroTxt">Explore enticing combinations of eats and brews.</h1>
         </div>
-        <button id="GenBtn" onClick="location.href='/views/pairing'">
-            <h2>Generate your combo <img src="../public/assets/BeerIcon.png" width="30px" alt="beerIcon"> + <img src="../public/assets/FoodIcon.png" width="26px" alt="foodIcon"></h2>
+        <button id="GenBtn" onClick="location.href='pairing.html'">
+            <h2>Generate your combo <img src="../public/assets/BeerIcon.png" width="30px" alt="beerIcon"> + <img
+                    src="../public/assets/FoodIcon.png" width="26px" alt="foodIcon"></h2>
         </button>
     </section>
+    <!-- Second block img and text -->
     <section class="cheersBlock">
         <div class="cheersTxt">
             <h2>We love beer and food.</h2>
@@ -41,31 +45,40 @@
     </section>
     <section class="combos">
         <div class="combosTxt">
-        <h2>Random Combos</h2>
+            <h2>Random Combos Slider</h2>
         </div>
     </section>
-
-<footer class="footer">
-    <div>
-        <h4>Thanks for visiting!</h4> 
-    </div>
-    
-</footer>
-<section class="loginOverlay">
-<div class="loginBox">
-    <a id="modalClose"><img src="../public/assets/close-x.png" alt="exit" width="100%"></a>
-    <div class="loginTxt">LOGIN</div>
-    <input placeholder="Username"></input>
-    <input placeholder="Password"></input>
-     <button id="loginBtn">
-        <h2>Login</h2>
-    </button>
-</div>
-</section>
+<!-- Login -->
+    <section class="loginOverlay">
+        <div class="loginBox">
+            <a id="modalClose"><img src="../public/assets/close-x.png" alt="exit" width="100%"></a>
+            <div class="loginTxt">LOGIN</div>
+            <input placeholder="Username"></input>
+            <input placeholder="Password"></input>
+            <h3>Create Account</h3>
+            <button id="loginBtn">
+                <h2>Login</h2>
+            </button>
+        </div>
+    </section>
+    <!-- Footer  -->
+    <footer>
+        <div>
+            <a class="footerLogo" href="index.html"><img src="../public/assets/BeerNBites-Logo.png" width="100%"
+                    alt="BeerNBites-Logo"></a>
+            <h4>2023 Beer ‘n’ Bites Full Stack Student Project </h4>
+        </div>
+        <div>
+            <ul>
+                <li><a href="aboutUs.html" class="footerLink"> About</a></li>
+                <li><a href="contactUs.html" class="footerLink">Contact Us</a></li>
+                <li><a href="#login" class="footerLink" id="login">Log in</a></li>
+            </ul>
+        </div>
+    </footer>
 
 </body>
 <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-
 <script defer src="../public/js/index.js"></script>
 
 </html>
