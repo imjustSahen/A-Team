@@ -242,7 +242,7 @@ header ul li {
     background-color: #ffffff;
     padding: 20px;
     width: 400px;
-    min-height: 400px;
+    min-height: 300px;
     Font-Family: var(--font-abril);
     font-size: 35px;
     color: var(--colorBlack);
@@ -273,13 +273,14 @@ header ul li {
     margin: var(--margin-auto);
     padding-left: 15px;
     padding-right: 15px;
+    margin-top: 50px;
+   padding-bottom: 50px;
 }
 
 .gntAgain,
 .save {
     background: var(--main-color-beer);
     border-radius: 50px;
-    margin-top: 70px;
     text-align: center;
     position: relative;
     padding-left: 15px;
@@ -594,8 +595,6 @@ textarea {
     width: 300px;
     padding: 30px;
     text-align: center;
-    border: 2px solid #A48178;
-    border-radius: 20px;
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -604,6 +603,7 @@ textarea {
     font-family: var(--font-abril);
     font-size: 26px;
     color: #3D2E2A;
+    line-height: 26px;
 }
 
 .infoCardRole {
