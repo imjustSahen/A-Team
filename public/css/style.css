@@ -157,7 +157,7 @@ header ul li {
 
 }
 
-#GenBtn {
+#gen-btn {
     display: var(--main-dp);
     background: var(--main-color-beer);
     padding: 24px;
@@ -171,14 +171,14 @@ header ul li {
     transition: all ease 200ms;
 }
 
-#GenBtn:hover {
+#gen-btn:hover {
     background-color: #ffffff;
     transform: scale(1.05);
     box-shadow: 0px 7px 15px 3px rgba(110, 92, 46, 0.66);
 
 }
 
-#GenBtn img {
+#gen-btn img {
     display: inline;
     margin-bottom: -10px;
 }
