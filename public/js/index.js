@@ -1,4 +1,5 @@
-const spoonacularKey = "3d1a85ae117b432aa54f8a339a92c766";
+const spoonacularKey = "";
+
 const randomBeerAPI = "https://api.punkapi.com/v2/beers/random";
 const randomBeerBtn = document.getElementById("get-beer-btn");
 const randomDishBtn = document.getElementById("get-dish-btn");
@@ -61,6 +62,11 @@ function getPairing(foodPairingString) {
       return response.json();
     })
     .then(function (data) {
+      let totalResult = data.totalResults;
+      console.log(totalResult);
+      if (totalResult === 0) {
+        return randomDish();
+      } else {
       const foodBody = $("#food-content .content");
       console.log(data);
       foodBody.children(".dish-name").text(data.results[0].title);
@@ -68,6 +74,9 @@ function getPairing(foodPairingString) {
       let recipeId = data.results[0].id;
       console.log(recipeId);
       getRecipe(recipeId);
+      }
+      console.log(data.totalResults.value);
+      console.log(data.totalResults);
       // savePairing(recipeId);
     })
     .catch(function (err) {
