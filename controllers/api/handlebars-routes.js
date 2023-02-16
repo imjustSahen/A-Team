@@ -14,4 +14,8 @@ router.get("/views/contactUs", (req, res) => {
   res.render("contactUs", { layout: "main" });
 });
 
+router.get("/views/pairing", (req, res) => {
+  res.render("pairing", { layout: "main" });
+});
+
 module.exports = router;
