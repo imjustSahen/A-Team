@@ -1,7 +1,8 @@
 const router = require("express").Router();
 const path = require("path");
-const { User, Pairing, Comment, Review } = require('../models');
-const sequelize = require('sequelize');
+const { User, Pairing, Comment, Review } = require("../models");
+const sequelize = require("sequelize");
+
 
 //getting all pairing data for carousel cards
 router.get('/', async (req, res) => {
@@ -17,11 +18,13 @@ router.get('/', async (req, res) => {
           ]
       });
 
-      const pairings = await pairingData.map((pairing) => pairing.get({ plain: true}));
 
-      res.status(200).json(pairings);
+    const pairings = await pairingData.map((pairing) =>
+      pairing.get({ plain: true })
+    );
+    res.status(200).json(pairings);
   } catch (err) {
-      res.status(500).json(err);
+    res.status(500).json(err);
   }
 });
 
