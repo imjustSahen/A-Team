@@ -1,40 +1,44 @@
-{{!-- This is our main html template that we put the items we want to show on every page. ie. header,footer,hero. --}}
-<!DOCTYPE html>
+{{! This is our main html template that we put the items we want to show on every page. ie. header,footer,hero. }}
+
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../../public/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins:300" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins:300"
+      rel="stylesheet"
+    />
     <title>Beer 'n' Bites</title>
-</head>
-<body>
-  {{!-- header --}}
+  </head>
+  <body>
+    {{! header }}
     <header>
-        <a href="/" class="logoImg"><img src="../../public/assets/BeerNBites-Logo.png" width="100%" alt="BeerNBites-Logo"></a>
-            <nav>
-                <ul>
-                    <li><a href="/views/aboutUs" class="navLink"> About</a></li>
-                    <li><a href="/views/contactUs" class="navLink">Contact Us</a></li>
-                    <li><a href="#login" class="navLink" id="login">Log in</a></li>
-                </ul>
-            </nav>
+      <a href="/" class="logoImg"><img
+          src="./assets/BeerNBites-Logo.png"
+          width="100%"
+          alt="BeerNBites-Logo"
+        /></a>
+      <nav>
+        <ul>
+          <li><a href="/views/aboutUs" class="navLink"> About</a></li>
+          <li><a href="/views/contactUs" class="navLink">Contact Us</a></li>
+          <li><a href="#login" class="navLink" id="login">Log in</a></li>
+        </ul>
+      </nav>
     </header>
 
+    {{! This is where the handlebars will be injected }}
+    {{{body}}}
 
-{{!-- This is where the handlebars will be injected --}}
-{{{body}}}
+    {{! Footer }}
+    <footer class="footer">
+      <div>
+        <h4>Thanks for visiting!</h4>
+      </div>
 
-
-
-{{!-- Footer --}}
-<footer class="footer">
-    <div>
-        <h4>Thanks for visiting!</h4> 
-    </div>
-    
-</footer>
-</body>
+    </footer>
+  </body>
 </html>
