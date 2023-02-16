@@ -67,13 +67,13 @@ function getPairing(foodPairingString) {
       if (totalResult === 0) {
         return randomDish();
       } else {
-      const foodBody = $("#food-content .content");
-      console.log(data);
-      foodBody.children(".dish-name").text(data.results[0].title);
-      $(".dish-image img").attr("src", data.results[0].image);
-      let recipeId = data.results[0].id;
-      console.log(recipeId);
-      getRecipe(recipeId);
+        const foodBody = $("#food-content .content");
+        console.log(data);
+        foodBody.children(".dish-name").text(data.results[0].title);
+        $(".dish-image img").attr("src", data.results[0].image);
+        let recipeId = data.results[0].id;
+        console.log(recipeId);
+        getRecipe(recipeId);
       }
       console.log(data.totalResults.value);
       console.log(data.totalResults);
@@ -139,39 +139,3 @@ function getRecipe(recipeId) {
       console.log(data);
     });
 }
-
-// Not complete yet
-// function saveBeerDetails(beerId, beerName) {
-//   let beerDetails = {
-//     beer_id: beerId,
-//     beer_name: beerName,
-//   };
-//   return savePairing(beerDetails);
-// }
-
-// function saveFoodDetails(recipeId) {
-//   let foodDetails = {
-//     recipe_id: recipeId,
-//   };
-//   return savePairing(foodDetails);
-// }
-
-// function savePairing(beerDetails, foodDetails) {
-
-//   let savedEvent = {
-//     beer: beerDetails,
-//     food: foodDetails,
-//   };
-//   console.log(savedEvent);
-
-//   savePairingBtn.addEventListener("click", function (e) {
-//     e.preventDefault();
-
-//     savedEventResults.push(savedEvent);
-
-//     localStorage.setItem(
-//       "savedEventResults",
-//       JSON.stringify(savedEventResults)
-//     );
-//   });
-// }
