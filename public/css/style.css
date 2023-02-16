@@ -332,6 +332,7 @@ h3 {
     Font-Family: var(--font-abril);
     font-size: 20px;
     position: relative;
+    border-radius: 40px;
 }
 
 .loginTxt {
@@ -339,6 +340,7 @@ h3 {
     padding: 10px;
     font-size: 25px;
 }
+
 
 .loginBox input {
     background-color: rgb(228, 228, 228);
@@ -473,13 +475,25 @@ h3 {
 }
 
 /* End of Card Hover Styling */
+.savedContainer {
+    background-color: #EEE4D2; 
+    width: 1016px;
+    height: 465px; 
+}
+ 
+.savedText h3 {
+    color: #A1857E;
+    font-family: var(--font-poppins);
+    font-size: 28px;
+    margin: var(--margin-auto);
+   
+}
 
 .savedPairs {
     background: #ded1b9;
     display: flex;
     justify-content: space-around;
-    width: 100%;
-    height: 450px;
+
 }
 .savedPairs h2 {
     font-family: var(--font-abril);
