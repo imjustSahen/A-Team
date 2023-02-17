@@ -18,7 +18,7 @@ $("#login").click(function () {
 });
 
 $("#modalClose").click(function () {
-  $(".loginOverlay").toggle();
+  $(".loginOverlay").hide();
 });
 
 // ---- Sign Up
@@ -31,7 +31,7 @@ $("#signup").click(function () {
 });
 
 $("#modalClose").click(function () {
-  $(".signup-Overlay").toggle();
+  $(".signup-Overlay").hide();
 });
 // ---------------------------------- ///
 
