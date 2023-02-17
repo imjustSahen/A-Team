@@ -6,6 +6,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"
+    ></script>
+
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins:300"
@@ -34,11 +38,29 @@
     {{{body}}}
 
     {{! Footer }}
-    <footer class="footer">
+    <footer>
       <div>
-        <h4>Thanks for visiting!</h4>
+        <a class="footerLogo" href="/views/home"><img
+            src="./assets/BeerNBites-Logo.png"
+            width="100%"
+            alt="BeerNBites-Logo"
+          /></a>
+        <h4>2023 Beer ‘n’ Bites Full Stack Student Project </h4>
       </div>
-
+      <div>
+        <ul>
+          <li><a href="/views/aboutUs" class="footerLink"> About</a></li>
+          <li><a href="/views/contactUs" class="footerLink">Contact Us</a></li>
+          <li><a href="#login" class="footerLink" id="login">Log in</a></li>
+        </ul>
+      </div>
     </footer>
+    <script
+      defer
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    ></script>
+    <script defer src="/public/js/index.js"></script>
+    <script defer src="/public/js/login.js"></script>
+    <script defer src="/public/js/logout.js"></script>
   </body>
 </html>
