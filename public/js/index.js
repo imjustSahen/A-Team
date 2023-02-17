@@ -21,6 +21,20 @@ $("#modalClose").click(function () {
   $(".loginOverlay").toggle();
 });
 
+// ---- Sign Up
+$(document).ready(function () {
+  $(".signup-Overlay").hide();
+});
+
+$("#signup").click(function () {
+  $(".signup-Overlay").toggle();
+});
+
+$("#modalClose").click(function () {
+  $(".signup-Overlay").toggle();
+});
+// ---------------------------------- ///
+
 newPairingBtn.addEventListener("click", function getNewPairing() {
   return randomBeer();
 });

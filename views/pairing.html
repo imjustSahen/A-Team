@@ -12,17 +12,20 @@
 
 <body>
     <header>
-        <h1 class="logo"><a href="index.html" class="logoImg"><img src="../public/assets/BeerNBites-Logo.png"
-                    width="100%" alt="BeerNBites-Logo"></a></h1>
+        <a href="index.html" class="logoImg"><img src="../public/assets/BeerNBites-Logo.png" width="100%"
+                alt="BeerNBites-Logo"></a>
         <nav>
-            <a href="aboutUs.html">About</a>
-            <a href="contactUs.html">Contact Us</a>
-            <a href="#login">Log in</a>
+            <ul>
+                <li><a href="aboutUs.html" class="navLink"> About</a></li>
+                <li><a href="contactUs.html" class="navLink">Contact Us</a></li>
+                <li><a href="#login" class="navLink" id="login">Log in</a></li>
+            </ul>
         </nav>
     </header>
-
+    <!-- CARDS -->
+    <section class="heroPic heroPicDarker">
     <main class="hero-content">
-        <h2 class="pair-intro">Try this pair</h2>
+        <!-- <div><p class="pair-intro">Try this pair</p> </div> -->
         <div class="container">
             <div class="card">
                 <div class="face face1" id="beer-face">
@@ -63,25 +66,30 @@
                     </div>
                 </div>
             </div>
-
-            <div class="comboBtnBox">
-                <button id="new-pairing-btn" class="gntAgain">
-                    Get New Pairing
-                </button>
-                <button id="save-pairing-btn" class="save">
-                    Save Your Pairing
-                </button>
-            </div>
         </div>
+
+        <!--   ---- Buttons----  -->
+        <div class="comboBtnBox">
+            <button id="new-pairing-btn">
+                <h2>Get New Pairing</h2>
+            </button>
+            <button id="save-pairing-btn">
+                <h2>Save Your Pairing</h2>
+            </button>
+        </div>
+    </main>
+</section>
         <section class="savedPairs">
             <div class="savedTxt">
+                <h2>My Saved Pairs</h2>
                 <div class="savedContainer">
-                    <h2>My Saved Pairs</h2>
-                <h3>Login or Sign Up to save pairings!</h3>
+                    <p class="Login--signup-text">Login or Sign Up to save pairings!</p>
+                    <button class="login-pairs-btn">LOGIN</button>
                 </div>
             </div>
         </section>
-    </main>
+
+    <!-- Footer -->
     <footer>
         <div>
             <a class="footerLogo" href="index.html"><img src="../public/assets/BeerNBites-Logo.png" width="100%" alt="BeerNBites-Logo"></a> 

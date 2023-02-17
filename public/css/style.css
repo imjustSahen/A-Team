@@ -20,8 +20,8 @@
     --main-dinlineB: inline-block;
     --colorBlack: black;
     --margin-auto: auto;
-
 }
+
 a {
     cursor: pointer;
 }
@@ -30,10 +30,13 @@ h1 {
     Font-Family: var(--font-abril);
 }
 
-h2,
+h2 {
+    Font-Family: var(--font-poppins);
+} 
+
 h3 {
     Font-Family: var(--font-poppins);
-    Font-Size: 25px;
+    /* Font-Size: 25px; */
 }
 
 h3 {
@@ -107,7 +110,6 @@ header .navLink:hover {
 header ul li {
     display: var(--main-dinlineB);
     margin-left: 15px;
-
 }
 
 .heroPic {
@@ -143,7 +145,7 @@ header ul li {
 }
 
 .smallTle {
-    font-size: 38px;
+    font-size: 28px;
     color: var(--main-color-beer);
 }
 
@@ -154,7 +156,6 @@ header ul li {
     max-width: 766px;
     font-weight: normal;
     line-height: 105%;
-
 }
 
 #GenBtn {
@@ -175,7 +176,6 @@ header ul li {
     background-color: #ffffff;
     transform: scale(1.05);
     box-shadow: 0px 7px 15px 3px rgba(110, 92, 46, 0.66);
-
 }
 
 #GenBtn img {
@@ -263,7 +263,6 @@ header ul li {
     font-size: 40px;
     color: #eee0cc;
     padding-bottom: 20px;
-
 }
 
 /* ---buttons for pairing page----- */
@@ -274,40 +273,39 @@ header ul li {
     padding-left: 15px;
     padding-right: 15px;
     margin-top: 50px;
-   padding-bottom: 50px;
+    padding-bottom: 50px;
+    font-family: var(--font-poppins);
 }
 
-.gntAgain,
-.save {
-    background: var(--main-color-beer);
+#new-pairing-btn  {
     border-radius: 50px;
     text-align: center;
     position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.gntAgain,
-.save,
-h3 {
-    color: var(--colorBlack);
-}
-
-.gntAgain {
     float: left;
+    padding: 20px;
 }
 
-.save {
+#save-pairing-btn {
+    border-radius: 50px;
+    text-align: center;
+    position: relative;
     float: right;
+    padding: 20px;
+}
+
+.Login--signup-text {
+    font-family: var(--font-poppins);
+    font-size: var(--main-bg-size);
+    margin-top: 30px;
+    text-align: center;
 }
 
 /* --- Log in --- */
 .loginBox a {
     width: 25px;
     position: absolute;
-    top: 20px;
-    right: 20px;
-
+    top: 34px;
+    right: 34px;
 }
 
 .loginOverlay {
@@ -321,18 +319,18 @@ h3 {
     justify-content: center;
     align-items: center;
     /* visibility: hidden; */
-
 }
 
 .loginBox {
     padding: 50px;
-    max-width: 400px;
+    max-width: 420px;
     background-color: #ffffff;
-    max-height: 420px;
+    max-height: 450px;
     Font-Family: var(--font-abril);
     font-size: 20px;
     position: relative;
     border-radius: 40px;
+   
 }
 
 .loginTxt {
@@ -348,12 +346,13 @@ h3 {
     padding-top: 14px;
     padding-bottom: 14px;
     margin-top: 10px;
-    width: 300px;
+    width: 316px;
     border-radius: 15px;
     padding-left: 20px;
     border: none;
     font-size: 20px;
     color: var(--colorBlack);
+
 }
 
 #loginBtn {
@@ -362,13 +361,83 @@ h3 {
     border-radius: 50px;
     width: 150px;
     align-items: center;
-    margin-top: 20px !important;
     display: var(--main-dp);
     margin: var(--margin-auto);
+    padding: 15px;
 }
 
 #loginBtn h2 {
     align-items: center;
+}
+
+.text-login {
+    font-size: 20px;
+    padding-top: 5px;
+    text-align: center;
+    color: #ED6541;
+}
+/*  --- Sign Up ---- */
+.signup-Box a {
+    width: 25px;
+    position: absolute;
+    top: 34px;
+    right: 34px;
+}
+
+.signup-Overlay {
+    background-color: rgba(0, 0, 0, 0.80);
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+}
+
+.signup-Box{
+    padding: 50px;
+    max-width: 420px;
+    background-color: #ffffff;
+    max-height: 450px;
+    Font-Family: var(--font-abril);
+    font-size: 20px;
+    position: relative;
+    border-radius: 40px;
+   
+}
+.signup-Txt {
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.signup-Box input {
+    background-color: rgb(228, 228, 228);
+    font-family: var(--font-poppins);
+    padding-top: 14px;
+    padding-bottom: 14px;
+    margin-top: 10px;
+    width: 316px;
+    border-radius: 15px;
+    padding-left: 20px;
+    border: none;
+    font-size: 20px;
+    color: var(--colorBlack);
+
+}
+
+#signupBtn {
+    color: var(--colorBlack);
+    background-color: var(--main-color-beer);
+    border-radius: 50px;
+    width: 150px;
+    align-items: center;
+    display: var(--main-dp);
+    margin: var(--margin-auto);
+    padding: 15px;
 }
 
 /* Card Hover Styling */
@@ -475,59 +544,82 @@ h3 {
 }
 
 /* End of Card Hover Styling */
-.savedContainer {
-    background-color: #EEE4D2; 
-    width: 1016px;
-    height: 465px; 
+
+/* ---- My saved pairs ----- */
+
+    /* main container */
+.hero-content {
+    margin-top: 20px;
 }
- 
-.savedText h3 {
-    color: #A1857E;
-    font-family: var(--font-poppins);
-    font-size: 28px;
-    margin: var(--margin-auto);
-   
+/* my saved container */
+.savedContainer {
+    background-color: #EEE4D2;
+    width: 700px;
+    height: 217px;  
 }
 
 .savedPairs {
-    background: #ded1b9;
+    background:#ded1b9;
     display: flex;
     justify-content: space-around;
-
+    width: 100%;
+    height: 550px;
 }
+
 .savedPairs h2 {
     font-family: var(--font-abril);
-    font-size: 40px;
-    max-width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
     text-align: center;
-    padding-top: 65px;
+    padding-top: 35px; 
 }
+
+.savedTxt {
+    font-family: var(--font-poppins);
+    font-size: 40px;
+    color: #3D2E2A;
+    margin-top: 44px;
+    height: 217px;
+}
+
+.savedTxt p {
+    color: #A1857E;
+    font-weight: bolder;
+    padding-top: 44px;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.login-pairs-btn {
+    font-family: var(--font-poppins);
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin-left: 251px;
+    font-size: 25px;
+    width: 179px;
+    height: 56px;
+}
+
 /* ---- Contact Us ---- */
-#contactUs,
-.aboutUs {
+#contactUs, .aboutUs {
     position: relative;
 }
+
 /* "About Us" */
-.cntc,
-.aboutSmllMsg {
+.cntc, .aboutSmllMsg {
     font-family: var(--font-abril);
     margin: var(--margin-auto);
     font-size: 72px;
     color: #eee0cc;
 }
+
 /* About us small subtitle */
-.msgCU,
-.msgAu {
+.msgCU, .msgAu {
     font-family: var(--font-poppins);
     font-size: 25px;
     color: var(--main-color-beer);
     margin-bottom: 25px;
 }
 
-.contInput,
-input {
+.contInput, input {
     width: 491px;
     margin: var(--margin-auto);
     height: 77px;
@@ -541,10 +633,10 @@ input {
     background-color: var(--colorBlack);
 }
 
-.ontInput,
-.msg {
+.ontInput, .msg {
     height: 130px;
 }
+
 /* Submit button */
 .subBtn {
     width: 213px;
@@ -641,7 +733,6 @@ textarea {
     font-family: var(--font-poppins);
     font-size: 16px;
     color: #A1857E;
-
 }
 
 .infoCardLinkBox {
@@ -650,7 +741,6 @@ textarea {
     max-width: 200px;
     margin: auto;
     margin-top: 20px;
-
 }
 
 /* ---- Footer --- */
@@ -678,13 +768,11 @@ footer h4 {
     font-size: 18px;
     font-family: var(--font-poppins);
     display: inline-block;
-
 }
 
 .footerLogo {
     display: inline-block;
     width: 200px;
-
 }
 
 footer ul {
@@ -693,7 +781,6 @@ footer ul {
     justify-content: space-between;
     width: 300px;
     padding-top: 10px;
-
 }
 
 
@@ -779,7 +866,7 @@ footer ul {
 }
 
 .smallTle {
-    font-size: 28px;
+    font-size: 22px;
 }
 
 .heroTxt {
