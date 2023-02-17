@@ -216,7 +216,6 @@ function saveBeerDetails(beerId, beerName) {
   console.log(beerDetails);
   savedBeer.push(beerDetails);
   localStorage.setItem("savedBeers", JSON.stringify(savedBeer));
-  
 }
 
 function saveFoodDetails(recipeId) {
@@ -227,7 +226,6 @@ function saveFoodDetails(recipeId) {
   console.log(dishDetails);
   savedBeer.push(dishDetails);
   localStorage.setItem("savedFood", JSON.stringify(savedFood));
-  
 }
 
 savePairingBtn.addEventListener("click", function (e) {
