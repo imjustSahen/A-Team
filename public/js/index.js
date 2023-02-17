@@ -58,10 +58,12 @@ function randomBeer() {
         .split(" ")
         .slice(0, 25)
         .join(" ");
+      beerContent.children("#beer-id").text(data[0].id);
       beerContent.children(".beer-description").text(`${beerDescription}...`);
       beerContent.children(".beer-abv").text(`${data[0].abv} ABV`);
       beerContent.children(".beer-tagline").text(data[0].tagline);
-
+      beerContent.children("#beer-img-url").text(data[0].image_url);
+      // console.log(beerContent.children("#beer-img-url").text(data[0].image_url));
       if (data[0].image_url === null) {
         $(".beer-image img").attr("src", "../public/assets/BeerIcon.png");
       } else {
@@ -126,7 +128,9 @@ function getPairing(foodPairingString) {
         console.log(data);
         foodBody.children(".dish-name").text(data.results[0].title);
         $(".dish-image img").attr("src", data.results[0].image);
+        foodBody.children("#dish-img-url").text(data.results[0].image);
         let recipeId = data.results[0].id;
+        foodBody.children("#dish-id").text(recipeId);
         console.log(recipeId);
         saveFoodDetails(recipeId);
         getRecipe(recipeId);
@@ -180,6 +184,8 @@ function randomDish() {
         .join(" ");
       foodBody.children(".dish-summary").html(`${foodSummary}...`);
       $("#recipe-link").attr("href", data.searchResults[0].results[i].link);
+      foodBody.children("#dish-id").text(recipeId);
+      foodBody.children("#dish-img-url").text(data.searchResults[0].results[i].image);
       saveFoodDetails(recipeId);
     })
     .catch(function (err) {
@@ -216,7 +222,6 @@ function saveBeerDetails(beerId, beerName) {
   console.log(beerDetails);
   savedBeer.push(beerDetails);
   localStorage.setItem("savedBeers", JSON.stringify(savedBeer));
-  
 }
 
 function saveFoodDetails(recipeId) {
@@ -227,7 +232,6 @@ function saveFoodDetails(recipeId) {
   console.log(dishDetails);
   savedBeer.push(dishDetails);
   localStorage.setItem("savedFood", JSON.stringify(savedFood));
-  
 }
 
 savePairingBtn.addEventListener("click", function (e) {
