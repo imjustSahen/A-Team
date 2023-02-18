@@ -18,7 +18,6 @@
     <title>Beer 'n' Bites</title>
   </head>
   <body>
-    {{! header }}
     <header>
       <a href="/" class="logoImg"><img
           src="/assets/BeerNBites-Logo.png"
@@ -35,7 +34,9 @@
     </header>
 
     {{! This is where the handlebars will be injected }}
+    <main>
     {{{body}}}
+    </main>
 
     {{! Footer }}
     <footer>
@@ -55,36 +56,36 @@
         </ul>
       </div>
     </footer>
-{{!-- login  --}}
+    {{!-- login  --}}
     <section class="loginOverlay">
         <div class="loginBox">
-            <a id="modalClose"><img src="../public/assets/close-x.png" alt="exit" width="100%"></a>
+            <a id="login-close"><img src="/assets/close-x.png" alt="exit" width="100%"></a>
             <div class="loginTxt">LOGIN</div>
             <input id="email-login" placeholder="Email"></input>
             <input id="password-login" placeholder="Password"></input>
             <h3 class="text-login">Create Account</h3>
-            <button id="submit">
+            <button type="submit" id="submit">
                 <h2>Login</h2>
             </button>
         </div>
     </section> 
-{{!-- create account --}}
+    {{!-- create account --}}
     <section class="signup-Overlay">
         <div class="signup-Box">
-            <a id="modalClose"><img src="../public/assets/close-x.png" alt="exit" width="100%"></a>
+            <a id="signup-close"><img src="/assets/close-x.png" alt="exit" width="100%"></a>
             <div class="signup-Txt">Create Account</div>
             <input placeholder="Email"></input>
             <input placeholder="Password"></input>
-            <button id="signupBtn">
+            <button type="submit" id="signupBtn">
                 <h2>SIGNUP</h2>
             </button>
         </div>
-    </section> 
+    </section>
   </body>
   <script
     defer
     src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"
-  ></script>
+  ><{{!}}/script>
   <script defer src="/js/index.js"><{{!}}/script>
   <script src="/js/login.js"></script>
   <script defer src="/js/logout.js"><{{!}}/script>
