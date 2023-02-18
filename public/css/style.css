@@ -170,12 +170,21 @@ header ul li {
     box-shadow: 0px 7px 15px 5px rgba(22, 17, 4, 0.66);
     cursor: pointer;
     transition: all ease 200ms;
+    
+    
 }
 
 #GenBtn:hover {
     background-color: #ffffff;
     transform: scale(1.05);
     box-shadow: 0px 7px 15px 3px rgba(110, 92, 46, 0.66);
+    background-image: url('../assets/beer-fill.gif');
+    background-size: cover;
+    background-position: center top;
+}
+
+#GenBtn h2 {
+    margin-top: -6px;
 }
 
 #GenBtn img {
@@ -567,7 +576,7 @@ header ul li {
 /* my saved container */
 .savedContainer {
     background-color: #EEE4D2;
-    width: 700px;
+    max-width: 700px;
     height: 217px;  
 }
 .pair-intro {
@@ -720,7 +729,7 @@ textarea {
 .connectCards {
     padding: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 40px;
 }
 
