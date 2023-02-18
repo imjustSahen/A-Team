@@ -126,8 +126,8 @@ router.post('/login', async (req, res) => {
 
     const validatePassword = await userData.checkPassword(req.body.password);
 
-    if (validatePassword) {
-      res.status(400).json({message: '**invalid pass. Incorrect email or password. Please try again.'});
+    if (!validatePassword) {
+      res.status(400).json({message: 'Incorrect email or password. Please try again.'});
       return;
     };
 
@@ -135,6 +135,7 @@ router.post('/login', async (req, res) => {
       req.session.user_id = userData.id;
       req.session.username = userData.username;
       req.session.loggedIn = true;
+
       res.json({user: userData, message: 'You are now logged in!'});
     });
 
