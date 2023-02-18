@@ -46,5 +46,5 @@ document
   .addEventListener("click", loginFormHandler);
 
 document
-  .querySelector(".signup-form")
-  .addEventListener("submit", signupFormHandler);
+  .querySelector("#signupBtn")
+  .addEventListener("click", signupFormHandler);
