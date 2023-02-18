@@ -29,10 +29,10 @@ router.post('/', async (req, res) => {
     try {
         const pairingData = await Pairing.create({
           beer_id: req.body.beer_id,
+          beer_img: req.body.beer_img,
           dish_id: req.body.dish_id,
-          //--------->
-          user_id: req.body.user_id
-          //user_id: req.session.user_id
+          dish_img: req.body.beer_img,
+          user_id: req.session.user_id
         });
         
         res.status(200).json(pairingData);
