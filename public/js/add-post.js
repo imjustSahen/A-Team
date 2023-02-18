@@ -6,7 +6,7 @@ async function savePairings(event) {
     const dish_id = document.querySelector('#dish-id').value;
     const dish_img = document.querySelector('#dish-img-url').value;
 
-    const response = await fetch(`/api/posts`, {
+    const response = await fetch(`/api/pairing`, {
         method: 'POST',
         body: JSON.stringify({
         beer_id,
@@ -19,8 +19,10 @@ async function savePairings(event) {
         }
     });
 
+
     // Needs to be updated
     if (response.ok) {
+        console.log(response);
         document.location.replace('/dashboard/');
     } else {
         alert(response.statusText);
