@@ -17,7 +17,7 @@ $("#login").click(function () {
   $(".loginOverlay").toggle();
 });
 
-$("#modalClose").click(function () {
+$("#login-close").click(function () {
   $(".loginOverlay").hide();
 });
 
@@ -30,7 +30,7 @@ $("#signup").click(function () {
   $(".signup-Overlay").toggle();
 });
 
-$("#modalClose").click(function () {
+$("#signup-close").click(function () {
   $(".signup-Overlay").hide();
 });
 // ---------------------------------- ///
