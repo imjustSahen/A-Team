@@ -30,10 +30,10 @@ router.get('/', async (req, res) => {
 
 //once a user is logged in, redirect to home page
 router.get('/login', (req, res) => {
-  // if(req.session.loggedIn) {
-  //     res.redirect('/');
-  //     return; 
-  // }
+  if(req.session.loggedIn) {
+      res.redirect('/');
+      return; 
+  }
 });
 
 //rendering sign up page
@@ -42,7 +42,6 @@ router.get('/login', (req, res) => {
 router.get('/signup', (req, res) => {
   // res.redirect('signup')
 });
-
 
 
 

@@ -1,53 +1,78 @@
-<main class="hero-content">
-        <h2 class="pair-intro">Try this pair</h2>
-        <div class="container">
-            <div class="card">
-                <div class="face face1" id="beer-face">
-                    <div class="content beer-image">
-                        <img src="" alt="beer">
-                    </div>
-                </div>
-                <div class="face face2" id="beer-content">
-                    <div class="content">
-                        <h3 class="beer-name"></h3>
-                        <p class="beer-tagline"></p>
-                        <p class="beer-abv"></p>
-                        <p class="beer-description"></p>
-                        <button id="get-beer-btn" type="button">Get New Beer</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card card-circle">
-                <svg xmlns="http://www.w3.org/2000/svg" width="98" height="98" viewBox="0 0 98 98" fill="none">
-                    <circle cx="49" cy="49" r="49" fill="#AF4636" />
-                    <path
-                        d="M64.8804 49.93H50.1104V64.56H47.4504V49.93H33.1004V47.62H47.4504V33.9H50.1104V47.62H64.8804V49.93Z"
-                        fill="#EEE1CC" />
-                </svg>
-            </div>
-            <div class="card">
-                <div class="face face1" id="food-face">
-                    <div class="content dish-image">
-                        <img src="">
-                    </div>
-                </div>
-                <div class="face face2" id="food-content">
-                    <div class="content">
-                        <h3 class="dish-name"></h3>
-                        <p class="dish-summary"></p>
-                        <a id="recipe-link" href="" target="_blank" rel="noopener noreferrer">Get Recipe</a>
-                        <button class="get-dish-btn" type="button">Get New Dish</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="comboBtnBox">
-                <button id="new-pairing-btn" class="gntAgain">
-                    Generate Again
-                </button>
-                <button id="save-pairing-btn" class="save">
-                    Save
-                </button>
-            </div>
+{{! <!-- CARDS --> }}
+<section class="heroPic heroPicDarker">
+  <main class="hero-content">
+    {{! <!-- <div><p class="pair-intro">Try this pair</p> </div> --> }}
+    <div class="container">
+      <div class="card">
+        <div class="face face1" id="beer-face">
+          <div class="content beer-image">
+            <img src="" alt="beer" />
+          </div>
         </div>
-    </main>
+        <div class="face face2" id="beer-content">
+          <div class="content">
+            <h3 class="beer-name"></h3>
+            <p class="beer-tagline"></p>
+            <p class="beer-abv"></p>
+            <p class="beer-description"></p>
+            <button id="get-beer-btn" type="button">Get New Beer</button>
+          </div>
+        </div>
+      </div>
+      <div class="card card-circle">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="98"
+          height="98"
+          viewBox="0 0 98 98"
+          fill="none"
+        >
+          <circle cx="49" cy="49" r="49" fill="#AF4636"></circle>
+          <path
+            d="M64.8804 49.93H50.1104V64.56H47.4504V49.93H33.1004V47.62H47.4504V33.9H50.1104V47.62H64.8804V49.93Z"
+            fill="#EEE1CC"
+          ></path>
+        </svg>
+      </div>
+      <div class="card">
+        <div class="face face1" id="food-face">
+          <div class="content dish-image">
+            <img src="" />
+          </div>
+        </div>
+        <div class="face face2" id="food-content">
+          <div class="content">
+            <h3 class="dish-name"></h3>
+            <p class="dish-summary"></p>
+            <a
+              id="recipe-link"
+              href=""
+              target="_blank"
+              rel="noopener noreferrer"
+            >Get Recipe</a>
+            <button id="get-dish-btn" type="button">Get New Dish</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {{! <!--   ---- Buttons----  --> }}
+    <div class="comboBtnBox">
+      <button id="new-pairing-btn">
+        <h2>Get New Pairing</h2>
+      </button>
+      <button id="save-pairing-btn">
+        <h2>Save Your Pairing</h2>
+      </button>
+    </div>
+  </main>
+</section>
+<section class="savedPairs">
+  <div class="savedTxt">
+    <h2>My Saved Pairs</h2>
+    <div class="savedContainer">
+      <p class="Login--signup-text">Login or Sign Up to save pairings!</p>
+      <button class="login-pairs-btn">LOGIN</button>
+    </div>
+  </div>
+</section>

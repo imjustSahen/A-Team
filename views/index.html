@@ -46,6 +46,9 @@
     <section class="combos">
         <div class="combosTxt">
             <h2>Random Combos Slider</h2>
+            {{#each images as |image| }}
+            {{> carousel-element image}}
+        {{/each}}
         </div>
     </section>
 <!-- Login -->

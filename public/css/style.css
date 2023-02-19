@@ -36,21 +36,21 @@ a {
 }
 
 h1 {
-    Font-Family: var(--font-abril);
+  font-family: var(--font-abril);
 }
 
 h2 {
-    Font-Family: var(--font-poppins);
-} 
-
-h3 {
-    Font-Family: var(--font-poppins);
-    /* Font-Size: 25px; */
+  font-family: var(--font-poppins);
 }
 
 h3 {
-    color: var(--main-color-beer);
-    padding: var(--main-pad);
+  font-family: var(--font-poppins);
+  /* Font-Size: 25px; */
+}
+
+h3 {
+  color: var(--main-color-beer);
+  padding: var(--main-pad);
 }
 
 body {
@@ -80,7 +80,7 @@ button:hover {
 }
 
 img {
-    display: var(--main-dp);
+  display: var(--main-dp);
 }
 
 /* ----website container----- */
@@ -107,22 +107,22 @@ header nav {
 }
 
 header .navLink {
-    text-decoration: none;
-    color: var(--colorBlack);
-    padding-top: 8px;
-    font-size: 20px;
-    color: white;
-    border-radius: 50px;
-    line-height: 25px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    transition: all ease 250ms;
+  text-decoration: none;
+  color: var(--colorBlack);
+  padding-top: 8px;
+  font-size: 20px;
+  color: white;
+  border-radius: 50px;
+  line-height: 25px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  transition: all ease 250ms;
 }
 
 header .navLink:hover {
-    background-color: var(--main-color-beer);
-    color: var(--colorBlack);
+  background-color: var(--main-color-beer);
+  color: var(--colorBlack);
 }
 
 .sticky {
@@ -140,7 +140,6 @@ header .navLink:hover {
 .logoImg {
     width: 300px;
     padding-top: 20px;
-
 }
 
 /* --- Navigation list--- */
@@ -169,36 +168,36 @@ header ul li {
 }
 
 .heroPicDarker {
-    background-blend-mode: luminosity;
+  background-blend-mode: luminosity;
 }
 
 .heroPicDarker::before {
-    content: "";
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    background-color: rgba(0, 0, 0, 0.30);
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .heroPic {
-    color: white;
-    font-size: 10px;
+  color: white;
+  font-size: 10px;
 }
 
 .smallTle {
-    font-size: 28px;
-    color: var(--main-color-beer);
+  font-size: 28px;
+  color: var(--main-color-beer);
 }
 
 .heroTxt {
-    font-size: 72px;
-    color: #eee0cc;
-    margin: var(--margin-auto);
-    max-width: 766px;
-    font-weight: normal;
-    line-height: 105%;
+  font-size: 72px;
+  color: #eee0cc;
+  margin: var(--margin-auto);
+  max-width: 766px;
+  font-weight: normal;
+  line-height: 105%;
 }
 
 #GenBtn {
@@ -214,7 +213,6 @@ header ul li {
     cursor: var(--cursor-pointer);
     transition: all ease 200ms;
     font-size: 28px;
-    
 }
 
 #GenBtn:hover {
@@ -230,9 +228,9 @@ header ul li {
     margin-top: -6px;
 }
 
-#GenBtn img {
-    display: inline;
-    margin-bottom: -10px;
+#gen-btn img {
+  display: inline;
+  margin-bottom: -10px;
 }
 
 .cheersBlock {
@@ -250,22 +248,22 @@ header ul li {
 } 
 
 .cheersTxt {
-    max-width: 360px;
-    padding-top: 110px;
-    padding-left: 20px;
+  max-width: 360px;
+  padding-top: 110px;
+  padding-left: 20px;
 }
 
 .cheersBlock h2 {
-    Font-Family: var(--font-abril);
-    font-size: 56px;
-    font-weight: normal;
-    line-height: 62px;
-    margin-bottom: 40px;
+  font-family: var(--font-abril);
+  font-size: 56px;
+  font-weight: normal;
+  line-height: 62px;
+  margin-bottom: 40px;
 }
 
 .cheersBlock p {
-    font-size: 25px;
-    font-family: var(--font-poppins);
+  font-size: 25px;
+  font-family: var(--font-poppins);
 }
 
 .cheersImg {
@@ -275,9 +273,9 @@ header ul li {
 }
 
 .combos {
-    height: 450px;
-    width: 100%;
-    background-color: rgb(204, 204, 204);
+  height: 450px;
+  width: 100%;
+  background-color: rgb(204, 204, 204);
 }
 
 .combosTxt {
@@ -300,30 +298,30 @@ header ul li {
 }
 
 .contentCard {
-    background-color: #ffffff;
-    padding: 20px;
-    width: 400px;
-    min-height: 300px;
-    Font-Family: var(--font-abril);
-    font-size: 35px;
-    color: var(--colorBlack);
+  background-color: #ffffff;
+  padding: 20px;
+  width: 400px;
+  min-height: 300px;
+  font-family: var(--font-abril);
+  font-size: 35px;
+  color: var(--colorBlack);
 }
 
 .circlePlus {
-    padding: 10px;
-    color: #ffffff;
-    border-radius: 100px;
-    margin-left: -20px;
-    margin-right: -20px;
-    z-index: 20
+  padding: 10px;
+  color: #ffffff;
+  border-radius: 100px;
+  margin-left: -20px;
+  margin-right: -20px;
+  z-index: 20;
 }
 
 .pairMsg {
-    font-family: var(--font-abril);
-    margin: var(--margin-auto);
-    font-size: 40px;
-    color: #eee0cc;
-    padding-bottom: 20px;
+  font-family: var(--font-abril);
+  margin: var(--margin-auto);
+  font-size: 40px;
+  color: #eee0cc;
+  padding-bottom: 20px;
 }
 
 /* ---buttons for pairing page----- */
@@ -409,10 +407,10 @@ header ul li {
 
 /*  --- Sign Up ---- */
 .signup-Box a {
-    width: 25px;
-    position: absolute;
-    top: 34px;
-    right: 34px;
+  width: 25px;
+  position: absolute;
+  top: 34px;
+  right: 34px;
 }
 
 .signup-Overlay {
@@ -471,7 +469,6 @@ header ul li {
     padding: 15px;
 }
 
-
 /* Card Hover Styling */
 .container {
   flex-flow: row wrap;
@@ -489,106 +486,105 @@ header ul li {
 .card-circle {
     z-index: 10;
     margin: -10px;
-
 }
 
 .container .card .face {
-    width: 400px;
-    height: 200px;
-    transition: 0.5s;
+  width: 400px;
+  height: 200px;
+  transition: 0.5s;
 }
 
 .container .card .face.face1 {
-    position: relative;
-    background: #333;
-    display: var(--display-flex);
-    justify-content: var(--justify-content-center);
-    align-items: var(--align-items-center);
-    z-index: 1;
-    transform: translateY(100px);
+  position: relative;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transform: translateY(100px);
 }
 
 .container .card:hover .face.face1 {
-    background: #a44e29;
-    transform: translateY(0);
+  background: #a44e29;
+  transform: translateY(0);
 }
 
 .container .card .face.face1 .content {
-    opacity: 0.2;
-    transition: 0.5s;
+  opacity: 0.2;
+  transition: 0.5s;
 }
 
 .container .card:hover .face.face1 .content {
-    opacity: 1;
+  opacity: 1;
 }
 
 .beer-image img {
-    transform: rotate(55deg);
-    max-width: 80px;
+  transform: rotate(55deg);
+  max-width: 80px;
 }
 
 .dish-image img {
-    max-width: 200px;
+  max-width: 200px;
 }
 
 .container .card .face.face2 .content h3 {
-    margin: 0;
-    padding-bottom: 10px;
-    color: rgb(176, 54, 10);
-    text-align: var(--text-align-center);
-    font-size: 1.5em;
+  margin: 0;
+  padding-bottom: 10px;
+  color: rgb(176, 54, 10);
+  text-align: center;
+  font-size: 1.5em;
 }
 
 .container .card .face.face2 {
-    position: relative;
-    background: #fff;
-    display: var(--display-flex);
-    justify-content: var(--justify-content-center);
-    align-items: var(--align-items-center);
-    padding: 20px;
-    box-sizing: border-box;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-    transform: translateY(-100px);
+  position: relative;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  transform: translateY(-100px);
 }
 
 .container .card:hover .face.face2 {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 
 .container .card .face.face2 .content p {
-    margin: 0;
-    padding: 2px 0px;
+  margin: 0;
+  padding: 2px 0px;
 }
 
 .beer-abv {
-    font-size: .9em;
-    font-weight: 800;
-    padding: 15px 0px;
+  font-size: 0.9em;
+  font-weight: 800;
+  padding: 15px 0px;
 }
 
 .container .card .face.face2 .content a {
-    margin: 15px 0 0;
-    display: inline-block;
-    text-decoration: none;
-    font-weight: 900;
-    color: #333;
-    padding: 5px;
-    border: 1px solid #333;
+  margin: 15px 0 0;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 900;
+  color: #333;
+  padding: 5px;
+  border: 1px solid #333;
 }
 
 .container .card .face.face2 .content a:hover {
-    background: #333;
-    color: #fff;
+  background: #333;
+  color: #fff;
 }
 
 /* End of Card Hover Styling */
 
 /* ---- My saved pairs ----- */
 
-    /* main container */
+/* main container */
 .hero-content {
-    margin-top: 10px;
-    margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 /* my saved container */
 .loginSavedContainer {
@@ -600,8 +596,8 @@ header ul li {
 }
 
 .pair-intro {
-    font-size: 30px;
-    font-weight: normal;
+  font-size: 30px;
+  font-weight: normal;
 }
 
 .savedPairs {
@@ -633,23 +629,24 @@ header ul li {
 }
 
 .login-pairs-btn {
-    font-family: var(--font-poppins);
-    padding-top: 10px;
-    padding-bottom: 20px;
-    margin-left: 251px;
-    font-size: 25px;
-    width: 179px;
-    height: 56px;
+  font-family: var(--font-poppins);
+  padding-top: 10px;
+  padding-bottom: 20px;
+  margin-left: 251px;
+  font-size: 25px;
+  width: 179px;
+  height: 56px;
 }
 
 .login-pairs-btn:hover {
-    background-color: #ffffff;
-    transform: scale(1.05);
-    box-shadow: 0px 7px 15px 3px rgba(110, 92, 46, 0.66);
+  background-color: #ffffff;
+  transform: scale(1.05);
+  box-shadow: 0px 7px 15px 3px rgba(110, 92, 46, 0.66);
 }
 /* ---- Contact Us ---- */
-#contactUs, .aboutUs {
-    position: relative;
+#contactUs,
+.aboutUs {
+  position: relative;
 }
 
 /* "About Us" */
@@ -689,25 +686,25 @@ header ul li {
 }
 
 textarea {
-    padding-top: 20px;
+  padding-top: 20px;
 }
 
 #aboutUs {
-    position: relative;
-    max-width: 800px;
-    margin: var(--margin-auto);
+  position: relative;
+  max-width: 800px;
+  margin: var(--margin-auto);
 }
 
 .aboutUsTxt {
-    display: var(--main-dp);
-    font-size: 20px;
-    font-family: var(--font-poppins);
-    line-height: 36px;
+  display: var(--main-dp);
+  font-size: 20px;
+  font-family: var(--font-poppins);
+  line-height: 36px;
 }
 
 .connect {
-    background: #ded1b9;
-    padding-bottom: 120px;
+  background: #ded1b9;
+  padding-bottom: 120px;
 }
 
 .connectTxt {
@@ -725,10 +722,10 @@ textarea {
 }
 
 .connectTxt p {
-    font-size: 28px;
-    font-weight: bolder;
-    font-family: var(--font-poppins);
-    color: #A1857E;
+  font-size: 28px;
+  font-weight: bolder;
+  font-family: var(--font-poppins);
+  color: #a1857e;
 }
 
 /*  -----connect cards - about us ----*/
@@ -749,17 +746,17 @@ textarea {
 }
 
 .infoCardName {
-    font-family: var(--font-abril);
-    font-size: 26px;
-    color: #3D2E2A;
-    line-height: 26px;
+  font-family: var(--font-abril);
+  font-size: 26px;
+  color: #3d2e2a;
+  line-height: 26px;
 }
 
 .infoCardRole {
-    font-family: var(--font-poppins);
-    font-size: 16px;
-    color: #A1857E;
-    padding-top: 5px;
+  font-family: var(--font-poppins);
+  font-size: 16px;
+  color: #a1857e;
+  padding-top: 5px;
 }
 
 .infoCardSeparator {
@@ -772,10 +769,10 @@ textarea {
 }
 
 .infoCardTitle {
-    font-family: var(--font-poppins);
-    font-family: var(--font-poppins);
-    font-size: 16px;
-    color: #A1857E;
+  font-family: var(--font-poppins);
+  font-family: var(--font-poppins);
+  font-size: 16px;
+  color: #a1857e;
 }
 
 .infoCardLinkBox {
@@ -799,29 +796,29 @@ footer {
 }
 
 footer h4 {
-    color: #676767;
-    padding-top: 5px;
-    font-size: 15px;
-    font-family: var(--font-poppins);
+  color: #676767;
+  padding-top: 5px;
+  font-size: 15px;
+  font-family: var(--font-poppins);
 }
 
 .footerLink {
-    text-decoration: none;
-    color: var(--main-color-beer);
-    font-size: 18px;
-    font-family: var(--font-poppins);
-    display: inline-block;
+  text-decoration: none;
+  color: var(--main-color-beer);
+  font-size: 18px;
+  font-family: var(--font-poppins);
+  display: inline-block;
 }
 
 .footerLink:hover {
-    color: white;
-    transform: scale(1.05);
-    font-size: large;
+  color: white;
+  transform: scale(1.05);
+  font-size: large;
 }
 
 .footerLogo {
-    display: inline-block;
-    width: 200px;
+  display: inline-block;
+  width: 200px;
 }
 
 footer ul {
@@ -832,18 +829,17 @@ footer ul {
     padding-top: 10px;
 }
 
-
 /*  -----Responsive  - Media Queries ---- */
 
 @media screen and (max-width: 1080px) {
-    .connectCards {
-        flex-wrap: wrap;
-    }
+  .connectCards {
+    flex-wrap: wrap;
+  }
 
-    .infoCard {
-        width: 47%;
-        margin-bottom: 20px;
-    }
+  .infoCard {
+    width: 47%;
+    margin-bottom: 20px;
+  }
 }
 
 /*  Browser window is 768 or smaller */

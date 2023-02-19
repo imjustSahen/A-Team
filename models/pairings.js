@@ -15,9 +15,17 @@ Pairing.init(
           type: DataTypes.INTEGER,
           allowNull: false
         },
+        beer_img: {
+          type: DataTypes.STRING,
+          allowNull: true
+        },
         dish_id: {
           type: DataTypes.INTEGER,
           allowNull: false
+        },
+        dish_img: {
+          type: DataTypes.STRING,
+          allowNull: true
         },
         user_id: {
           type: DataTypes.INTEGER,

@@ -1,40 +1,93 @@
-{{!-- This is our main html template that we put the items we want to show on every page. ie. header,footer,hero. --}}
-<!DOCTYPE html>
+{{! This is our main html template that we put the items we want to show on every page. ie. header,footer,hero. }}
+
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../../public/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins:300" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"
+    ></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins:300"
+      rel="stylesheet"
+    />
     <title>Beer 'n' Bites</title>
-</head>
-<body>
-  {{!-- header --}}
+  </head>
+  <body>
     <header>
-        <a href="/" class="logoImg"><img src="../../public/assets/BeerNBites-Logo.png" width="100%" alt="BeerNBites-Logo"></a>
-            <nav>
-                <ul>
-                    <li><a href="/views/aboutUs" class="navLink"> About</a></li>
-                    <li><a href="/views/contactUs" class="navLink">Contact Us</a></li>
-                    <li><a href="#login" class="navLink" id="login">Log in</a></li>
-                </ul>
-            </nav>
+      <a href="/" class="logoImg"><img
+          src="/assets/BeerNBites-Logo.png"
+          width="100%"
+          alt="BeerNBites-Logo"
+        /></a>
+      <nav>
+        <ul>
+          <li><a href="/views/aboutUs" class="navLink"> About</a></li>
+          <li><a href="/views/contactUs" class="navLink">Contact Us</a></li>
+          <li><a href="#login" class="navLink" id="login">Log in</a></li>
+        </ul>
+      </nav>
     </header>
 
+    {{! This is where the handlebars will be injected }}
+    <main>
+    {{{body}}}
+    </main>
 
-{{!-- This is where the handlebars will be injected --}}
-{{{body}}}
-
-
-
-{{!-- Footer --}}
-<footer class="footer">
-    <div>
-        <h4>Thanks for visiting!</h4> 
-    </div>
-    
-</footer>
-</body>
+    {{! Footer }}
+    <footer>
+      <div>
+        <a class="footerLogo" href="/views/home"><img
+            src="/assets/BeerNBites-Logo.png"
+            width="100%"
+            alt="BeerNBites-Logo"
+          /></a>
+        <h4>2023 Beer ‘n’ Bites Full Stack Student Project </h4>
+      </div>
+      <div>
+        <ul>
+          <li><a href="/views/aboutUs" class="footerLink"> About</a></li>
+          <li><a href="/views/contactUs" class="footerLink">Contact Us</a></li>
+          <li><a href="#login" class="footerLink" id="login">Log in</a></li>
+        </ul>
+      </div>
+    </footer>
+    {{!-- login  --}}
+    <section class="loginOverlay">
+        <div class="loginBox">
+            <a id="login-close"><img src="/assets/close-x.png" alt="exit" width="100%"></a>
+            <div class="loginTxt">LOGIN</div>
+            <input id="email-login" placeholder="Email"></input>
+            <input id="password-login" placeholder="Password"></input>
+            <h3 class="text-login" id="signup-modal"><a href="#signup-modal">Create Account</a></h3>
+            <button type="submit" id="submit">
+                <h2>Login</h2>
+            </button>
+        </div>
+    </section> 
+    {{!-- create account --}}
+    <section class="signup-Overlay" id="signup-modal">
+        <div class="signup-Box">
+            <a id="signup-close"><img src="/assets/close-x.png" alt="exit" width="100%"></a>
+            <div class="signup-Txt">Create Account</div>
+            <input placeholder="Username" id="username-signup"></input>
+            <input placeholder="Email" id="email-signup"></input>
+            <input placeholder="Password" id="password-signup"></input>
+            <button type="submit" id="signupBtn">
+                <h2>SIGNUP</h2>
+            </button>
+        </div>
+    </section>
+  </body>
+  <script
+    defer
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+  ><{{!}}/script>
+  <script defer src="/js/index.js"><{{!}}/script>
+  <script src="/js/login.js"></script>
+  <script defer src="/js/logout.js"><{{!}}/script>
 </html>
