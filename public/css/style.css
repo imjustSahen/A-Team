@@ -28,7 +28,7 @@
     --justify-content-center: center;
     --align-items-center: center;
     --display-flex: flex;
-    --cursor-pointer-pointer: pointer;
+    --cursor-pointer: pointer;
 }   
 
 a {
@@ -228,7 +228,7 @@ header ul li {
     margin-top: -6px;
 }
 
-#gen-btn img {
+#GenBtn img {
   display: inline;
   margin-bottom: -10px;
 }
