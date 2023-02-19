@@ -3,6 +3,10 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    -webkit-transition: all ease-out .25s;
+    -moz-transition: all ease-out .25s;
+    -o-transition: all ease-out .25s;
+    transition: all ease-out .25s;
 }
 
 /*  ----Variables---- */
@@ -20,10 +24,15 @@
     --main-dinlineB: inline-block;
     --colorBlack: black;
     --margin-auto: auto;
-}
+    --text-align-center: center;
+    --justify-content-center: center;
+    --align-items-center: center;
+    --display-flex: flex;
+    --cursor-pointer-pointer: pointer;
+}   
 
 a {
-    cursor: pointer;
+    cursor: var(--cursor-pointer);
 }
 
 h1 {
@@ -46,7 +55,6 @@ h3 {
 
 body {
     background-color: #f6f6f6;
-    display: var(--main-dp);
     position: relative;
 }
 
@@ -54,7 +62,21 @@ button {
     border: none;
     background-color: var(--main-color-beer);
     border-radius: 50px;
-    cursor: pointer;
+    cursor: var(--cursor-pointer);
+    font-size: 18px;
+    padding: 18px;
+    position: relative;
+    font-family: var(--font-poppins);
+    font-weight: bold;
+    color: #000000;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+button:hover {
+    background-color: #ffffff;
+    transform: scale(1.05);
+    box-shadow: 0px 7px 15px 3px rgba(136, 113, 54, 0.66);
 }
 
 img {
@@ -65,19 +87,22 @@ img {
 
 header {
     padding-left: 20px;
-    display: var(--main-dp);
     position: fixed;
     top: 0px;
-    z-index: 10;
+    z-index: 50;
     width: 100%;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
+    display: var(--display-flex);
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: var(--align-items-center);
 }
+
 
 header nav {
     text-align: right;
-    padding-top: 44px;
-    margin-right: 20px;
-    float: right;
+    padding-top: 36px;
+    padding-right: 20px;
     Font-Family: var(--font-poppins);
 }
 
@@ -100,16 +125,34 @@ header .navLink:hover {
     color: var(--colorBlack);
 }
 
+.sticky {
+    background-color: #000000;
+    padding-bottom: 20px;
+}
+
+.sticky .logoImg {
+    width: 180px;
+}
+.sticky .navLink {
+    font-size: 18px;
+}
+
 .logoImg {
     width: 300px;
     padding-top: 20px;
-    display: inline-block;
+
 }
 
 /* --- Navigation list--- */
+header ul {
+    display: var(--display-flex);
+    justify-content: var(--justify-content-center);
+}
+
 header ul li {
-    display: var(--main-dinlineB);
     margin-left: 15px;
+    list-style: none;
+    flex-shrink: 0;
 }
 
 .heroPic {
@@ -119,7 +162,7 @@ header ul li {
     position: relative;
     padding: 50px;
     background-image: url('../assets/Hero-bk.jpg');
-    text-align: center;
+    text-align: var(--text-align-center);
     background-position: center center;
     padding-top: 140px;
     padding-bottom: 120px;
@@ -168,9 +211,9 @@ header ul li {
     padding-left: 40px;
     padding-right: 40px;
     box-shadow: 0px 7px 15px 5px rgba(22, 17, 4, 0.66);
-    cursor: pointer;
+    cursor: var(--cursor-pointer);
     transition: all ease 200ms;
-    
+    font-size: 28px;
     
 }
 
@@ -194,9 +237,17 @@ header ul li {
 
 .cheersBlock {
     background: #ded1b9;
-    display: flex;
+    display: var(--display-flex);
     justify-content: space-around;
 }
+
+.cheersBlock>*:first-child {
+    align-self:flex-start;
+} 
+
+.cheersBlock>*:last-child {
+    align-self:flex-end;
+} 
 
 .cheersTxt {
     max-width: 360px;
@@ -220,6 +271,7 @@ header ul li {
 .cheersImg {
     max-width: 700px;
     padding-top: 70px;
+    padding-left: 20px;
 }
 
 .combos {
@@ -232,16 +284,16 @@ header ul li {
     margin: var(--margin-auto);
     max-width: 450px;
     padding-top: 200px;
-    text-align: center;
+    text-align: var(--text-align-center);
 }
 
 /* -----pairing page------- */
 
 .pairContainer {
-    display: flex;
-    justify-content: center;
+    display: var(--display-flex);
+    justify-content: var(--justify-content-center);
     max-width: 1000px;
-    align-items: center;
+    align-items: var(--align-items-center);
     margin: var(--margin-auto);
     position: relative;
     padding: 10px;
@@ -279,49 +331,21 @@ header ul li {
 .comboBtnBox {
     max-width: 900px;
     margin: var(--margin-auto);
-    padding-left: 15px;
-    padding-right: 15px;
     margin-top: 50px;
     padding-bottom: 50px;
-    font-family: var(--font-poppins);
-}
-
-#new-pairing-btn  {
-    border-radius: 50px;
-    text-align: center;
-    position: relative;
-    float: left;
-    padding: 20px;
-}
-
-#save-pairing-btn {
-    border-radius: 50px;
-    text-align: center;
-    position: relative;
-    float: right;
-    padding: 20px;
-}
-#new-pairing-btn:hover {
-    background-color: #ffffff;
-    transform: scale(1.05);
-    box-shadow: 0px 7px 15px 3px rgba(110, 92, 46, 0.66);
-}
-
-#save-pairing-btn:hover {
-    background-color: #ffffff;
-    transform: scale(1.05);
-    box-shadow: 0px 7px 15px 3px rgba(110, 92, 46, 0.66);
+    display: var(--display-flex);
+    justify-content: space-between;
 }
 
 .Login--signup-text {
     font-family: var(--font-poppins);
     font-size: var(--main-bg-size);
     margin-top: 30px;
-    text-align: center;
+    text-align: var(--text-align-center);
 }
 
 /* --- Log in --- */
-.loginBox a {
+.loginBox #modalClose {
     width: 25px;
     position: absolute;
     top: 34px;
@@ -335,9 +359,9 @@ header ul li {
     height: 100vh;
     top: 0;
     z-index: 10;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: var(--display-flex);
+    justify-content: var(--justify-content-center);
+    align-items: var(--align-items-center);
     /* visibility: hidden; */
 }
 
@@ -345,20 +369,18 @@ header ul li {
     padding: 50px;
     max-width: 420px;
     background-color: #ffffff;
-    max-height: 450px;
     Font-Family: var(--font-abril);
     font-size: 20px;
     position: relative;
     border-radius: 40px;
-   
+    text-align: var(--text-align-center);
 }
 
 .loginTxt {
-    text-align: center;
+    text-align: var(--text-align-center);
     padding: 10px;
-    font-size: 25px;
+    font-size: 35px;
 }
-
 
 .loginBox input {
     background-color: rgb(228, 228, 228);
@@ -372,30 +394,19 @@ header ul li {
     border: none;
     font-size: 20px;
     color: var(--colorBlack);
-
-}
-
-#loginBtn {
-    color: var(--colorBlack);
-    background-color: var(--main-color-beer);
-    border-radius: 50px;
-    width: 150px;
-    align-items: center;
-    display: var(--main-dp);
-    margin: var(--margin-auto);
-    padding: 15px;
-}
-
-#loginBtn h2 {
-    align-items: center;
 }
 
 .text-login {
     font-size: 20px;
-    padding-top: 5px;
-    text-align: center;
+    padding-top: 30px;
+    text-align: var(--text-align-center);
     color: #ED6541;
+    display: block;
+    text-decoration: solid;
+    font-family: var(--font-poppins);
+    font-weight: bold;
 }
+
 /*  --- Sign Up ---- */
 .signup-Box a {
     width: 25px;
@@ -411,9 +422,9 @@ header ul li {
     height: 100vh;
     top: 0;
     z-index: 10;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: var(--display-flex);
+    justify-content: var(--justify-content-center);
+    align-items: var(--align-items-center);
     visibility: visible;
 }
 
@@ -426,10 +437,11 @@ header ul li {
     font-size: 20px;
     position: relative;
     border-radius: 40px;
-   
+    text-align: var(--text-align-center);
 }
+
 .signup-Txt {
-    text-align: center;
+    text-align: var(--text-align-center);
     padding: 10px;
     font-size: 25px;
 }
@@ -446,7 +458,6 @@ header ul li {
     border: none;
     font-size: 20px;
     color: var(--colorBlack);
-
 }
 
 #signupBtn {
@@ -454,7 +465,7 @@ header ul li {
     background-color: var(--main-color-beer);
     border-radius: 50px;
     width: 150px;
-    align-items: center;
+    align-items: var(--align-items-center);
     display: var(--main-dp);
     margin: var(--margin-auto);
     padding: 15px;
@@ -464,15 +475,21 @@ header ul li {
 /* Card Hover Styling */
 .container {
   flex-flow: row wrap;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: var(--display-flex);
+  justify-content: var(--justify-content-center);
+  align-items: var(--align-items-center);
   padding-bottom: 50px;
 }
 
 .container .card {
     position: relative;
-    cursor: pointer;
+    cursor: var(--cursor-pointer);
+}
+
+.card-circle {
+    z-index: 10;
+    margin: -10px;
+
 }
 
 .container .card .face {
@@ -484,9 +501,9 @@ header ul li {
 .container .card .face.face1 {
     position: relative;
     background: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: var(--display-flex);
+    justify-content: var(--justify-content-center);
+    align-items: var(--align-items-center);
     z-index: 1;
     transform: translateY(100px);
 }
@@ -518,16 +535,16 @@ header ul li {
     margin: 0;
     padding-bottom: 10px;
     color: rgb(176, 54, 10);
-    text-align: center;
+    text-align: var(--text-align-center);
     font-size: 1.5em;
 }
 
 .container .card .face.face2 {
     position: relative;
     background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: var(--display-flex);
+    justify-content: var(--justify-content-center);
+    align-items: var(--align-items-center);
     padding: 20px;
     box-sizing: border-box;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
@@ -574,11 +591,14 @@ header ul li {
     margin-bottom: 20px;
 }
 /* my saved container */
-.savedContainer {
+.loginSavedContainer {
     background-color: #EEE4D2;
     max-width: 700px;
-    height: 217px;  
+   margin: var(--margin-auto);
+   padding: 40px;
+   text-align: var(--text-align-center); 
 }
+
 .pair-intro {
     font-size: 30px;
     font-weight: normal;
@@ -586,30 +606,28 @@ header ul li {
 
 .savedPairs {
     background:#ded1b9;
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    height: 550px;
+    padding-bottom: 60px;
 }
 
 .savedPairs h2 {
     font-family: var(--font-abril);
-    text-align: center;
-    padding-top: 35px; 
+    text-align: var(--text-align-center);
+    padding-top: 45px; 
+    padding-bottom: 35px;
+    font-size: 56px;
+    color: #3D2E2A;
+    font-weight: normal;
 }
 
 .savedTxt {
     font-family: var(--font-poppins);
     font-size: 40px;
     color: #3D2E2A;
-    margin-top: 44px;
-    height: 217px;
 }
 
 .savedTxt p {
     color: #A1857E;
     font-weight: bolder;
-    padding-top: 44px;
     font-size: 30px;
     margin-bottom: 30px;
 }
@@ -637,7 +655,6 @@ header ul li {
 /* "About Us" */
 .cntc, .aboutSmllMsg {
     font-family: var(--font-abril);
-    margin: var(--margin-auto);
     font-size: 72px;
     color: #eee0cc;
 }
@@ -647,40 +664,28 @@ header ul li {
     font-family: var(--font-poppins);
     font-size: 25px;
     color: var(--main-color-beer);
-    margin-bottom: 25px;
+    margin-bottom: 16px;
+}
+.InputBox {
+    max-width: 500px;
+    margin: var(--margin-auto);
 }
 
 .contInput, input {
-    width: 491px;
-    margin: var(--margin-auto);
-    height: 77px;
+    width: 100%;
     border-radius: 20px;
     border: 2px solid #A48178;
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 16px;
-    padding-left: 44px;
     color: white;
     font-family: var(--font-poppins);
     background-color: var(--colorBlack);
+    padding: 16px;
+    padding-left: 24px;
 }
 
 .ontInput, .msg {
     height: 130px;
-}
-
-/* Submit button */
-.subBtn {
-    width: 213px;
-    height: 66px;
-    font-size: 20px;
-    border-radius: 44px;
-    margin-top: 15px;
-}
-
-.subBtn:hover {
-    background-color: #ffffff;
-    transform: scale(1.05);
-    box-shadow: 0px 7px 15px 3px rgba(110, 92, 46, 0.66);
 }
 
 textarea {
@@ -706,7 +711,7 @@ textarea {
 }
 
 .connectTxt {
-    text-align: center;
+    text-align: var(--text-align-center);
     padding-top: 100px;
 }
 
@@ -714,8 +719,9 @@ textarea {
     Font-Family: var(--font-abril);
     font-size: 56px;
     font-weight: normal;
-    line-height: 62px;
+    line-height: 56px;
     margin-bottom: 10px;
+    color: #3D2E2A;
 }
 
 .connectTxt p {
@@ -728,8 +734,8 @@ textarea {
 /*  -----connect cards - about us ----*/
 .connectCards {
     padding: 20px;
-    display: flex;
-    justify-content: center;
+    display: var(--display-flex);
+    justify-content: var(--justify-content-center);
     margin-top: 40px;
 }
 
@@ -737,7 +743,7 @@ textarea {
     background-color: #EEE4D2;
     width: 300px;
     padding: 30px;
-    text-align: center;
+    text-align: var(--text-align-center);
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -760,7 +766,7 @@ textarea {
     background-color: #D9C9B2;
     height: 4px;
     width: 50px;
-    margin: auto;
+    margin: var(--margin-auto);
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -773,10 +779,10 @@ textarea {
 }
 
 .infoCardLinkBox {
-    display: flex;
+    display: var(--display-flex);
     justify-content: space-between;
     max-width: 200px;
-    margin: auto;
+    margin: var(--margin-auto);
     margin-top: 20px;
 }
 
@@ -786,7 +792,7 @@ footer {
     background-color: var(--colorBlack);
     color: white;
     width: 100%;
-    display: flex;
+    display: var(--display-flex);
     justify-content: space-between;
     padding: 30px;
     font-family: var(--font-poppins);
@@ -820,7 +826,7 @@ footer h4 {
 
 footer ul {
     list-style: none;
-    display: flex;
+    display: var(--display-flex);
     justify-content: space-between;
     width: 300px;
     padding-top: 10px;
@@ -844,19 +850,28 @@ footer ul {
 @media screen and (max-width: 768px) {
     header {
         padding-left: 0px;
+       justify-content: space-around;
     }
 
-    .logoImg {
-        display: var(--main-dp);
-        margin: auto;
-        width: 275px;
+    header ul li {
+        margin-left: 0px;
     }
 
     header nav {
-        text-align: center;
         padding-top: 20px;
-        margin-right: 0px;
-        float: none;
+    }
+
+    header .navLink {
+        font-size: 18px;
+
+    }
+
+    #GenBtn img,span {
+        display: none;
+    }
+
+    .logoImg {
+        width: 220px;
     }
 
     .heroPic {
@@ -869,50 +884,157 @@ footer ul {
     }
 
     footer {
-        display: var(--main-dp);
+        justify-content: space-around;
+        flex-wrap: wrap;
     }
 
+
     footer ul {
-        margin: auto;
-        margin-bottom: 30px;
+        margin: var(--margin-auto);
+        margin-bottom: 20px;
+        padding-top: 20px;
     }
 
     .footerLogo {
         display: var(--main-dp);
-        margin: auto;
+        width: 200px;
+        margin: var(--margin-auto);
+
     }
 
     footer h4 {
-        text-align: center;
-
+        text-align: var(--text-align-center);
+        font-size: 12px;
     }
 
     .cheersBlock {
         display: var(--main-dp);
-
     }
 
     .cheersTxt {
         max-width: 100%;
         padding-left: 20px;
         padding-right: 20px;
-        text-align: center;
+        text-align: var(--text-align-center);
+        padding-bottom: 0px;
     }
 
     .cheersImg {
         max-width: 100%;
         padding-top: 70px;
+        padding-left: 0px;
     }
-    .contInput,
-    input {
-    width: 350px;
-}
 
-.smallTle {
+    .smallTle {
     font-size: 22px;
-}
+    }
 
-.heroTxt {
+    .heroTxt {
     font-size: 45px;
-}
+    }
+
+    .comboBtnBox {
+    justify-content: var(--justify-content-center);
+    flex-wrap: wrap;
+    gap: 40px;
+    }
+    }
+
+    /* Mobil queries */
+@media screen and (max-width: 500px) {
+
+    p {
+    font-size: 18px;
+    line-height: 32px;
+        }
+
+    .heroPic {
+        padding-top: 120px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 80px;
+    }
+
+    .smallTle {
+        font-size: 18px;
+        padding-bottom: 10px;
+    }
+
+    .heroTxt {
+        font-size: 40px;
+    }
+
+    .heroTxt {
+        font-size: 45px;
+    }
+    #GenBtn {
+        font-size: 18px;
+        margin-top: 32px;
+        padding: 20px;
+    }
+    .cheersTxt {
+        padding-top: 62px;
+    }
+
+    .cheersBlock h2 {
+        font-size: 36px;
+        line-height: 36px;
+    }
+
+    .cheersBlock p {
+        font-size: 18px;
+    }
+
+    #aboutUs, #contactUs {
+        padding-top: 20px;
+    }
+
+    .cntc, .aboutSmllMsg{
+        font-size: 48px;
+    }
+
+    .msgCU, .msgAu {
+        font-size: 18px;
+        padding: 0px;
+        line-height: 23px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+
+    .connect {
+        padding-bottom: 60px;
+    }
+
+    .connectTxt {
+        padding-top: 60px;
+    }
+
+    .connect h2 {
+        font-size: 36px;
+        margin-bottom: 0px;
+    }
+
+    .connectTxt p {
+        font-size: 18px;
+    }
+
+    .connectCards{
+        margin-top: 20px;
+    }
+    .savedPairs h2 {
+        font-size: 36px;
+    }
+    .Login--signup-text {
+        margin: 10px;
+    }
+    .savedTxt p {
+        font-size: 18px;
+        line-height: 24px;
+
+    }
+    .comboBtnBox {
+        margin-top: 20px;
+        padding-bottom: 20px;
+    }
+
 }
