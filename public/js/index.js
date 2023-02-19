@@ -25,7 +25,7 @@ $(document).ready(function () {
 
 });
 
-$("#login").click(function () {
+$(".login-btn").click(function () {
   $(".loginOverlay").toggle();
 });
 
@@ -259,3 +259,5 @@ savePairingBtn.addEventListener("click", function (e) {
   // localStorage.getItem("savedFood", JSON.stringify(savedFood))
   console.log(savedBeer, savedFood);
 });
+
+randomBeer();
