@@ -12,23 +12,23 @@
 /*  ----Variables---- */
 
 :root {
-  --main-bg-color: white;
-  --main-dp: block;
-  --main-tx-align: left;
-  --main-pad: 20px;
-  --main-bg-size: cover;
-  --main-fontsize: 20px;
-  --main-color-beer: #ffbf43;
-  --font-poppins: "Poppins", Sans-Serif;
-  --font-abril: "Abril Fatface", Cursive;
-  --main-dinlineB: inline-block;
-  --colorBlack: black;
-  --margin-auto: auto;
-  --text-align-center: center;
-  --justify-content-center: center;
-  --align-items-center: center;
-  --display-flex: flex;
-  --cursor-pointer-pointer: pointer;
+    --main-bg-color: white;
+    --main-dp: block;
+    --main-tx-align: left;
+    --main-pad: 20px;
+    --main-bg-size: cover;
+    --main-fontsize: 20px;
+    --main-color-beer: #ffbf43;
+    --font-poppins: 'Poppins', Sans-Serif;
+    --font-abril: 'Abril Fatface', Cursive;
+    --main-dinlineB: inline-block;
+    --colorBlack: black;
+    --margin-auto: auto;
+    --text-align-center: center;
+    --justify-content-center: center;
+    --align-items-center: center;
+    --display-flex: flex;
+    --cursor-pointer: pointer;
 }
 
 a {
@@ -227,7 +227,7 @@ header ul li {
   margin-top: -6px;
 }
 
-#gen-btn img {
+#GenBtn img {
   display: inline;
   margin-bottom: -10px;
 }
