@@ -22,7 +22,7 @@ $("#login-close").click(function () {
 });
 
 // Sign up button from login
-$("#signup-modul").click(function () {
+$("#signup-modal").click(function () {
   $(".loginOverlay").hide();
   $(".signup-Overlay").toggle();
 });

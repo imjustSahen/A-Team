@@ -28,7 +28,11 @@
         <ul>
           <li><a href="/views/aboutUs" class="navLink"> About</a></li>
           <li><a href="/views/contactUs" class="navLink">Contact Us</a></li>
+          {{#if loggedIn}}
+          <button id="logout" class="btn-no-style">Logout</button>
+          {{else}}
           <li><a href="#login" class="navLink" id="login">Log in</a></li>
+          {{/if}}
         </ul>
       </nav>
     </header>
@@ -52,7 +56,11 @@
         <ul>
           <li><a href="/views/aboutUs" class="footerLink"> About</a></li>
           <li><a href="/views/contactUs" class="footerLink">Contact Us</a></li>
+          {{#if loggedIn}}
+          <button id="logout" class="btn-no-style">Logout</button>
+          {{else}}
           <li><a href="#login" class="footerLink" id="login">Log in</a></li>
+          {{/if}}
         </ul>
       </div>
     </footer>
@@ -63,14 +71,14 @@
             <div class="loginTxt">LOGIN</div>
             <input id="email-login" placeholder="Email"></input>
             <input id="password-login" placeholder="Password"></input>
-            <h3 class="text-login" id="signup-modul"><a href="#signup-modul">Create Account</a></h3>
+            <h3 class="text-login" id="signup-modal"><a href="#signup-modal">Create Account</a></h3>
             <button type="submit" id="submit">
                 <h2>Login</h2>
             </button>
         </div>
     </section> 
     {{!-- create account --}}
-    <section class="signup-Overlay" id="signup-modul">
+    <section class="signup-Overlay" id="signup-modal">
         <div class="signup-Box">
             <a id="signup-close"><img src="/assets/close-x.png" alt="exit" width="100%"></a>
             <div class="signup-Txt">Create Account</div>
@@ -88,6 +96,6 @@
     src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"
   ><{{!}}/script>
   <script defer src="/js/index.js"><{{!}}/script>
-  <script src="/js/login.js"></script>
-  <script defer src="/js/logout.js"><{{!}}/script>
+  <script defer src="/js/login.js"><{{!}}/script>
+  <script defer src="/js/logout.js"></script>
 </html>
