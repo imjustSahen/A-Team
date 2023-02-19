@@ -1,12 +1,12 @@
 /* Page reset */
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    -webkit-transition: all ease-out .25s;
-    -moz-transition: all ease-out .25s;
-    -o-transition: all ease-out .25s;
-    transition: all ease-out .25s;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-transition: all ease-out 0.25s;
+  -moz-transition: all ease-out 0.25s;
+  -o-transition: all ease-out 0.25s;
+  transition: all ease-out 0.25s;
 }
 
 /*  ----Variables---- */
@@ -29,10 +29,10 @@
     --align-items-center: center;
     --display-flex: flex;
     --cursor-pointer: pointer;
-}   
+}
 
 a {
-    cursor: var(--cursor-pointer);
+  cursor: var(--cursor-pointer);
 }
 
 h1 {
@@ -54,29 +54,29 @@ h3 {
 }
 
 body {
-    background-color: #f6f6f6;
-    position: relative;
+  background-color: #f6f6f6;
+  position: relative;
 }
 
 button {
-    border: none;
-    background-color: var(--main-color-beer);
-    border-radius: 50px;
-    cursor: var(--cursor-pointer);
-    font-size: 18px;
-    padding: 18px;
-    position: relative;
-    font-family: var(--font-poppins);
-    font-weight: bold;
-    color: #000000;
-    padding-left: 40px;
-    padding-right: 40px;
+  border: none;
+  background-color: var(--main-color-beer);
+  border-radius: 50px;
+  cursor: var(--cursor-pointer);
+  font-size: 18px;
+  padding: 18px;
+  position: relative;
+  font-family: var(--font-poppins);
+  font-weight: bold;
+  color: #000000;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 button:hover {
-    background-color: #ffffff;
-    transform: scale(1.05);
-    box-shadow: 0px 7px 15px 3px rgba(136, 113, 54, 0.66);
+  background-color: #ffffff;
+  transform: scale(1.05);
+  box-shadow: 0px 7px 15px 3px rgba(136, 113, 54, 0.66);
 }
 
 img {
@@ -86,24 +86,27 @@ img {
 /* ----website container----- */
 
 header {
-    padding-left: 20px;
-    position: fixed;
-    top: 0px;
-    z-index: 50;
-    width: 100%;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
-    display: var(--display-flex);
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: var(--align-items-center);
+  padding-left: 20px;
+  position: fixed;
+  top: 0px;
+  z-index: 50;
+  width: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+  display: var(--display-flex);
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: var(--align-items-center);
 }
 
-
 header nav {
-    text-align: right;
-    padding-top: 36px;
-    padding-right: 20px;
-    Font-Family: var(--font-poppins);
+  text-align: right;
+  padding-top: 36px;
+  padding-right: 20px;
+  font-family: var(--font-poppins);
 }
 
 header .navLink {
@@ -126,45 +129,46 @@ header .navLink:hover {
 }
 
 .sticky {
-    background-color: #000000;
-    padding-bottom: 20px;
+  background-color: #000000;
+  padding-bottom: 20px;
 }
 
 .sticky .logoImg {
-    width: 180px;
+  width: 180px;
 }
 .sticky .navLink {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .logoImg {
-    width: 300px;
-    padding-top: 20px;
+  width: 300px;
+  padding-top: 20px;
 }
 
 /* --- Navigation list--- */
 header ul {
-    display: var(--display-flex);
-    justify-content: var(--justify-content-center);
+  display: var(--display-flex);
+  justify-content: var(--justify-content-center);
 }
 
 header ul li {
-    margin-left: 15px;
-    list-style: none;
-    flex-shrink: 0;
+  margin-left: 15px;
+  list-style: none;
+  flex-shrink: 0;
 }
 
 .heroPic {
-    width: 100%;
-    background-color: rgb(0, 0, 0);
-    background-size: cover;
-    position: relative;
-    padding: 50px;
-    background-image: url('../assets/Hero-bk.jpg');
-    text-align: var(--text-align-center);
-    background-position: center center;
-    padding-top: 140px;
-    padding-bottom: 120px;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  background-size: cover;
+  position: relative;
+  padding: 50px;
+  background-image: url("../assets/Hero-bk.jpg");
+  text-align: var(--text-align-center);
+  background-position: center center;
+  padding-top: 140px;
+  padding-bottom: 120px;
+  color: white;
 }
 
 .heroPicDarker {
@@ -179,11 +183,6 @@ header ul li {
   bottom: 0px;
   left: 0px;
   background-color: rgba(0, 0, 0, 0.3);
-}
-
-.heroPic {
-  color: white;
-  font-size: 10px;
 }
 
 .smallTle {
@@ -201,31 +200,31 @@ header ul li {
 }
 
 #GenBtn {
-    display: var(--main-dp);
-    background: var(--main-color-beer);
-    padding: 24px;
-    border-radius: 50px;
-    margin: var(--margin-auto);
-    margin-top: 70px;
-    padding-left: 40px;
-    padding-right: 40px;
-    box-shadow: 0px 7px 15px 5px rgba(22, 17, 4, 0.66);
-    cursor: var(--cursor-pointer);
-    transition: all ease 200ms;
-    font-size: 28px;
+  display: var(--main-dp);
+  background: var(--main-color-beer);
+  padding: 24px;
+  border-radius: 50px;
+  margin: var(--margin-auto);
+  margin-top: 70px;
+  padding-left: 40px;
+  padding-right: 40px;
+  box-shadow: 0px 7px 15px 5px rgba(22, 17, 4, 0.66);
+  cursor: var(--cursor-pointer);
+  transition: all ease 200ms;
+  font-size: 28px;
 }
 
 #GenBtn:hover {
-    background-color: #ffffff;
-    transform: scale(1.05);
-    box-shadow: 0px 7px 15px 3px rgba(110, 92, 46, 0.66);
-    background-image: url('../assets/beer-fill.gif');
-    background-size: cover;
-    background-position: center top;
+  background-color: #ffffff;
+  transform: scale(1.05);
+  box-shadow: 0px 7px 15px 3px rgba(110, 92, 46, 0.66);
+  background-image: url("../assets/beer-fill.gif");
+  background-size: cover;
+  background-position: center top;
 }
 
 #GenBtn h2 {
-    margin-top: -6px;
+  margin-top: -6px;
 }
 
 #GenBtn img {
@@ -234,18 +233,18 @@ header ul li {
 }
 
 .cheersBlock {
-    background: #ded1b9;
-    display: var(--display-flex);
-    justify-content: space-around;
+  background: #ded1b9;
+  display: var(--display-flex);
+  justify-content: space-around;
 }
 
-.cheersBlock>*:first-child {
-    align-self:flex-start;
-} 
+.cheersBlock > *:first-child {
+  align-self: flex-start;
+}
 
-.cheersBlock>*:last-child {
-    align-self:flex-end;
-} 
+.cheersBlock > *:last-child {
+  align-self: flex-end;
+}
 
 .cheersTxt {
   max-width: 360px;
@@ -267,9 +266,9 @@ header ul li {
 }
 
 .cheersImg {
-    max-width: 700px;
-    padding-top: 70px;
-    padding-left: 20px;
+  max-width: 700px;
+  padding-top: 70px;
+  padding-left: 20px;
 }
 
 .combos {
@@ -279,22 +278,22 @@ header ul li {
 }
 
 .combosTxt {
-    margin: var(--margin-auto);
-    max-width: 450px;
-    padding-top: 200px;
-    text-align: var(--text-align-center);
+  margin: var(--margin-auto);
+  max-width: 450px;
+  padding-top: 200px;
+  text-align: var(--text-align-center);
 }
 
 /* -----pairing page------- */
 
 .pairContainer {
-    display: var(--display-flex);
-    justify-content: var(--justify-content-center);
-    max-width: 1000px;
-    align-items: var(--align-items-center);
-    margin: var(--margin-auto);
-    position: relative;
-    padding: 10px;
+  display: var(--display-flex);
+  justify-content: var(--justify-content-center);
+  max-width: 1000px;
+  align-items: var(--align-items-center);
+  margin: var(--margin-auto);
+  position: relative;
+  padding: 10px;
 }
 
 .contentCard {
@@ -327,82 +326,82 @@ header ul li {
 /* ---buttons for pairing page----- */
 
 .comboBtnBox {
-    max-width: 900px;
-    margin: var(--margin-auto);
-    margin-top: 50px;
-    padding-bottom: 50px;
-    display: var(--display-flex);
-    justify-content: space-between;
+  max-width: 900px;
+  margin: var(--margin-auto);
+  margin-top: 50px;
+  padding-bottom: 50px;
+  display: var(--display-flex);
+  justify-content: space-between;
 }
 
 .Login--signup-text {
-    font-family: var(--font-poppins);
-    font-size: var(--main-bg-size);
-    margin-top: 30px;
-    text-align: var(--text-align-center);
+  font-family: var(--font-poppins);
+  font-size: var(--main-bg-size);
+  margin-top: 30px;
+  text-align: var(--text-align-center);
 }
 
 /* --- Log in --- */
-.loginBox #modalClose {
-    width: 25px;
-    position: absolute;
-    top: 34px;
-    right: 34px;
+.loginBox #login-close {
+  width: 25px;
+  position: absolute;
+  top: 34px;
+  right: 34px;
 }
 
 .loginOverlay {
-    background-color: rgba(0, 0, 0, 0.80);
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    z-index: 10;
-    display: var(--display-flex);
-    justify-content: var(--justify-content-center);
-    align-items: var(--align-items-center);
-    /* visibility: hidden; */
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  z-index: 10;
+  display: var(--display-flex);
+  justify-content: var(--justify-content-center);
+  align-items: var(--align-items-center);
+  /* visibility: hidden; */
 }
 
 .loginBox {
-    padding: 50px;
-    max-width: 420px;
-    background-color: #ffffff;
-    Font-Family: var(--font-abril);
-    font-size: 20px;
-    position: relative;
-    border-radius: 40px;
-    text-align: var(--text-align-center);
+  padding: 50px;
+  max-width: 420px;
+  background-color: #ffffff;
+  font-family: var(--font-abril);
+  font-size: 20px;
+  position: relative;
+  border-radius: 40px;
+  text-align: var(--text-align-center);
 }
 
 .loginTxt {
-    text-align: var(--text-align-center);
-    padding: 10px;
-    font-size: 35px;
+  text-align: var(--text-align-center);
+  padding: 10px;
+  font-size: 35px;
 }
 
 .loginBox input {
-    background-color: rgb(228, 228, 228);
-    font-family: var(--font-poppins);
-    padding-top: 14px;
-    padding-bottom: 14px;
-    margin-top: 10px;
-    width: 316px;
-    border-radius: 15px;
-    padding-left: 20px;
-    border: none;
-    font-size: 20px;
-    color: var(--colorBlack);
+  background-color: rgb(228, 228, 228);
+  font-family: var(--font-poppins);
+  padding-top: 14px;
+  padding-bottom: 14px;
+  margin-top: 10px;
+  width: 316px;
+  border-radius: 15px;
+  padding-left: 20px;
+  border: none;
+  font-size: 20px;
+  color: var(--colorBlack);
 }
 
 .text-login {
-    font-size: 20px;
-    padding-top: 30px;
-    text-align: var(--text-align-center);
-    color: #ED6541;
-    display: block;
-    text-decoration: solid;
-    font-family: var(--font-poppins);
-    font-weight: bold;
+  font-size: 20px;
+  padding-top: 30px;
+  text-align: var(--text-align-center);
+  color: #ed6541;
+  display: block;
+  text-decoration: solid;
+  font-family: var(--font-poppins);
+  font-weight: bold;
 }
 
 /*  --- Sign Up ---- */
@@ -414,78 +413,78 @@ header ul li {
 }
 
 .signup-Overlay {
-    background-color: rgba(0, 0, 0, 0.80);
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    z-index: 10;
-    display: var(--display-flex);
-    justify-content: var(--justify-content-center);
-    align-items: var(--align-items-center);
-    visibility: visible;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  z-index: 10;
+  display: var(--display-flex);
+  justify-content: var(--justify-content-center);
+  align-items: var(--align-items-center);
+  visibility: visible;
 }
 
-.signup-Box{
-    padding: 50px;
-    max-width: 420px;
-    background-color: #ffffff;
-    max-height: 450px;
-    Font-Family: var(--font-abril);
-    font-size: 20px;
-    position: relative;
-    border-radius: 40px;
-    text-align: var(--text-align-center);
+.signup-Box {
+  padding: 50px;
+  max-width: 420px;
+  background-color: #ffffff;
+  max-height: 450px;
+  font-family: var(--font-abril);
+  font-size: 20px;
+  position: relative;
+  border-radius: 40px;
+  text-align: var(--text-align-center);
 }
 
 .signup-Txt {
-    text-align: var(--text-align-center);
-    padding: 10px;
-    font-size: 25px;
+  text-align: var(--text-align-center);
+  padding: 10px;
+  font-size: 25px;
 }
 
 .signup-Box input {
-    background-color: rgb(228, 228, 228);
-    font-family: var(--font-poppins);
-    padding-top: 14px;
-    padding-bottom: 14px;
-    margin-top: 10px;
-    width: 316px;
-    border-radius: 15px;
-    padding-left: 20px;
-    border: none;
-    font-size: 20px;
-    color: var(--colorBlack);
+  background-color: rgb(228, 228, 228);
+  font-family: var(--font-poppins);
+  padding-top: 14px;
+  padding-bottom: 14px;
+  margin-top: 10px;
+  width: 316px;
+  border-radius: 15px;
+  padding-left: 20px;
+  border: none;
+  font-size: 20px;
+  color: var(--colorBlack);
 }
 
 #signupBtn {
-    color: var(--colorBlack);
-    background-color: var(--main-color-beer);
-    border-radius: 50px;
-    width: 150px;
-    align-items: var(--align-items-center);
-    display: var(--main-dp);
-    margin: var(--margin-auto);
-    padding: 15px;
+  color: var(--colorBlack);
+  background-color: var(--main-color-beer);
+  border-radius: 50px;
+  width: 150px;
+  align-items: var(--align-items-center);
+  display: var(--main-dp);
+  margin: var(--margin-auto);
+  padding: 15px;
 }
 
 /* Card Hover Styling */
 .container {
   flex-flow: row wrap;
-  display: var(--display-flex);
-  justify-content: var(--justify-content-center);
-  align-items: var(--align-items-center);
+  display: flex;
+  justify-content: center;
+  /* align-items: var(--align-items-center); */
   padding-bottom: 50px;
 }
 
 .container .card {
-    position: relative;
-    cursor: var(--cursor-pointer);
+  position: relative;
+  cursor: var(--cursor-pointer);
 }
 
 .card-circle {
-    z-index: 10;
-    margin: -10px;
+  z-index: 10;
+  margin: -10px;
 }
 
 .container .card .face {
@@ -527,20 +526,12 @@ header ul li {
   max-width: 200px;
 }
 
-.container .card .face.face2 .content h3 {
-  margin: 0;
-  padding-bottom: 10px;
-  color: rgb(176, 54, 10);
-  text-align: center;
-  font-size: 1.5em;
-}
-
 .container .card .face.face2 {
   position: relative;
   background: #fff;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
   padding: 20px;
   box-sizing: border-box;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
@@ -551,15 +542,32 @@ header ul li {
   transform: translateY(0);
 }
 
+.container .card .face.face2 .content h3 {
+  margin: 0px;
+  padding: 0px;
+  color: rgb(176, 54, 10);
+  font-size: 1.2rem;
+  text-align: center;
+}
+
 .container .card .face.face2 .content p {
+  color: black;
   margin: 0;
   padding: 2px 0px;
+  font-size: .9rem;
+  text-align: left;
 }
 
 .beer-abv {
-  font-size: 0.9em;
+  font-size: 0.8rem;
   font-weight: 800;
   padding: 15px 0px;
+}
+
+.container .card .face.face2 .content button {
+  padding: 5px 10px;
+  align-items: center;
+  font-size: 14px;
 }
 
 .container .card .face.face2 .content a {
@@ -576,7 +584,6 @@ header ul li {
   background: #333;
   color: #fff;
 }
-
 /* End of Card Hover Styling */
 
 /* ---- My saved pairs ----- */
@@ -588,11 +595,11 @@ header ul li {
 }
 /* my saved container */
 .loginSavedContainer {
-    background-color: #EEE4D2;
-    max-width: 700px;
-   margin: var(--margin-auto);
-   padding: 40px;
-   text-align: var(--text-align-center); 
+  background-color: #eee4d2;
+  max-width: 700px;
+  margin: var(--margin-auto);
+  padding: 40px;
+  text-align: var(--text-align-center);
 }
 
 .pair-intro {
@@ -601,31 +608,31 @@ header ul li {
 }
 
 .savedPairs {
-    background:#ded1b9;
-    padding-bottom: 60px;
+  background: #ded1b9;
+  padding-bottom: 60px;
 }
 
 .savedPairs h2 {
-    font-family: var(--font-abril);
-    text-align: var(--text-align-center);
-    padding-top: 45px; 
-    padding-bottom: 35px;
-    font-size: 56px;
-    color: #3D2E2A;
-    font-weight: normal;
+  font-family: var(--font-abril);
+  text-align: var(--text-align-center);
+  padding-top: 45px;
+  padding-bottom: 35px;
+  font-size: 56px;
+  color: #3d2e2a;
+  font-weight: normal;
 }
 
 .savedTxt {
-    font-family: var(--font-poppins);
-    font-size: 40px;
-    color: #3D2E2A;
+  font-family: var(--font-poppins);
+  font-size: 40px;
+  color: #3d2e2a;
 }
 
 .savedTxt p {
-    color: #A1857E;
-    font-weight: bolder;
-    font-size: 30px;
-    margin-bottom: 30px;
+  color: #a1857e;
+  font-weight: bolder;
+  font-size: 30px;
+  margin-bottom: 30px;
 }
 
 .login-pairs-btn {
@@ -650,39 +657,43 @@ header ul li {
 }
 
 /* "About Us" */
-.cntc, .aboutSmllMsg {
-    font-family: var(--font-abril);
-    font-size: 72px;
-    color: #eee0cc;
+.cntc,
+.aboutSmllMsg {
+  font-family: var(--font-abril);
+  font-size: 72px;
+  color: #eee0cc;
 }
 
 /* About us small subtitle */
-.msgCU, .msgAu {
-    font-family: var(--font-poppins);
-    font-size: 25px;
-    color: var(--main-color-beer);
-    margin-bottom: 16px;
+.msgCU,
+.msgAu {
+  font-family: var(--font-poppins);
+  font-size: 25px;
+  color: var(--main-color-beer);
+  margin-bottom: 16px;
 }
 .InputBox {
-    max-width: 500px;
-    margin: var(--margin-auto);
+  max-width: 500px;
+  margin: var(--margin-auto);
 }
 
-.contInput, input {
-    width: 100%;
-    border-radius: 20px;
-    border: 2px solid #A48178;
-    font-size: 18px;
-    margin-bottom: 16px;
-    color: white;
-    font-family: var(--font-poppins);
-    background-color: var(--colorBlack);
-    padding: 16px;
-    padding-left: 24px;
+.contInput,
+input {
+  width: 100%;
+  border-radius: 20px;
+  border: 2px solid #a48178;
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: white;
+  font-family: var(--font-poppins);
+  background-color: var(--colorBlack);
+  padding: 16px;
+  padding-left: 24px;
 }
 
-.ontInput, .msg {
-    height: 130px;
+.ontInput,
+.msg {
+  height: 130px;
 }
 
 textarea {
@@ -708,17 +719,17 @@ textarea {
 }
 
 .connectTxt {
-    text-align: var(--text-align-center);
-    padding-top: 100px;
+  text-align: var(--text-align-center);
+  padding-top: 100px;
 }
 
 .connect h2 {
-    Font-Family: var(--font-abril);
-    font-size: 56px;
-    font-weight: normal;
-    line-height: 56px;
-    margin-bottom: 10px;
-    color: #3D2E2A;
+  font-family: var(--font-abril);
+  font-size: 56px;
+  font-weight: normal;
+  line-height: 56px;
+  margin-bottom: 10px;
+  color: #3d2e2a;
 }
 
 .connectTxt p {
@@ -730,19 +741,20 @@ textarea {
 
 /*  -----connect cards - about us ----*/
 .connectCards {
-    padding: 20px;
-    display: var(--display-flex);
-    justify-content: var(--justify-content-center);
-    margin-top: 40px;
+  padding: 20px;
+  display: var(--display-flex);
+  justify-content: var(--justify-content-center);
+  margin-top: 40px;
 }
 
 .infoCard {
-    background-color: #EEE4D2;
-    width: 300px;
-    padding: 30px;
-    text-align: var(--text-align-center);
-    margin-left: 10px;
-    margin-right: 10px;
+  background-color: #eee4d2;
+  width: 300px;
+  padding: 30px;
+  text-align: var(--text-align-center);
+  margin: 0px 10px;
+  /* margin-left: 10px;
+  margin-right: 10px; */
 }
 
 .infoCardName {
@@ -760,39 +772,39 @@ textarea {
 }
 
 .infoCardSeparator {
-    background-color: #D9C9B2;
-    height: 4px;
-    width: 50px;
-    margin: var(--margin-auto);
-    margin-top: 20px;
-    margin-bottom: 20px;
+  background-color: #d9c9b2;
+  height: 4px;
+  width: 50px;
+  margin: 20px auto;
+  /* margin: var(--margin-auto);
+  margin-top: 20px;
+  margin-bottom: 20px; */
 }
 
 .infoCardTitle {
-  font-family: var(--font-poppins);
   font-family: var(--font-poppins);
   font-size: 16px;
   color: #a1857e;
 }
 
 .infoCardLinkBox {
-    display: var(--display-flex);
-    justify-content: space-between;
-    max-width: 200px;
-    margin: var(--margin-auto);
-    margin-top: 20px;
+  display: var(--display-flex);
+  justify-content: space-between;
+  max-width: 200px;
+  margin: 20px auto 0px;
+  /* margin: var(--margin-auto);
+  margin-top: 20px; */
 }
 
 /* ---- Footer --- */
-
 footer {
-    background-color: var(--colorBlack);
-    color: white;
-    width: 100%;
-    display: var(--display-flex);
-    justify-content: space-between;
-    padding: 30px;
-    font-family: var(--font-poppins);
+  background-color: var(--colorBlack);
+  color: white;
+  width: 100%;
+  display: var(--display-flex);
+  justify-content: space-between;
+  padding: 30px;
+  font-family: var(--font-poppins);
 }
 
 footer h4 {
@@ -800,6 +812,14 @@ footer h4 {
   padding-top: 5px;
   font-size: 15px;
   font-family: var(--font-poppins);
+}
+
+footer ul {
+  list-style: none;
+  display: var(--display-flex);
+  justify-content: space-between;
+  width: 300px;
+  padding-top: 10px;
 }
 
 .footerLink {
@@ -821,14 +841,6 @@ footer h4 {
   width: 200px;
 }
 
-footer ul {
-    list-style: none;
-    display: var(--display-flex);
-    justify-content: space-between;
-    width: 300px;
-    padding-top: 10px;
-}
-
 /*  -----Responsive  - Media Queries ---- */
 
 @media screen and (max-width: 1080px) {
@@ -844,193 +856,191 @@ footer ul {
 
 /*  Browser window is 768 or smaller */
 @media screen and (max-width: 768px) {
-    header {
-        padding-left: 0px;
-       justify-content: space-around;
-    }
+  header {
+    padding-left: 0px;
+    justify-content: space-around;
+  }
 
-    header ul li {
-        margin-left: 0px;
-    }
+  header ul li {
+    margin-left: 0px;
+  }
 
-    header nav {
-        padding-top: 20px;
-    }
+  header nav {
+    padding-top: 20px;
+  }
 
-    header .navLink {
-        font-size: 18px;
+  header .navLink {
+    font-size: 18px;
+  }
 
-    }
+  #GenBtn img,
+  span {
+    display: none;
+  }
 
-    #GenBtn img,span {
-        display: none;
-    }
+  .logoImg {
+    width: 220px;
+  }
 
-    .logoImg {
-        width: 220px;
-    }
+  .heroPic {
+    padding-top: 160px;
+  }
 
-    .heroPic {
-        padding-top: 160px;
-    }
+  .infoCard {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 
-    .infoCard {
-        width: 100%;
-        margin-bottom: 20px;
-    }
+  footer {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
 
-    footer {
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
+  footer ul {
+    margin: var(--margin-auto);
+    margin-bottom: 20px;
+    padding-top: 20px;
+  }
 
+  .footerLogo {
+    display: var(--main-dp);
+    width: 200px;
+    margin: var(--margin-auto);
+  }
 
-    footer ul {
-        margin: var(--margin-auto);
-        margin-bottom: 20px;
-        padding-top: 20px;
-    }
+  footer h4 {
+    text-align: var(--text-align-center);
+    font-size: 12px;
+  }
 
-    .footerLogo {
-        display: var(--main-dp);
-        width: 200px;
-        margin: var(--margin-auto);
+  .cheersBlock {
+    display: var(--main-dp);
+  }
 
-    }
+  .cheersTxt {
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: var(--text-align-center);
+    padding-bottom: 0px;
+  }
 
-    footer h4 {
-        text-align: var(--text-align-center);
-        font-size: 12px;
-    }
+  .cheersImg {
+    max-width: 100%;
+    padding-top: 70px;
+    padding-left: 0px;
+  }
 
-    .cheersBlock {
-        display: var(--main-dp);
-    }
-
-    .cheersTxt {
-        max-width: 100%;
-        padding-left: 20px;
-        padding-right: 20px;
-        text-align: var(--text-align-center);
-        padding-bottom: 0px;
-    }
-
-    .cheersImg {
-        max-width: 100%;
-        padding-top: 70px;
-        padding-left: 0px;
-    }
-
-    .smallTle {
+  .smallTle {
     font-size: 22px;
-    }
+  }
 
-    .heroTxt {
+  .heroTxt {
     font-size: 45px;
-    }
+  }
 
-    .comboBtnBox {
+  .comboBtnBox {
     justify-content: var(--justify-content-center);
     flex-wrap: wrap;
     gap: 40px;
-    }
-    }
+  }
+}
 
-    /* Mobil queries */
+/* Mobil queries */
 @media screen and (max-width: 500px) {
-
-    p {
+  p {
     font-size: 18px;
     line-height: 32px;
-        }
+  }
 
-    .heroPic {
-        padding-top: 120px;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-bottom: 80px;
-    }
+  .heroPic {
+    padding-top: 120px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 80px;
+  }
 
-    .smallTle {
-        font-size: 18px;
-        padding-bottom: 10px;
-    }
+  .smallTle {
+    font-size: 18px;
+    padding-bottom: 10px;
+  }
 
-    .heroTxt {
-        font-size: 40px;
-    }
+  .heroTxt {
+    font-size: 40px;
+  }
 
-    .heroTxt {
-        font-size: 45px;
-    }
-    #GenBtn {
-        font-size: 18px;
-        margin-top: 32px;
-        padding: 20px;
-    }
-    .cheersTxt {
-        padding-top: 62px;
-    }
+  .heroTxt {
+    font-size: 45px;
+  }
+  #GenBtn {
+    font-size: 18px;
+    margin-top: 32px;
+    padding: 20px;
+  }
+  .cheersTxt {
+    padding-top: 62px;
+  }
 
-    .cheersBlock h2 {
-        font-size: 36px;
-        line-height: 36px;
-    }
+  .cheersBlock h2 {
+    font-size: 36px;
+    line-height: 36px;
+  }
 
-    .cheersBlock p {
-        font-size: 18px;
-    }
+  .cheersBlock p {
+    font-size: 18px;
+  }
 
-    #aboutUs, #contactUs {
-        padding-top: 20px;
-    }
+  #aboutUs,
+  #contactUs {
+    padding-top: 20px;
+  }
 
-    .cntc, .aboutSmllMsg{
-        font-size: 48px;
-    }
+  .cntc,
+  .aboutSmllMsg {
+    font-size: 48px;
+  }
 
-    .msgCU, .msgAu {
-        font-size: 18px;
-        padding: 0px;
-        line-height: 23px;
-        margin-top: 10px;
-        margin-bottom: 30px;
-    }
+  .msgCU,
+  .msgAu {
+    font-size: 18px;
+    padding: 0px;
+    line-height: 23px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
 
-    .connect {
-        padding-bottom: 60px;
-    }
+  .connect {
+    padding-bottom: 60px;
+  }
 
-    .connectTxt {
-        padding-top: 60px;
-    }
+  .connectTxt {
+    padding-top: 60px;
+  }
 
-    .connect h2 {
-        font-size: 36px;
-        margin-bottom: 0px;
-    }
+  .connect h2 {
+    font-size: 36px;
+    margin-bottom: 0px;
+  }
 
-    .connectTxt p {
-        font-size: 18px;
-    }
+  .connectTxt p {
+    font-size: 18px;
+  }
 
-    .connectCards{
-        margin-top: 20px;
-    }
-    .savedPairs h2 {
-        font-size: 36px;
-    }
-    .Login--signup-text {
-        margin: 10px;
-    }
-    .savedTxt p {
-        font-size: 18px;
-        line-height: 24px;
-
-    }
-    .comboBtnBox {
-        margin-top: 20px;
-        padding-bottom: 20px;
-    }
-
+  .connectCards {
+    margin-top: 20px;
+  }
+  .savedPairs h2 {
+    font-size: 36px;
+  }
+  .Login--signup-text {
+    margin: 10px;
+  }
+  .savedTxt p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .comboBtnBox {
+    margin-top: 20px;
+    padding-bottom: 20px;
+  }
 }
