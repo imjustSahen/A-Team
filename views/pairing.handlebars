@@ -70,9 +70,13 @@
 <section class="savedPairs">
   <div class="savedTxt">
     <h2>My Saved Pairs</h2>
+    {{#if loggedIn}}
+
+    {{else}}
     <div class="savedContainer">
       <p class="Login--signup-text">Login or Sign Up to save pairings!</p>
-      <button class="login-pairs-btn">LOGIN</button>
+      <button class="login-pairs-btn"><a href="#login">LOGIN</a></button>
     </div>
+    {{/if}}
   </div>
 </section>
