@@ -261,3 +261,4 @@ savePairingBtn.addEventListener("click", function (e) {
 });
 
 randomBeer();
+ 
