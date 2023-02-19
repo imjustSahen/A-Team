@@ -1,29 +1,38 @@
 /* Page reset */
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    -webkit-transition: all ease-out .25s;
+    -moz-transition: all ease-out .25s;
+    -o-transition: all ease-out .25s;
+    transition: all ease-out .25s;
 }
 
 /*  ----Variables---- */
 
 :root {
-  --main-bg-color: white;
-  --main-dp: block;
-  --main-tx-align: left;
-  --main-pad: 20px;
-  --main-bg-size: cover;
-  --main-fontsize: 20px;
-  --main-color-beer: #ffbf43;
-  --font-poppins: "Poppins", Sans-Serif;
-  --font-abril: "Abril Fatface", Cursive;
-  --main-dinlineB: inline-block;
-  --colorBlack: black;
-  --margin-auto: auto;
-}
+    --main-bg-color: white;
+    --main-dp: block;
+    --main-tx-align: left;
+    --main-pad: 20px;
+    --main-bg-size: cover;
+    --main-fontsize: 20px;
+    --main-color-beer: #ffbf43;
+    --font-poppins: 'Poppins', Sans-Serif;
+    --font-abril: 'Abril Fatface', Cursive;
+    --main-dinlineB: inline-block;
+    --colorBlack: black;
+    --margin-auto: auto;
+    --text-align-center: center;
+    --justify-content-center: center;
+    --align-items-center: center;
+    --display-flex: flex;
+    --cursor-pointer-pointer: pointer;
+}   
 
 a {
-  cursor: pointer;
+    cursor: var(--cursor-pointer);
 }
 
 h1 {
@@ -45,16 +54,29 @@ h3 {
 }
 
 body {
-  background-color: #f6f6f6;
-  display: var(--main-dp);
-  position: relative;
+    background-color: #f6f6f6;
+    position: relative;
 }
 
 button {
-  border: none;
-  background-color: var(--main-color-beer);
-  border-radius: 50px;
-  cursor: pointer;
+    border: none;
+    background-color: var(--main-color-beer);
+    border-radius: 50px;
+    cursor: var(--cursor-pointer);
+    font-size: 18px;
+    padding: 18px;
+    position: relative;
+    font-family: var(--font-poppins);
+    font-weight: bold;
+    color: #000000;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+button:hover {
+    background-color: #ffffff;
+    transform: scale(1.05);
+    box-shadow: 0px 7px 15px 3px rgba(136, 113, 54, 0.66);
 }
 
 img {
@@ -64,25 +86,24 @@ img {
 /* ----website container----- */
 
 header {
-  padding-left: 20px;
-  display: var(--main-dp);
-  position: fixed;
-  top: 0px;
-  z-index: 10;
-  width: 100%;
-  background: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.75) 100%
-  );
+    padding-left: 20px;
+    position: fixed;
+    top: 0px;
+    z-index: 50;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
+    display: var(--display-flex);
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: var(--align-items-center);
 }
 
+
 header nav {
-  text-align: right;
-  padding-top: 44px;
-  margin-right: 20px;
-  float: right;
-  font-family: var(--font-poppins);
+    text-align: right;
+    padding-top: 36px;
+    padding-right: 20px;
+    Font-Family: var(--font-poppins);
 }
 
 header .navLink {
@@ -104,29 +125,46 @@ header .navLink:hover {
   color: var(--colorBlack);
 }
 
+.sticky {
+    background-color: #000000;
+    padding-bottom: 20px;
+}
+
+.sticky .logoImg {
+    width: 180px;
+}
+.sticky .navLink {
+    font-size: 18px;
+}
+
 .logoImg {
-  width: 300px;
-  padding-top: 20px;
-  display: inline-block;
+    width: 300px;
+    padding-top: 20px;
 }
 
 /* --- Navigation list--- */
+header ul {
+    display: var(--display-flex);
+    justify-content: var(--justify-content-center);
+}
+
 header ul li {
-  display: var(--main-dinlineB);
-  margin-left: 15px;
+    margin-left: 15px;
+    list-style: none;
+    flex-shrink: 0;
 }
 
 .heroPic {
-  width: 100%;
-  background-color: rgb(0, 0, 0);
-  background-size: cover;
-  position: relative;
-  padding: 50px;
-  background-image: url("../assets/Hero-bk.jpg");
-  text-align: center;
-  background-position: center center;
-  padding-top: 140px;
-  padding-bottom: 120px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    background-size: cover;
+    position: relative;
+    padding: 50px;
+    background-image: url('../assets/Hero-bk.jpg');
+    text-align: var(--text-align-center);
+    background-position: center center;
+    padding-top: 140px;
+    padding-bottom: 120px;
 }
 
 .heroPicDarker {
@@ -162,24 +200,32 @@ header ul li {
   line-height: 105%;
 }
 
-#gen-btn {
-  display: var(--main-dp);
-  background: var(--main-color-beer);
-  padding: 24px;
-  border-radius: 50px;
-  margin: var(--margin-auto);
-  margin-top: 70px;
-  padding-left: 40px;
-  padding-right: 40px;
-  box-shadow: 0px 7px 15px 5px rgba(22, 17, 4, 0.66);
-  cursor: pointer;
-  transition: all ease 200ms;
+#GenBtn {
+    display: var(--main-dp);
+    background: var(--main-color-beer);
+    padding: 24px;
+    border-radius: 50px;
+    margin: var(--margin-auto);
+    margin-top: 70px;
+    padding-left: 40px;
+    padding-right: 40px;
+    box-shadow: 0px 7px 15px 5px rgba(22, 17, 4, 0.66);
+    cursor: var(--cursor-pointer);
+    transition: all ease 200ms;
+    font-size: 28px;
 }
 
-#gen-btn:hover {
-  background-color: #ffffff;
-  transform: scale(1.05);
-  box-shadow: 0px 7px 15px 3px rgba(110, 92, 46, 0.66);
+#GenBtn:hover {
+    background-color: #ffffff;
+    transform: scale(1.05);
+    box-shadow: 0px 7px 15px 3px rgba(110, 92, 46, 0.66);
+    background-image: url('../assets/beer-fill.gif');
+    background-size: cover;
+    background-position: center top;
+}
+
+#GenBtn h2 {
+    margin-top: -6px;
 }
 
 #gen-btn img {
@@ -188,10 +234,18 @@ header ul li {
 }
 
 .cheersBlock {
-  background: #ded1b9;
-  display: flex;
-  justify-content: space-around;
+    background: #ded1b9;
+    display: var(--display-flex);
+    justify-content: space-around;
 }
+
+.cheersBlock>*:first-child {
+    align-self:flex-start;
+} 
+
+.cheersBlock>*:last-child {
+    align-self:flex-end;
+} 
 
 .cheersTxt {
   max-width: 360px;
@@ -213,8 +267,9 @@ header ul li {
 }
 
 .cheersImg {
-  max-width: 700px;
-  padding-top: 70px;
+    max-width: 700px;
+    padding-top: 70px;
+    padding-left: 20px;
 }
 
 .combos {
@@ -224,22 +279,22 @@ header ul li {
 }
 
 .combosTxt {
-  margin: var(--margin-auto);
-  max-width: 450px;
-  padding-top: 200px;
-  text-align: center;
+    margin: var(--margin-auto);
+    max-width: 450px;
+    padding-top: 200px;
+    text-align: var(--text-align-center);
 }
 
 /* -----pairing page------- */
 
 .pairContainer {
-  display: flex;
-  justify-content: center;
-  max-width: 1000px;
-  align-items: center;
-  margin: var(--margin-auto);
-  position: relative;
-  padding: 10px;
+    display: var(--display-flex);
+    justify-content: var(--justify-content-center);
+    max-width: 1000px;
+    align-items: var(--align-items-center);
+    margin: var(--margin-auto);
+    position: relative;
+    padding: 10px;
 }
 
 .contentCard {
@@ -272,122 +327,84 @@ header ul li {
 /* ---buttons for pairing page----- */
 
 .comboBtnBox {
-  max-width: 900px;
-  margin: var(--margin-auto);
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-top: 50px;
-  padding-bottom: 50px;
-  font-family: var(--font-poppins);
-}
-
-#new-pairing-btn {
-  border-radius: 50px;
-  text-align: center;
-  position: relative;
-  float: left;
-  padding: 20px;
-}
-
-#save-pairing-btn {
-  border-radius: 50px;
-  text-align: center;
-  position: relative;
-  float: right;
-  padding: 20px;
-}
-#new-pairing-btn:hover {
-  background-color: #ffffff;
-  transform: scale(1.05);
-  box-shadow: 0px 7px 15px 3px rgba(110, 92, 46, 0.66);
-}
-
-#save-pairing-btn:hover {
-  background-color: #ffffff;
-  transform: scale(1.05);
-  box-shadow: 0px 7px 15px 3px rgba(110, 92, 46, 0.66);
+    max-width: 900px;
+    margin: var(--margin-auto);
+    margin-top: 50px;
+    padding-bottom: 50px;
+    display: var(--display-flex);
+    justify-content: space-between;
 }
 
 .Login--signup-text {
-  font-family: var(--font-poppins);
-  font-size: var(--main-bg-size);
-  margin-top: 30px;
-  text-align: center;
+    font-family: var(--font-poppins);
+    font-size: var(--main-bg-size);
+    margin-top: 30px;
+    text-align: var(--text-align-center);
 }
 
 /* --- Log in --- */
-#login-close {
-  width: 25px;
-  position: absolute;
-  top: 34px;
-  right: 34px;
+.loginBox #modalClose {
+    width: 25px;
+    position: absolute;
+    top: 34px;
+    right: 34px;
 }
 
 .loginOverlay {
-  background-color: rgba(0, 0, 0, 0.8);
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  z-index: 10;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* visibility: hidden; */
+    background-color: rgba(0, 0, 0, 0.80);
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    z-index: 10;
+    display: var(--display-flex);
+    justify-content: var(--justify-content-center);
+    align-items: var(--align-items-center);
+    /* visibility: hidden; */
 }
 
 .loginBox {
-  padding: 50px;
-  max-width: 420px;
-  background-color: #ffffff;
-  max-height: 450px;
-  font-family: var(--font-abril);
-  font-size: 20px;
-  position: relative;
-  border-radius: 40px;
+    padding: 50px;
+    max-width: 420px;
+    background-color: #ffffff;
+    Font-Family: var(--font-abril);
+    font-size: 20px;
+    position: relative;
+    border-radius: 40px;
+    text-align: var(--text-align-center);
 }
 
 .loginTxt {
-  text-align: center;
-  padding: 10px;
-  font-size: 25px;
+    text-align: var(--text-align-center);
+    padding: 10px;
+    font-size: 35px;
 }
 
 .loginBox input {
-  background-color: rgb(228, 228, 228);
-  font-family: var(--font-poppins);
-  padding-top: 14px;
-  padding-bottom: 14px;
-  margin-top: 10px;
-  width: 316px;
-  border-radius: 15px;
-  padding-left: 20px;
-  border: none;
-  font-size: 20px;
-  color: var(--colorBlack);
+    background-color: rgb(228, 228, 228);
+    font-family: var(--font-poppins);
+    padding-top: 14px;
+    padding-bottom: 14px;
+    margin-top: 10px;
+    width: 316px;
+    border-radius: 15px;
+    padding-left: 20px;
+    border: none;
+    font-size: 20px;
+    color: var(--colorBlack);
 }
 
-#loginBtn {
-  color: var(--colorBlack);
-  background-color: var(--main-color-beer);
-  border-radius: 50px;
-  width: 150px;
-  align-items: center;
-  display: var(--main-dp);
-  margin: var(--margin-auto);
-  padding: 15px;
+.text-login {
+    font-size: 20px;
+    padding-top: 30px;
+    text-align: var(--text-align-center);
+    color: #ED6541;
+    display: block;
+    text-decoration: solid;
+    font-family: var(--font-poppins);
+    font-weight: bold;
 }
 
-#loginBtn h2 {
-  align-items: center;
-}
-
-.text-login a {
-  font-size: 20px;
-  padding-top: 5px;
-  text-align: center;
-  color: #ed6541;
-}
 /*  --- Sign Up ---- */
 .signup-Box a {
   width: 25px;
@@ -397,71 +414,78 @@ header ul li {
 }
 
 .signup-Overlay {
-  background-color: rgba(0, 0, 0, 0.8);
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  z-index: 10;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  visibility: visible;
+    background-color: rgba(0, 0, 0, 0.80);
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    z-index: 10;
+    display: var(--display-flex);
+    justify-content: var(--justify-content-center);
+    align-items: var(--align-items-center);
+    visibility: visible;
 }
 
-.signup-Box {
-  padding: 50px;
-  max-width: 420px;
-  background-color: #ffffff;
-  max-height: 450px;
-  font-family: var(--font-abril);
-  font-size: 20px;
-  position: relative;
-  border-radius: 40px;
+.signup-Box{
+    padding: 50px;
+    max-width: 420px;
+    background-color: #ffffff;
+    max-height: 450px;
+    Font-Family: var(--font-abril);
+    font-size: 20px;
+    position: relative;
+    border-radius: 40px;
+    text-align: var(--text-align-center);
 }
+
 .signup-Txt {
-  text-align: center;
-  padding: 10px;
-  font-size: 25px;
+    text-align: var(--text-align-center);
+    padding: 10px;
+    font-size: 25px;
 }
 
 .signup-Box input {
-  background-color: rgb(228, 228, 228);
-  font-family: var(--font-poppins);
-  padding-top: 14px;
-  padding-bottom: 14px;
-  margin-top: 10px;
-  width: 316px;
-  border-radius: 15px;
-  padding-left: 20px;
-  border: none;
-  font-size: 20px;
-  color: var(--colorBlack);
+    background-color: rgb(228, 228, 228);
+    font-family: var(--font-poppins);
+    padding-top: 14px;
+    padding-bottom: 14px;
+    margin-top: 10px;
+    width: 316px;
+    border-radius: 15px;
+    padding-left: 20px;
+    border: none;
+    font-size: 20px;
+    color: var(--colorBlack);
 }
 
 #signupBtn {
-  color: var(--colorBlack);
-  background-color: var(--main-color-beer);
-  border-radius: 50px;
-  width: 150px;
-  align-items: center;
-  display: var(--main-dp);
-  margin: var(--margin-auto);
-  padding: 15px;
+    color: var(--colorBlack);
+    background-color: var(--main-color-beer);
+    border-radius: 50px;
+    width: 150px;
+    align-items: var(--align-items-center);
+    display: var(--main-dp);
+    margin: var(--margin-auto);
+    padding: 15px;
 }
 
 /* Card Hover Styling */
 .container {
   flex-flow: row wrap;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: var(--display-flex);
+  justify-content: var(--justify-content-center);
+  align-items: var(--align-items-center);
   padding-bottom: 50px;
 }
 
 .container .card {
-  position: relative;
-  cursor: pointer;
+    position: relative;
+    cursor: var(--cursor-pointer);
+}
+
+.card-circle {
+    z-index: 10;
+    margin: -10px;
 }
 
 .container .card .face {
@@ -563,44 +587,45 @@ header ul li {
   margin-bottom: 20px;
 }
 /* my saved container */
-.savedContainer {
-  background-color: #eee4d2;
-  width: 700px;
-  height: 217px;
+.loginSavedContainer {
+    background-color: #EEE4D2;
+    max-width: 700px;
+   margin: var(--margin-auto);
+   padding: 40px;
+   text-align: var(--text-align-center); 
 }
+
 .pair-intro {
   font-size: 30px;
   font-weight: normal;
 }
 
 .savedPairs {
-  background: #ded1b9;
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  height: 550px;
+    background:#ded1b9;
+    padding-bottom: 60px;
 }
 
 .savedPairs h2 {
-  font-family: var(--font-abril);
-  text-align: center;
-  padding-top: 35px;
+    font-family: var(--font-abril);
+    text-align: var(--text-align-center);
+    padding-top: 45px; 
+    padding-bottom: 35px;
+    font-size: 56px;
+    color: #3D2E2A;
+    font-weight: normal;
 }
 
 .savedTxt {
-  font-family: var(--font-poppins);
-  font-size: 40px;
-  color: #3d2e2a;
-  margin-top: 44px;
-  height: 217px;
+    font-family: var(--font-poppins);
+    font-size: 40px;
+    color: #3D2E2A;
 }
 
 .savedTxt p {
-  color: #a1857e;
-  font-weight: bolder;
-  padding-top: 44px;
-  font-size: 30px;
-  margin-bottom: 30px;
+    color: #A1857E;
+    font-weight: bolder;
+    font-size: 30px;
+    margin-bottom: 30px;
 }
 
 .login-pairs-btn {
@@ -625,56 +650,39 @@ header ul li {
 }
 
 /* "About Us" */
-.cntc,
-.aboutSmllMsg {
-  font-family: var(--font-abril);
-  margin: var(--margin-auto);
-  font-size: 72px;
-  color: #eee0cc;
+.cntc, .aboutSmllMsg {
+    font-family: var(--font-abril);
+    font-size: 72px;
+    color: #eee0cc;
 }
 
 /* About us small subtitle */
-.msgCU,
-.msgAu {
-  font-family: var(--font-poppins);
-  font-size: 25px;
-  color: var(--main-color-beer);
-  margin-bottom: 25px;
+.msgCU, .msgAu {
+    font-family: var(--font-poppins);
+    font-size: 25px;
+    color: var(--main-color-beer);
+    margin-bottom: 16px;
+}
+.InputBox {
+    max-width: 500px;
+    margin: var(--margin-auto);
 }
 
-.contInput,
-input {
-  width: 491px;
-  margin: var(--margin-auto);
-  height: 77px;
-  border-radius: 20px;
-  border: 2px solid #a48178;
-  font-size: 20px;
-  margin-bottom: 16px;
-  padding-left: 44px;
-  color: white;
-  font-family: var(--font-poppins);
-  background-color: var(--colorBlack);
+.contInput, input {
+    width: 100%;
+    border-radius: 20px;
+    border: 2px solid #A48178;
+    font-size: 18px;
+    margin-bottom: 16px;
+    color: white;
+    font-family: var(--font-poppins);
+    background-color: var(--colorBlack);
+    padding: 16px;
+    padding-left: 24px;
 }
 
-.ontInput,
-.msg {
-  height: 130px;
-}
-
-/* Submit button */
-.subBtn {
-  width: 213px;
-  height: 66px;
-  font-size: 20px;
-  border-radius: 44px;
-  margin-top: 15px;
-}
-
-.subBtn:hover {
-  background-color: #ffffff;
-  transform: scale(1.05);
-  box-shadow: 0px 7px 15px 3px rgba(110, 92, 46, 0.66);
+.ontInput, .msg {
+    height: 130px;
 }
 
 textarea {
@@ -700,16 +708,17 @@ textarea {
 }
 
 .connectTxt {
-  text-align: center;
-  padding-top: 100px;
+    text-align: var(--text-align-center);
+    padding-top: 100px;
 }
 
 .connect h2 {
-  font-family: var(--font-abril);
-  font-size: 56px;
-  font-weight: normal;
-  line-height: 62px;
-  margin-bottom: 10px;
+    Font-Family: var(--font-abril);
+    font-size: 56px;
+    font-weight: normal;
+    line-height: 56px;
+    margin-bottom: 10px;
+    color: #3D2E2A;
 }
 
 .connectTxt p {
@@ -721,19 +730,19 @@ textarea {
 
 /*  -----connect cards - about us ----*/
 .connectCards {
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 40px;
+    padding: 20px;
+    display: var(--display-flex);
+    justify-content: var(--justify-content-center);
+    margin-top: 40px;
 }
 
 .infoCard {
-  background-color: #eee4d2;
-  width: 300px;
-  padding: 30px;
-  text-align: center;
-  margin-left: 10px;
-  margin-right: 10px;
+    background-color: #EEE4D2;
+    width: 300px;
+    padding: 30px;
+    text-align: var(--text-align-center);
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .infoCardName {
@@ -751,12 +760,12 @@ textarea {
 }
 
 .infoCardSeparator {
-  background-color: #d9c9b2;
-  height: 4px;
-  width: 50px;
-  margin: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
+    background-color: #D9C9B2;
+    height: 4px;
+    width: 50px;
+    margin: var(--margin-auto);
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .infoCardTitle {
@@ -767,23 +776,23 @@ textarea {
 }
 
 .infoCardLinkBox {
-  display: flex;
-  justify-content: space-between;
-  max-width: 200px;
-  margin: auto;
-  margin-top: 20px;
+    display: var(--display-flex);
+    justify-content: space-between;
+    max-width: 200px;
+    margin: var(--margin-auto);
+    margin-top: 20px;
 }
 
 /* ---- Footer --- */
 
 footer {
-  background-color: var(--colorBlack);
-  color: white;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 30px;
-  font-family: var(--font-poppins);
+    background-color: var(--colorBlack);
+    color: white;
+    width: 100%;
+    display: var(--display-flex);
+    justify-content: space-between;
+    padding: 30px;
+    font-family: var(--font-poppins);
 }
 
 footer h4 {
@@ -813,11 +822,11 @@ footer h4 {
 }
 
 footer ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  width: 300px;
-  padding-top: 10px;
+    list-style: none;
+    display: var(--display-flex);
+    justify-content: space-between;
+    width: 300px;
+    padding-top: 10px;
 }
 
 /*  -----Responsive  - Media Queries ---- */
@@ -835,75 +844,193 @@ footer ul {
 
 /*  Browser window is 768 or smaller */
 @media screen and (max-width: 768px) {
-  header {
-    padding-left: 0px;
-  }
+    header {
+        padding-left: 0px;
+       justify-content: space-around;
+    }
 
-  .logoImg {
-    display: var(--main-dp);
-    margin: auto;
-    width: 275px;
-  }
+    header ul li {
+        margin-left: 0px;
+    }
 
-  header nav {
-    text-align: center;
-    padding-top: 20px;
-    margin-right: 0px;
-    float: none;
-  }
+    header nav {
+        padding-top: 20px;
+    }
 
-  .heroPic {
-    padding-top: 160px;
-  }
+    header .navLink {
+        font-size: 18px;
 
-  .infoCard {
-    width: 100%;
-    margin-bottom: 20px;
-  }
+    }
 
-  footer {
-    display: var(--main-dp);
-  }
+    #GenBtn img,span {
+        display: none;
+    }
 
-  footer ul {
-    margin: auto;
-    margin-bottom: 30px;
-  }
+    .logoImg {
+        width: 220px;
+    }
 
-  .footerLogo {
-    display: var(--main-dp);
-    margin: auto;
-  }
+    .heroPic {
+        padding-top: 160px;
+    }
 
-  footer h4 {
-    text-align: center;
-  }
+    .infoCard {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 
-  .cheersBlock {
-    display: var(--main-dp);
-  }
+    footer {
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
 
-  .cheersTxt {
-    max-width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: center;
-  }
 
-  .cheersImg {
-    max-width: 100%;
-    padding-top: 70px;
-  }
-  .contInput,
-  input {
-    width: 350px;
-  }
+    footer ul {
+        margin: var(--margin-auto);
+        margin-bottom: 20px;
+        padding-top: 20px;
+    }
 
-  .smallTle {
+    .footerLogo {
+        display: var(--main-dp);
+        width: 200px;
+        margin: var(--margin-auto);
+
+    }
+
+    footer h4 {
+        text-align: var(--text-align-center);
+        font-size: 12px;
+    }
+
+    .cheersBlock {
+        display: var(--main-dp);
+    }
+
+    .cheersTxt {
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: var(--text-align-center);
+        padding-bottom: 0px;
+    }
+
+    .cheersImg {
+        max-width: 100%;
+        padding-top: 70px;
+        padding-left: 0px;
+    }
+
+    .smallTle {
     font-size: 22px;
-  }
+    }
 
-  .heroTxt {
+    .heroTxt {
     font-size: 45px;
-  }
+    }
+
+    .comboBtnBox {
+    justify-content: var(--justify-content-center);
+    flex-wrap: wrap;
+    gap: 40px;
+    }
+    }
+
+    /* Mobil queries */
+@media screen and (max-width: 500px) {
+
+    p {
+    font-size: 18px;
+    line-height: 32px;
+        }
+
+    .heroPic {
+        padding-top: 120px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 80px;
+    }
+
+    .smallTle {
+        font-size: 18px;
+        padding-bottom: 10px;
+    }
+
+    .heroTxt {
+        font-size: 40px;
+    }
+
+    .heroTxt {
+        font-size: 45px;
+    }
+    #GenBtn {
+        font-size: 18px;
+        margin-top: 32px;
+        padding: 20px;
+    }
+    .cheersTxt {
+        padding-top: 62px;
+    }
+
+    .cheersBlock h2 {
+        font-size: 36px;
+        line-height: 36px;
+    }
+
+    .cheersBlock p {
+        font-size: 18px;
+    }
+
+    #aboutUs, #contactUs {
+        padding-top: 20px;
+    }
+
+    .cntc, .aboutSmllMsg{
+        font-size: 48px;
+    }
+
+    .msgCU, .msgAu {
+        font-size: 18px;
+        padding: 0px;
+        line-height: 23px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+
+    .connect {
+        padding-bottom: 60px;
+    }
+
+    .connectTxt {
+        padding-top: 60px;
+    }
+
+    .connect h2 {
+        font-size: 36px;
+        margin-bottom: 0px;
+    }
+
+    .connectTxt p {
+        font-size: 18px;
+    }
+
+    .connectCards{
+        margin-top: 20px;
+    }
+    .savedPairs h2 {
+        font-size: 36px;
+    }
+    .Login--signup-text {
+        margin: 10px;
+    }
+    .savedTxt p {
+        font-size: 18px;
+        line-height: 24px;
+
+    }
+    .comboBtnBox {
+        margin-top: 20px;
+        padding-bottom: 20px;
+    }
+
 }
