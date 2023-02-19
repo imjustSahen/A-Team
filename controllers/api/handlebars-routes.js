@@ -13,6 +13,10 @@ router.get("/", (req, res) => {
   });
 });
 
+router.get("/views/login", (req, res) => {
+  res.render("login");
+});
+
 router.get("/views/contactUs", (req, res) => {
   res.render("contactUs");
 });

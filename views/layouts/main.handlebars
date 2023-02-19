@@ -28,7 +28,11 @@
         <ul>
           <li><a href="/views/aboutUs" class="navLink"> About</a></li>
           <li><a href="/views/contactUs" class="navLink">Contact Us</a></li>
+          {{#if loggedIn}}
+          <button id="logout" class="btn-no-style">Logout</button>
+          {{else}}
           <li><a href="#" class="navLink login-btn">Log in</a></li>
+          {{/if}}
         </ul>
       </nav>
     </header>
@@ -52,7 +56,11 @@
         <ul>
           <li><a href="/views/aboutUs" class="footerLink"> About</a></li>
           <li><a href="/views/contactUs" class="footerLink">Contact Us</a></li>
+          {{#if loggedIn}}
+          <button id="logout" class="btn-no-style">Logout</button>
+          {{else}}
           <li><a href="#" class="footerLink login-btn">Log in</a></li>
+          {{/if}}
         </ul>
       </div>
     </footer>
