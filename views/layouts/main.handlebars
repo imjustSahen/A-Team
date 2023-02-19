@@ -63,19 +63,20 @@
             <div class="loginTxt">LOGIN</div>
             <input id="email-login" placeholder="Email"></input>
             <input id="password-login" placeholder="Password"></input>
-            <h3 class="text-login">Create Account</h3>
+            <h3 class="text-login" id="signup-modal"><a href="#signup-modal">Create Account</a></h3>
             <button type="submit" id="submit">
                 <h2>Login</h2>
             </button>
         </div>
     </section> 
     {{!-- create account --}}
-    <section class="signup-Overlay">
+    <section class="signup-Overlay" id="signup-modal">
         <div class="signup-Box">
             <a id="signup-close"><img src="/assets/close-x.png" alt="exit" width="100%"></a>
             <div class="signup-Txt">Create Account</div>
-            <input placeholder="Email"></input>
-            <input placeholder="Password"></input>
+            <input placeholder="Username" id="username-signup"></input>
+            <input placeholder="Email" id="email-signup"></input>
+            <input placeholder="Password" id="password-signup"></input>
             <button type="submit" id="signupBtn">
                 <h2>SIGNUP</h2>
             </button>

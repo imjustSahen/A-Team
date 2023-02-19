@@ -21,6 +21,12 @@ $("#login-close").click(function () {
   $(".loginOverlay").hide();
 });
 
+// Sign up button from login
+$("#signup-modal").click(function () {
+  $(".loginOverlay").hide();
+  $(".signup-Overlay").toggle();
+});
+
 // ---- Sign Up
 $(document).ready(function () {
   $(".signup-Overlay").hide();
