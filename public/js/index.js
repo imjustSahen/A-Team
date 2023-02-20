@@ -260,5 +260,4 @@ savePairingBtn.addEventListener("click", function (e) {
   console.log(savedBeer, savedFood);
 });
 
-randomBeer();
- 
+// randomBeer();

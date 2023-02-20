@@ -29,7 +29,7 @@
           <li><a href="/views/aboutUs" class="navLink"> About</a></li>
           <li><a href="/views/contactUs" class="navLink">Contact Us</a></li>
           {{#if loggedIn}}
-          <button id="logout" class="btn-no-style">Logout</button>
+          <li><a id="logout" class="btn-no-style">Logout</a></li>
           {{else}}
           <li><a href="#" class="navLink login-btn">Log in</a></li>
           {{/if}}
@@ -82,12 +82,14 @@
         <div class="signup-Box">
             <a id="signup-close"><img src="/assets/close-x.png" alt="exit" width="100%"></a>
             <div class="signup-Txt">Create Account</div>
+            <form class="signup-form">
             <input placeholder="Username" id="username-signup"></input>
             <input placeholder="Email" id="email-signup"></input>
             <input placeholder="Password" id="password-signup"></input>
-            <button type="submit" id="signupBtn">
+            <button type="submit" class="signup-btn" id="signupBtn">
                 <h2>SIGNUP</h2>
             </button>
+            </form>
         </div>
     </section>
   </body>
