@@ -12,7 +12,7 @@ const loginFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace("/");
+      document.location.replace("/views/pairing");
     } else {
       alert("Failed to log in.");
     }
@@ -27,14 +27,14 @@ const signupFormHandler = async (event) => {
   const password = document.querySelector("#password-signup").value.trim();
 
   if (username && email && password) {
-    const response = await fetch("/api/users", {
+    const response = await fetch("/api/user", {
       method: "POST",
       body: JSON.stringify({ username, email, password }),
       headers: { "Content-Type": "application/json" },
     });
 
     if (response.ok) {
-      document.location.replace("/");
+      document.location.replace("/views/pairing");
     } else {
       alert("Failed to sign up.");
     }
@@ -46,5 +46,5 @@ document
   .addEventListener("click", loginFormHandler);
 
 document
-  .querySelector("#signupBtn")
-  .addEventListener("click", signupFormHandler);
+  .querySelector(".signup-form")
+  .addEventListener("submit", signupFormHandler);

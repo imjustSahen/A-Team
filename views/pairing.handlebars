@@ -67,16 +67,20 @@
     </div>
   </main>
 </section>
+{{#if loggedIn}}
 <section class="savedPairs">
   <div class="savedTxt">
     <h2>My Saved Pairs</h2>
-    {{#if loggedIn}}
-
-    {{else}}
+    <p>Test test</p>
+  </div>
+</section>
+{{else}}
+<section class="savedPairs">
+  <div class="savedTxt">
     <div class="savedContainer">
       <p class="Login--signup-text">Login or Sign Up to save pairings!</p>
       <a href="#" class="login-btn"><button class=" login-pairs-btn">LOGIN</button></a>
     </div>
-    {{/if}}
   </div>
 </section>
+{{/if}}
