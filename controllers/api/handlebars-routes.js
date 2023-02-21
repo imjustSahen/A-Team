@@ -1,6 +1,7 @@
 const { Router } = require("express");
 const express = require("express");
 const router = express.Router();
+const withAuth = require("../../utils/auth");
 
 router.get("/views/aboutUs", (req, res) => {
   res.render("aboutUs");
