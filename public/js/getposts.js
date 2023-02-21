@@ -1,3 +1,4 @@
+//will have to fetch by user id's
 
 const getPairings = async () => {
     const response = await fetch("/api/pairing");
