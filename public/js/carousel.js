@@ -1,13 +1,15 @@
-async function pairingApiData(event) {
+const getPairings = async () => {
+    const response = await fetch("/api/pairing");
 
-await fetch(`/api/pairing`)
-    .then((response) => {
-        console.log(response)  
+    var data = await response.json();
+    console.log(data);
+
+    if(!response.ok) {
+        throw new Error('Could not fetch');
     }
-)};
+};
 
-pairingApiData();
-
+getPairings();
 
 //CAROUSEL AUTMATEDSLIDER 
 // ------------------------->
