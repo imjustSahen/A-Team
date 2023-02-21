@@ -1,5 +1,4 @@
 {{! This is our main html template that we put the items we want to show on every page. ie. header,footer,hero. }}
-
 <html lang="en">
 
   <head>
@@ -9,6 +8,7 @@
     <script
       src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"
     ></script>
+    <script src="https://kit.fontawesome.com/98a738832b.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
     <link
@@ -29,7 +29,7 @@
           <li><a href="/views/aboutUs" class="navLink"> About</a></li>
           <li><a href="/views/contactUs" class="navLink">Contact Us</a></li>
           {{#if loggedIn}}
-          <li><a id="logout" class="btn-no-style">Logout</a></li>
+          <li><a id="logout" class="navLink">Logout</a></li>
           {{else}}
           <li><a href="#" class="navLink login-btn">Log in</a></li>
           {{/if}}
@@ -44,7 +44,7 @@
 
     {{! Footer }}
     <footer>
-      <div>
+      <div class="footer-flex">
         <a class="footerLogo" href="/views/home"><img
             src="/assets/BeerNBites-Logo.png"
             width="100%"
@@ -52,12 +52,12 @@
           /></a>
         <h4>2023 Beer ‘n’ Bites Full Stack Student Project </h4>
       </div>
-      <div>
+      <div class="footer-flex">
         <ul>
           <li><a href="/views/aboutUs" class="footerLink"> About</a></li>
           <li><a href="/views/contactUs" class="footerLink">Contact Us</a></li>
           {{#if loggedIn}}
-          <button id="logout" class="btn-no-style">Logout</button>
+          <li><a id="logout" class="footerLink">Logout</a></li>
           {{else}}
           <li><a href="#" class="footerLink login-btn">Log in</a></li>
           {{/if}}
@@ -89,7 +89,6 @@
             <button type="submit" class="signup-btn" id="signupBtn">
                 <h2>SIGNUP</h2>
             </button>
-            </form>
         </div>
     </section>
   </body>
@@ -97,9 +96,9 @@
     defer
     src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"
   ><{{!}}/script>
+  
   <script defer src="/js/index.js"><{{!}}/script>
   <script src="/js/getposts.js">
   <script src="/js/login.js"></script>
-  <script defer src="/js/add-post.js"><{{!}}/script>
   <script defer src="/js/logout.js"><{{!}}/script>
 </html>

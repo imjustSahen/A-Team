@@ -1,19 +1,17 @@
 {{! <!-- CARDS --> }}
-<section class="heroPic heroPicDarker">
-  <main class="hero-content">
-    {{! <!-- <div><p class="pair-intro">Try this pair</p> </div> --> }}
+<section class="heroPic heroPicDarker hero-content">
+  <div class="hero-flex">
+    {{!-- <h1 class="pair-intro">Try this pair</h1> --}}
     <div class="container">
       <div class="card">
         <div class="face face1" id="beer-face">
           <div class="content beer-image">
             <img src="" alt="beer" />
-            <p hidden id="beer-img-url"></p>
           </div>
         </div>
         <div class="face face2" id="beer-content">
           <div class="content">
             <h3 class="beer-name"></h3>
-            <p hidden id="beer-id"></p>
             <p class="beer-tagline"></p>
             <p class="beer-abv"></p>
             <p class="beer-description"></p>
@@ -40,13 +38,11 @@
         <div class="face face1" id="food-face">
           <div class="content dish-image">
             <img src="" />
-            <p hidden id="dish-img-url"></p>
           </div>
         </div>
         <div class="face face2" id="food-content">
           <div class="content">
             <h3 class="dish-name"></h3>
-            <p hidden id="dish-id"></p>
             <p class="dish-summary"></p>
             <a
               id="recipe-link"
@@ -62,29 +58,35 @@
 
     {{! <!--   ---- Buttons----  --> }}
     <div class="comboBtnBox">
-      <button id="new-pairing-btn">
+      <div class="rating">
+          <span class="rating-result"></span>
+          <i class="rating-star far fa-star"></i>
+          <i class="rating-star far fa-star"></i>
+          <i class="rating-star far fa-star"></i>
+          <i class="rating-star far fa-star"></i>
+          <i class="rating-star far fa-star"></i>
+      </div>
+      <button class="pairing-btn" id="new-pairing-btn">
         <h2>Get New Pairing</h2>
       </button>
-      <button id="save-pairing-btn">
+      <button class="pairing-btn" id="save-pairing-btn">
         <h2>Save Your Pairing</h2>
       </button>
     </div>
-  </main>
+    </div>
 </section>
-{{#if loggedIn}}
 <section class="savedPairs">
   <div class="savedTxt">
     <h2>My Saved Pairs</h2>
-    <p>Test test</p>
-  </div>
-</section>
-{{else}}
-<section class="savedPairs">
-  <div class="savedTxt">
-    <div class="savedContainer">
+    {{#if loggedIn}}
+      {{#each user.pairings as |pairing|}}
+      {{> user-pairings}}
+      {{/each}}
+    {{else}}
+    <div class="loginSavedContainer">
       <p class="Login--signup-text">Login or Sign Up to save pairings!</p>
       <a href="#" class="login-btn"><button class=" login-pairs-btn">LOGIN</button></a>
     </div>
+    {{/if}}
   </div>
 </section>
-{{/if}}
