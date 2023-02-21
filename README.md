@@ -10,9 +10,7 @@
   ![License Badge](https://img.shields.io/badge/-.ENV-ECD53F?logo=.env&syle=flat&logoColor=white)
   
   ## Description
-  .
-  .
-  .
+  Our vision was to create an app that celebrates the joy of beer and food that brings people together to share the experience. Cheers to the good times and great beer!
 
 
   ## Table of Contents
