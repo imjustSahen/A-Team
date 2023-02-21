@@ -1,22 +1,21 @@
-<!-- Hero Pic Section -->
+{{!-- <!-- Hero Pic Section --> --}}
     <section class="heroPic">
         <div class="'heroPic-label">
             <h3 class="smallTle">EAT, DRINK, ENJOY</h3><br>
             <h1 class="heroTxt">Explore enticing combinations of eats and brews.</h1>
         </div>
-        <button id="gen-btn" onClick="location.href='/views/pairing'">
-            <h2>Generate your combo <img src="./assets/BeerIcon.png" width="30px" alt="beerIcon"> + <img
-                    src="./assets/FoodIcon.png" width="26px" alt="foodIcon"></h2>
+        <button id="GenBtn" onClick="location.href='pairing.html'">Generate your combo <img src="/assets/BeerIcon.png" width="30px" alt="beerIcon"><span> + </span><img
+                    src="/assets/FoodIcon.png" width="26px" alt="foodIcon">
         </button>
     </section>
-    <!-- Second block img and text -->
+    {{!-- <!-- Second block img and text --> --}}
     <section class="cheersBlock">
         <div class="cheersTxt">
             <h2>We love beer and food.</h2>
             <p>"Great beer and delicious food - a perfect pairing for those who love to savor life's flavors!"</p>
         </div>
         <div class="cheersImg">
-            <img src="./assets/cheers-pic.jpg" alt="cheers-pic" width="100%">
+            <img src="/assets/cheers-pic.jpg" alt="cheers-pic" width="100%">
         </div>
     </section>
     <section class="combos">
@@ -25,5 +24,31 @@
             {{#each images as |image| }}
             {{> carousel-element image}}
         {{/each}}
+        </div>
+    </section>
+{{!-- <!-- Login --> --}}
+    <section class="loginOverlay">
+        <div class="loginBox">
+            <a id="modalClose"><img src="/assets/close-x.png" alt="exit" width="100%"></a>
+            <div class="loginTxt">Login</div>
+            <input placeholder="Username"></input>
+            <input placeholder="Password"></input>
+            <button>
+                Login
+            </button>
+            <a href="#" class="text-login">Create Account</a>
+        </div>
+    </section>
+
+    {{!-- <!-- Create Account  --> --}}
+    <section class="signup-Overlay">
+        <div class="signup-Box">
+            <a id="modalClose"><img src="/assets/close-x.png" alt="exit" width="100%"></a>
+            <div class="signup-Txt">Create Account</div>
+            <input placeholder="Email"></input>
+            <input placeholder="Password"></input>
+            <button>
+                SIGNUP
+            </button>
         </div>
     </section>

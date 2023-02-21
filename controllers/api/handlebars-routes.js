@@ -6,6 +6,11 @@ router.get("/views/aboutUs", (req, res) => {
   res.render("aboutUs");
 });
 
+//  GET home page
+router.get("/", (req, res) => {
+  res.render("home", { loggedIn: req.session.loggedIn });
+});
+
 router.get("/", (req, res) => {
   const imagesArr = [{ number: 2 }, { number: 3 }, { number: 4 }];
   res.render("home", {
