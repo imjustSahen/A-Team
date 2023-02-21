@@ -13,16 +13,15 @@ $(document).ready(function () {
   $(".loginOverlay").hide();
 
   $(function stickyNav() {
-    $(window).on("scroll", function() {
-        if($(window).scrollTop() > 20) {
-            $("header").addClass("sticky");
-        } else {
-            //remove the background property so it comes transparent again (defined in your css)
-           $("header").removeClass("sticky");
-        }
+    $(window).on("scroll", function () {
+      if ($(window).scrollTop() > 20) {
+        $("header").addClass("sticky");
+      } else {
+        //remove the background property so it comes transparent again (defined in your css)
+        $("header").removeClass("sticky");
+      }
     });
   });
-
 });
 
 $(".login-btn").click(function () {
@@ -51,8 +50,44 @@ $("#signup").click(function () {
 $("#signup-close").click(function () {
   $(".signup-Overlay").hide();
 });
-// ---------------------------------- ///
 
+// Star Review
+const ratingStars = [...document.getElementsByClassName("rating-star")];
+const ratingResult = document.querySelector(".rating-result");
+
+printRatingResult(ratingResult);
+
+function executeRating(stars, result) {
+  const starClassActive = "rating-star fas fa-star";
+  const starClassUnactive = "rating-star far fa-star";
+  const starsLength = stars.length;
+  let i;
+  stars.map((star) => {
+    star.onclick = () => {
+      i = stars.indexOf(star);
+
+      if (star.className.indexOf(starClassUnactive) !== -1) {
+        printRatingResult(result, i + 1);
+        for (i; i >= 0; --i) stars[i].className = starClassActive;
+      } else {
+        printRatingResult(result, i);
+        for (i; i < starsLength; ++i) stars[i].className = starClassUnactive;
+      }
+    };
+  });
+}
+
+function printRatingResult(result, num = 0) {
+  result.textContent = `${num}/5`;
+}
+
+executeRating(ratingStars, ratingResult);
+
+newPairingBtn.addEventListener("click", function getRating() {
+  console.log(ratingResult);
+});
+
+// API Calls
 newPairingBtn.addEventListener("click", function getNewPairing() {
   return randomBeer();
 });
@@ -93,42 +128,6 @@ function randomBeer() {
       return getPairing(foodPairingString, beerId, beerName);
     });
 }
-
-// In progress function for looping through food_pairing array
-// function getPairing(foodPairingString) {
-
-//   for (let i = 0; i < foodPairingString.length; i++) {
-//     let foodPairing = foodPairingString[i].replaceAll(" ", "%");
-//     const foodPairingAPI = `https://api.spoonacular.com/recipes/complexSearch?query=${foodPairing}&apiKey=${spoonacularKey}`;
-
-//     console.log(foodPairing);
-//     fetch(foodPairingAPI)
-//       .then(function (response) {
-//         return response.json();
-//       })
-//       .then(function (data) {
-//         let totalResult = data.totalResults;
-//         console.log(totalResult);
-//         if (totalResult === 0) {
-//           return randomDish();
-//         } else {
-//           const foodBody = $("#food-content .content");
-//           console.log(data);
-//           foodBody.children(".dish-name").text(data.results[0].title);
-//           $(".dish-image img").attr("src", data.results[0].image);
-//           let recipeId = data.results[0].id;
-//           console.log(recipeId);
-//           getRecipe(recipeId);
-//         }
-//         console.log(data.totalResults.value);
-//         console.log(data.totalResults);
-//         // savePairing(recipeId);
-//       })
-//       .catch(function (err) {
-//         console.log(err);
-//       });
-//   }
-// }
 
 function getPairing(foodPairingString) {
   const foodPairingAPI = `https://api.spoonacular.com/recipes/complexSearch?query=${foodPairingString}&apiKey=${spoonacularKey}`;
@@ -208,7 +207,9 @@ function randomDish() {
       foodBody.children(".dish-summary").html(`${foodSummary}...`);
       $("#recipe-link").attr("href", data.searchResults[0].results[i].link);
       foodBody.children("#dish-id").text(dishId);
-      foodBody.children("#dish-img-url").text(data.searchResults[0].results[i].image);
+      foodBody
+        .children("#dish-img-url")
+        .text(data.searchResults[0].results[i].image);
       saveFoodDetails(dishId, dishName, dishImg);
     })
     .catch(function (err) {
