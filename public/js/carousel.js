@@ -1,10 +1,11 @@
 async function pairingApiData(event) {
 
 await fetch(`/api/pairing`)
-    .then((response) => {
-        console.log(response)  
-    }
-)};
+    .then((response) => 
+        response.json())
+    .then((data) => console.log(data))
+};
+
 
 pairingApiData();
 
