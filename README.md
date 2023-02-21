@@ -1,6 +1,13 @@
 # Beer'n'Bites
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  ![License Badge](https://img.shields.io/badge/-Javascript-F7DF1E?logo=Javascript&syle=flat&logoColor=white)
+  ![License Badge](https://img.shields.io/badge/-Sequelize-52B0E7?logo=sequelize&style=flat&logoColor=white)
+  ![License Badge](https://img.shields.io/badge/-Handlebars.js-000000?logo=handlebars.js&style=flat&logoColor=white)
+  ![License Badge](https://img.shields.io/badge/-Express-000000?logo=express&style=flat&logoColor=white)
+  ![License Badge](https://img.shields.io/badge/-Node.js-339933?logo=node.js&style=flat&logoColor=white)
+  ![License Badge](https://img.shields.io/badge/-MySQL-4479A1?logo=mysql&syle=flat&logoColor=white)
+  ![License Badge](https://img.shields.io/badge/-.ENV-ECD53F?logo=.env&syle=flat&logoColor=white)
   
   ## Description
   .
@@ -22,7 +29,7 @@
   ## Usage
   <pre>npm i</pre>
 
-  Using a local database, employee_db, with password 
+  Using a local database
 
   <pre>mysql -u root -p</pre>
 
