@@ -11,6 +11,10 @@ Pairing.init(
           primaryKey: true,
           autoIncrement: true
         },
+        beer_name: {
+          type: DataTypes.STRING,
+          allowNull: false
+        },
         beer_id: {
           type: DataTypes.INTEGER,
           allowNull: false
@@ -18,6 +22,10 @@ Pairing.init(
         beer_img: {
           type: DataTypes.STRING,
           allowNull: true
+        },
+        dish_name: {
+          type: DataTypes.STRING,
+          allowNull: false
         },
         dish_id: {
           type: DataTypes.INTEGER,
