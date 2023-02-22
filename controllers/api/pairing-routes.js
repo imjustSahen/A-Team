@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const { User, Pairing, Review, Comment } = require('../../models');
 
-//localhost:3001/api/pairing
 router.get('/', async (req, res) => {
     try {
         const pairingData = await Pairing.findAll({
