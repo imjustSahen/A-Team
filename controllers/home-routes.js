@@ -44,8 +44,6 @@ router.get("/pairing", async (req, res) => {
   try {
 
     if(req.session.loggedIn) {
-
-
         const pairingData = await Pairing.findAll({
         //uses id from the session
         where: { user_id: req.session.user_id },
