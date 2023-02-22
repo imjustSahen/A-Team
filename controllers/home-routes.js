@@ -40,8 +40,8 @@ router.get("/contactUs", (req, res) => {
 });
 
 router.get("/pairing", async (req, res) => {
-  if (req.session.loggedIn) {
-    try {
+  try {
+     if (req.session.loggedIn) {
       const pairingData = await Pairing.findAll({
         //uses id from the session
         where: { user_id: req.session.user_id },
@@ -58,19 +58,16 @@ router.get("/pairing", async (req, res) => {
       const pairings = pairingData.map((pairing) =>
         pairing.get({ plain: true })
       );
+
       res.render("pairing", {
         pairings,
         loggedIn: req.session.loggedIn,
       });
-    } catch (err) {
-      res.status(500).json(err);
+    } else {
+      res.render("pairing");
     }
-  } else {
-    try {
-      res.render("pairing", { loggedIn: req.session.loggedIn });
-    } catch (err) {
+  } catch (err) {
       res.status(500).json(err);
-    }
   }
 });
 
