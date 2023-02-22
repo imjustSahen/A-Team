@@ -83,7 +83,7 @@
   <div class="savedTxt">
     <h2>My Saved Pairs</h2>
     {{#if loggedIn}}
-      {{#each user.pairings as |pairing|}}
+      {{#each pairings}}
       {{> user-pairings}}
       {{/each}}
     {{else}}

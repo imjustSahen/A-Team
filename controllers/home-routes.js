@@ -47,7 +47,7 @@ router.get("/pairing", async (req, res) => {
         const pairingData = await Pairing.findAll({
         //uses id from the session
         where: { user_id: req.session.user_id },
-        attributes: { exclude: ['user_id'] },
+        attributes: { exclude: ["user_id"] },
         include: [
             {
                 model: Review,
@@ -66,8 +66,14 @@ router.get("/pairing", async (req, res) => {
 
 } catch (err) {
     res.status(500).json(err);
-}
-
+    }
+  } else {
+    try {
+      res.render("pairing", { loggedIn: req.session.loggedIn });
+    } catch (err) {
+    res.status(500).json(err);
+    }
+  }
 });
 
 module.exports = router;
