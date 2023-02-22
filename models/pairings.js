@@ -35,6 +35,10 @@ Pairing.init(
           type: DataTypes.STRING,
           allowNull: true
         },
+        dish_link: {
+          type: DataTypes.STRING,
+          allowNull: false
+        },
         user_id: {
           type: DataTypes.INTEGER,
           references: {
