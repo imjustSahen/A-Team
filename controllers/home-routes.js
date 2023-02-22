@@ -11,7 +11,7 @@ router.get("/", async (req, res) => {
         {
           model: Review,
           attributes: { exclude: ["pairing_id", "user_id"] },
-          include: [{ model: User, attributes: { exclude: ["id"] } }],
+          include: [{ model: User, attributes: { exclude: ["id", "password"] } }],
         },
       ],
     });
@@ -50,7 +50,7 @@ router.get("/pairing", async (req, res) => {
           {
             model: Review,
             attributes: { exclude: ["pairing_id", "user_id"] },
-            include: [{ model: User, attributes: { exclude: ["id"] } }],
+            include: [{ model: User, attributes: { exclude: ["id", "password"] } }],
           },
         ],
       });
