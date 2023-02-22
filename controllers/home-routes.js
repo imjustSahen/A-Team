@@ -2,7 +2,6 @@ const router = require("express").Router();
 const path = require("path");
 const { User, Pairing, Comment, Review } = require("../models");
 
-//getting all pairing data for carousel cards
 router.get("/", async (req, res) => {
   try {
     const pairingData = await Pairing.findAll({
@@ -30,7 +29,6 @@ router.get("/", async (req, res) => {
   }
 });
 
-// Handlebar routes
 router.get("/aboutUs", (req, res) => {
   res.render("aboutUs", { loggedIn: req.session.loggedIn });
 });
@@ -43,7 +41,6 @@ router.get("/pairing", async (req, res) => {
   try {
      if (req.session.loggedIn) {
       const pairingData = await Pairing.findAll({
-        //uses id from the session
         where: { user_id: req.session.user_id },
         attributes: { exclude: ["user_id"] },
         include: [
