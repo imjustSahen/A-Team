@@ -1,36 +1,40 @@
 <section class="hero-flex">
-  <div class="container">
-    <div class="card">
-      <div class="face face1" id="beer-face">
-        <div class="content beer-image">
-          <img id="beer-img-url" src="{{beer_img}}" alt="beer" />
-        </div>
+  <div class="saved-container">
+    <div class="card drop-shadow">
+      <div class="content1 beer-image">
+        <img id="beer-img-url" src="{{beer_img}}" alt="beer" />
       </div>
-      <div class="face face2" id="beer-content">
-        <div class="content">
-          <h3 class="beer-name">{{beer_name}}</h3>
-        </div>
+      <div class="content2">
+        <h3 class="beer-name">{{beer_name}}</h3>
       </div>
     </div>
-    <div class="card">
-      <div class="face face1" id="food-face">
-        <div class="content dish-image">
-          <img src="{{dish_img}}" />
-          <p hidden id="dish-img-url"></p>
-        </div>
+    {{!-- <div class="card card-circle">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="68"
+        height="68"
+        viewBox="0 0 98 98"
+        fill="none"
+      >
+        <circle cx="49" cy="49" r="49" fill="#AF4636"></circle>
+        <path
+          d="M64.8804 49.93H50.1104V64.56H47.4504V49.93H33.1004V47.62H47.4504V33.9H50.1104V47.62H64.8804V49.93Z"
+          fill="#EEE1CC"
+        ></path>
+      </svg>
+    </div> --}}
+    <div class="card drop-shadow">
+      <div class="content1 dish-image">
+        <img src="{{dish_img}}" />
       </div>
-      <div class="face face2" id="food-content">
-        <div class="content">
-          <h3 class="dish-name">{{dish_name}}</h3>
-          <p hidden id="dish-id"></p>
-          <p class="dish-summary"></p>
-          <a
-            id="recipe-link"
-            href="{{dish_link}}"
-            target="_blank"
-            rel="noopener noreferrer"
-          >Get Recipe</a>
-        </div>
+      <div class="content2">
+        <h3 class="dish-name">{{dish_name}}</h3>
+        <a
+          id="recipe-link"
+          href="{{dish_link}}"
+          target="_blank"
+          rel="noopener noreferrer"
+        ><button>Get Recipe</button></a>
       </div>
     </div>
   </div>
