@@ -6,6 +6,11 @@ const randomDishBtn = document.getElementById("get-dish-btn");
 const newPairingBtn = document.getElementById("new-pairing-btn");
 const savePairingBtn = document.getElementById("save-pairing-btn");
 
+//loader
+const loaderContainer = document.querySelector(".loader-container");
+window.addEventListener("load", () => {
+  loaderContainer.style.display = "none";
+});
 // const savedEventResults = [];
 
 // ---- Login ----
@@ -268,20 +273,5 @@ savePairingBtn.addEventListener("click", function (e) {
   // localStorage.getItem("savedFood", JSON.stringify(savedFood))
   console.log(savedBeer, savedFood);
 });
-
-//java for loading screen for funnies
-
-const loaderContainer = document.querySelector(".loader-container");
-window.addEventListener("load", () => {
-  loaderContainer.style.display = "none";
-});
-
-const displayLoading = () => {
-  loaderContainer.style.display = "block";
-};
-
-const hideLoading = () => {
-  loaderContainer.style.display = "none";
-};
 
 // randomBeer();
