@@ -11,34 +11,34 @@ Pairing.init(
           primaryKey: true,
           autoIncrement: true
         },
-        beer_name: {
-          type: DataTypes.STRING,
-          allowNull: false
-        },
         beer_id: {
           type: DataTypes.INTEGER,
           allowNull: false
         },
+        // beer_name: {
+        //   type: DataTypes.STRING,
+        //   allowNull: false
+        // },
         beer_img: {
           type: DataTypes.STRING,
           allowNull: true
-        },
-        dish_name: {
-          type: DataTypes.STRING,
-          allowNull: false
         },
         dish_id: {
           type: DataTypes.INTEGER,
           allowNull: false
         },
+        // dish_name: {
+        //   type: DataTypes.STRING,
+        //   allowNull: false
+        // },
         dish_img: {
           type: DataTypes.STRING,
           allowNull: true
         },
-        dish_link: {
-          type: DataTypes.STRING,
-          allowNull: false
-        },
+        // dish_link: {
+        //   type: DataTypes.STRING,
+        //   allowNull: false
+        // },
         user_id: {
           type: DataTypes.INTEGER,
           references: {

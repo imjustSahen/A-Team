@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const path = require("path");
 const { User, Pairing, Comment, Review } = require("../models");
+const withAuth = require('../utils/auth');
 
 //getting all pairing data for carousel cards
 router.get("/", async (req, res) => {
@@ -16,12 +17,12 @@ router.get("/", async (req, res) => {
       ],
     });
 
-    const pairings = await pairingData.map((pairing) =>
+    const pairings =  pairingData.map((pairing) =>
       pairing.get({ plain: true })
     );
     const imagesArr = [{ number: 2 }, { number: 3 }, { number: 4 }];
     res.render("home", {
-      pairings,
+      // pairings,
       images: imagesArr,
       loggedIn: req.session.loggedIn,
     });
@@ -42,7 +43,10 @@ router.get("/contactUs", (req, res) => {
 router.get("/pairing", async (req, res) => {
   try {
 
-    const pairingData = await Pairing.findAll({
+    if(req.session.loggedIn) {
+
+
+        const pairingData = await Pairing.findAll({
         //uses id from the session
         where: { user_id: req.session.user_id },
         attributes: { exclude: ['user_id'] },
@@ -54,12 +58,14 @@ router.get("/pairing", async (req, res) => {
             }
         ]
     });
+      const pairings = pairingData.map((pairing) => pairing.get({ plain: true }));
+    }
 
-    const pairings = await pairingData.map((pairing) => pairing.get({ plain: true }));
     res.render("pairing", { 
-      pairings,
+      // pairings,
       loggedIn: req.session.loggedIn 
     });
+
 } catch (err) {
     res.status(500).json(err);
 }
