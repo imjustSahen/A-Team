@@ -520,12 +520,13 @@ header ul li {
   flex-flow: row wrap;
   display: flex;
   justify-content: center;
-  /* align-items: var(--align-items-center); */
-  padding-bottom: 50px;
+  align-items: center;
+  /* padding-bottom: 50px; */
 }
 
 .container .card {
   position: relative;
+  justify-content: center;
   cursor: var(--cursor-pointer);
 }
 
@@ -534,9 +535,13 @@ header ul li {
   margin: -10px;
 }
 
+circle {
+  box-shadow: 0px 2px 5px 2px rgba(27, 27, 27, 0.493);
+}
+
 .container .card .face {
-  width: 400px;
-  height: 200px;
+  width: 450px;
+  height: 225px;
   transition: 0.5s;
 }
 
@@ -547,7 +552,10 @@ header ul li {
   justify-content: center;
   align-items: center;
   z-index: 1;
-  transform: translateY(100px);
+  transform: translateY(0);
+  /* border-right: 3px solid var(--colorBlack); */
+  border-top-right-radius: 10px;
+  box-shadow: 5px 3px 8px 2px rgba(49, 49, 49, 0.505);
 }
 
 .container .card:hover .face.face1 {
@@ -566,11 +574,13 @@ header ul li {
 
 .beer-image img {
   transform: rotate(55deg);
-  max-width: 80px;
+  max-width: 100px;
 }
 
 .dish-image img {
-  max-width: 200px;
+  max-width: 250px;
+  border-radius: 30px;
+  box-shadow: 0px 2px 5px 2px rgba(27, 27, 27, 0.493);
 }
 
 .container .card .face.face2 {
@@ -578,11 +588,11 @@ header ul li {
   background: #fff;
   display: flex;
   justify-content: left;
-  align-items: left;
   padding: 20px;
   box-sizing: border-box;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-  transform: translateY(-100px);
+  transform: translateY(0);
+  border-bottom-left-radius: 10px;
 }
 
 .container .card:hover .face.face2 {
@@ -592,7 +602,7 @@ header ul li {
 .container .card .face.face2 .content h3 {
   margin: 0px;
   padding: 0px;
-  color: rgb(176, 54, 10);
+  color: rgb(49, 49, 49);
   font-size: 1.2rem;
   text-align: center;
 }
@@ -601,7 +611,7 @@ header ul li {
   color: black;
   margin: 0;
   padding: 2px 0px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   text-align: left;
 }
 
@@ -618,28 +628,102 @@ header ul li {
 }
 
 .container .card .face.face2 .content a {
-  margin: 15px 0 0;
-  display: inline-block;
   text-decoration: none;
-  font-weight: 900;
-  color: #333;
-  padding: 5px;
-  border: 1px solid #333;
 }
 
-.container .card .face.face2 .content a:hover {
-  background: #333;
-  color: #fff;
+/* User's saved pairings */
+.saved-container {
+  flex-flow: row wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+  transition: 0.5s;
+  padding-bottom: 15px;
 }
-/* End of Card Hover Styling */
 
-/* ---- My saved pairs ----- */
+.saved-container:hover {
+  opacity: 1;
+}
 
-/* main container */
-/* .hero-content {
-  margin-top: 10px;
-  margin-bottom: 20px;
+.saved-container .card {
+  position: relative;
+  justify-content: center;
+  cursor: var(--cursor-pointer);
+}
+
+.saved-container .drop-shadow {
+  box-shadow: 2px 4px 4px 0px rgba(27, 27, 27, 0.493);
+}
+
+/* .saved-container .card-circle {
+  z-index: 10;
+  margin: -10px;
 } */
+
+.saved-container .card .content1 {
+  width: 400px;
+  height: 150px;
+  transition: 0.5s;
+}
+
+.saved-container .card .content2 {
+  width: 400px;
+  height: 100px;
+  transition: 0.5s;
+}
+
+.saved-container .card .content1 {
+  position: relative;
+  background: #a44e29;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transform: translateY(0);
+}
+
+.saved-container .beer-image img {
+  transform: rotate(65deg);
+  max-width: 70px;
+}
+
+.saved-container .dish-image img {
+  max-width: 175px;
+  border-radius: 30px;
+}
+
+.saved-container .card .content2 {
+  position: relative;
+  background: #fff;
+  padding: 10px;
+}
+
+.saved-container .card .content2 {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.saved-container .card .content2 h3 {
+  margin: 0px;
+  padding: 0px;
+  color: rgb(176, 54, 10);
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.saved-container .card .content2 button {
+  padding: 5px 10px;
+  align-self: center;
+  font-size: 14px;
+}
+
+.saved-container .card .content2 .content a {
+  text-decoration: none;
+}
+
 /* my saved container */
 .loginSavedContainer {
   background-color: #eee4d2;

@@ -1,4 +1,4 @@
-const spoonacularKey = "4d99c4b67da24285b6aeb06e045ba25f";
+const spoonacularKey = "3d1a85ae117b432aa54f8a339a92c766";
 
 const randomBeerAPI = "https://api.punkapi.com/v2/beers/random";
 const randomBeerBtn = document.getElementById("get-beer-btn");
@@ -52,40 +52,40 @@ $("#signup-close").click(function () {
 });
 
 // Star Review
-const ratingStars = [...document.getElementsByClassName("rating-star")];
-const ratingResult = document.querySelector(".rating-result");
+// const ratingStars = [...document.getElementsByClassName("rating-star")];
+// const ratingResult = document.querySelector(".rating-result");
 
-printRatingResult(ratingResult);
+// printRatingResult(ratingResult);
 
-function executeRating(stars, result) {
-  const starClassActive = "rating-star fas fa-star";
-  const starClassUnactive = "rating-star far fa-star";
-  const starsLength = stars.length;
-  let i;
-  stars.map((star) => {
-    star.onclick = () => {
-      i = stars.indexOf(star);
+// function executeRating(stars, result) {
+//   const starClassActive = "rating-star fas fa-star";
+//   const starClassUnactive = "rating-star far fa-star";
+//   const starsLength = stars.length;
+//   let i;
+//   stars.map((star) => {
+//     star.onclick = () => {
+//       i = stars.indexOf(star);
 
-      if (star.className.indexOf(starClassUnactive) !== -1) {
-        printRatingResult(result, i + 1);
-        for (i; i >= 0; --i) stars[i].className = starClassActive;
-      } else {
-        printRatingResult(result, i);
-        for (i; i < starsLength; ++i) stars[i].className = starClassUnactive;
-      }
-    };
-  });
-}
+//       if (star.className.indexOf(starClassUnactive) !== -1) {
+//         printRatingResult(result, i + 1);
+//         for (i; i >= 0; --i) stars[i].className = starClassActive;
+//       } else {
+//         printRatingResult(result, i);
+//         for (i; i < starsLength; ++i) stars[i].className = starClassUnactive;
+//       }
+//     };
+//   });
+// }
 
-function printRatingResult(result, num = 0) {
-  result.textContent = `${num}/5`;
-}
+// function printRatingResult(result, num = 0) {
+//   result.textContent = `${num}/5`;
+// }
 
-executeRating(ratingStars, ratingResult);
+// executeRating(ratingStars, ratingResult);
 
-newPairingBtn.addEventListener("click", function getRating() {
-  console.log(ratingResult);
-});
+// newPairingBtn.addEventListener("click", function getRating() {
+//   console.log(ratingResult);
+// });
 
 // API Calls
 newPairingBtn.addEventListener("click", function getNewPairing() {
