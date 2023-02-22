@@ -32,8 +32,8 @@
         /></a>
       <nav>
         <ul>
-          <li><a href="/views/aboutUs" class="navLink"> About</a></li>
-          <li><a href="/views/contactUs" class="navLink">Contact Us</a></li>
+          <li><a href="/aboutUs" class="navLink"> About</a></li>
+          <li><a href="/contactUs" class="navLink">Contact Us</a></li>
           {{#if loggedIn}}
           <li><a id="logout" class="navLink">Logout</a></li>
           {{else}}
@@ -60,8 +60,8 @@
       </div>
       <div class="footer-flex">
         <ul>
-          <li><a href="/views/aboutUs" class="footerLink"> About</a></li>
-          <li><a href="/views/contactUs" class="footerLink">Contact Us</a></li>
+          <li><a href="/aboutUs" class="footerLink"> About</a></li>
+          <li><a href="/contactUs" class="footerLink">Contact Us</a></li>
           {{#if loggedIn}}
           <li><a id="logout" class="footerLink">Logout</a></li>
           {{else}}
@@ -75,12 +75,14 @@
         <div class="loginBox">
             <a id="login-close"><img src="/assets/close-x.png" alt="exit" width="100%"></a>
             <div class="loginTxt">LOGIN</div>
+            <form class="login-form">
             <input id="email-login" placeholder="Email"></input>
-            <input id="password-login" placeholder="Password"></input>
+            <input id="password-login" placeholder="Password" type="password"></input>
             <h3 class="text-login" id="signup-modal"><a href="#signup-modal">Create Account</a></h3>
             <button type="submit" id="signinBtn">
                 <h2>Login</h2>
             </button>
+            </form>
         </div>
     </section> 
     {{!-- create account --}}
@@ -91,10 +93,11 @@
             <form class="signup-form">
             <input placeholder="Username" id="username-signup"></input>
             <input placeholder="Email" id="email-signup"></input>
-            <input placeholder="Password" id="password-signup"></input>
+            <input placeholder="Password" id="password-signup" type="password"></input>
             <button type="submit" class="signup-btn" id="signupBtn">
                 <h2>SIGNUP</h2>
             </button>
+            </form>
         </div>
     </section>
   </body>
@@ -104,7 +107,8 @@
   ><{{!}}/script>
   
   <script defer src="/js/index.js"><{{!}}/script>
-  <script src="/js/getposts.js">
-  <script src="/js/login.js"></script>
+  <script defer src="/js/login.js"><{{!}}/script>
   <script defer src="/js/logout.js"><{{!}}/script>
+  <script defer src="/js/getposts.js"><{{!}}/script>
+
 </html>
