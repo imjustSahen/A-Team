@@ -40,30 +40,38 @@ router.get("/contactUs", (req, res) => {
 });
 
 router.get("/pairing", async (req, res) => {
-  try {
-
-    const pairingData = await Pairing.findAll({
+  if (req.session.loggedIn) {
+    try {
+      const pairingData = await Pairing.findAll({
         //uses id from the session
         where: { user_id: req.session.user_id },
-        attributes: { exclude: ['user_id'] },
+        attributes: { exclude: ["user_id"] },
         include: [
-            {
-                model: Review,
-                attributes: { exclude: ['pairing_id', 'user_id'] },
-                include: [{ model: User, attributes: { exclude: ['id'] } }]
-            }
-        ]
-    });
+          {
+            model: Review,
+            attributes: { exclude: ["pairing_id", "user_id"] },
+            include: [{ model: User, attributes: { exclude: ["id"] } }],
+          },
+        ],
+      });
 
-    const pairings = await pairingData.map((pairing) => pairing.get({ plain: true }));
-    res.render("pairing", { 
-      pairings,
-      loggedIn: req.session.loggedIn 
-    });
-} catch (err) {
+      const pairings = pairingData.map((pairing) =>
+        pairing.get({ plain: true })
+      );
+      res.render("pairing", {
+        pairings,
+        loggedIn: req.session.loggedIn,
+      });
+    } catch (err) {
     res.status(500).json(err);
-}
-
+    }
+  } else {
+    try {
+      res.render("pairing", { loggedIn: req.session.loggedIn });
+    } catch (err) {
+    res.status(500).json(err);
+    }
+  }
 });
 
 module.exports = router;

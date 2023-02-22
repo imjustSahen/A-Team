@@ -1,26 +1,37 @@
-<section class="card">
-  <a href="/pairing/{{id}}">
-    <div class="card-body">
-      <img src="{{beer_img}}" alt="{{description}}" />
-      <p>{{beer_name}}</p>
+<section class="hero-flex">
+  <div class="container">
+    <div class="card">
+      <div class="face face1" id="beer-face">
+        <div class="content beer-image">
+          <img id="beer-img-url" src="{{beer_img}}" alt="beer" />
+        </div>
+      </div>
+      <div class="face face2" id="beer-content">
+        <div class="content">
+          <h3 class="beer-name">{{beer_name}}</h3>
+        </div>
+      </div>
     </div>
-  </a>
-  <a href="/pairing/{{id}}">
-    <div class="card-body">
-      <img src="{{dish_img}}" alt="{{description}}" />
-      <p>{{dish_name}}</p>
-      <a href="{{dish_link}}"></a>
+    <div class="card">
+      <div class="face face1" id="food-face">
+        <div class="content dish-image">
+          <img src="{{dish_img}}" />
+          <p hidden id="dish-img-url"></p>
+        </div>
+      </div>
+      <div class="face face2" id="food-content">
+        <div class="content">
+          <h3 class="dish-name">{{dish_name}}</h3>
+          <p hidden id="dish-id"></p>
+          <p class="dish-summary"></p>
+          <a
+            id="recipe-link"
+            href="{{dish_link}}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Get Recipe</a>
+        </div>
+      </div>
     </div>
-  </a>
-  <div>
-    <div class="rating">
-      <span class="rating-result"></span>
-      <i class="rating-star far fa-star"></i>
-      <i class="rating-star far fa-star"></i>
-      <i class="rating-star far fa-star"></i>
-      <i class="rating-star far fa-star"></i>
-      <i class="rating-star far fa-star"></i>
-    </div>
-    <input type="text" placeholder="review"></input>
   </div>
 </section>

@@ -30,6 +30,7 @@ async function savePairings(event) {
 
     // Needs to be updated
     if (response.ok) {
+        document.location.reload("/pairing");
         console.log(response);
         // document.location.replace('/dashboard/');
     } else {
