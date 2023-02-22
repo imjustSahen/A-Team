@@ -29,17 +29,23 @@
   --display-flex: flex;
   --cursor-pointer: pointer;
 }
-
+/* loading screen */
 .loader-container {
   width: 100%;
   height: 100vh;
   position: fixed;
-  background: #000
-    url("https://media.giphy.com/media/8agqybiK5LW8qrG3vJ/giphy.gif") center
-    no-repeat;
+  background: url("/public/assets/beer-loading.gif") center no-repeat;
   z-index: 1;
 }
 
+.funny {
+  width: 64px;
+  height: 64px;
+  border: 8px solid;
+  border-color: #3d5af1 transparent #3d5af1 transparent;
+  border-radius: 50%;
+  animation: spin-anim 1.2s linear infinite;
+}
 a {
   cursor: var(--cursor-pointer);
 }

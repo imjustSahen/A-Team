@@ -4,6 +4,32 @@ const { User, Pairing, Comment, Review } = require("../models");
 const sequelize = require("sequelize");
 const express = require("express");
 
+// Handlebar routes
+
+router.get("/views/aboutUs", (req, res) => {
+  res.render("aboutUs", { loggedIn: req.session.loggedIn });
+});
+
+router.get("/", (req, res) => {
+  const imagesArr = [{ number: 2 }, { number: 3 }, { number: 4 }];
+  res.render("home", {
+    images: imagesArr,
+    loggedIn: req.session.loggedIn,
+  });
+});
+
+router.get("/views/login", (req, res) => {
+  res.render("login", { loggedIn: req.session.loggedIn });
+});
+
+router.get("/views/contactUs", (req, res) => {
+  res.render("contactUs", { loggedIn: req.session.loggedIn });
+});
+
+router.get("/views/pairing", (req, res) => {
+  res.render("pairing", { loggedIn: req.session.loggedIn });
+});
+
 //getting all pairing data for carousel cards
 router.get("/", async (req, res) => {
   try {
@@ -40,32 +66,6 @@ router.get("/login", (req, res) => {
 //with a modal
 router.get("/signup", (req, res) => {
   // res.redirect('signup')
-});
-
-// Handlebar routes
-
-router.get("/views/aboutUs", (req, res) => {
-  res.render("aboutUs", { loggedIn: req.session.loggedIn });
-});
-
-router.get("/", (req, res) => {
-  const imagesArr = [{ number: 2 }, { number: 3 }, { number: 4 }];
-  res.render("home", {
-    images: imagesArr,
-    loggedIn: req.session.loggedIn,
-  });
-});
-
-router.get("/views/login", (req, res) => {
-  res.render("login", { loggedIn: req.session.loggedIn });
-});
-
-router.get("/views/contactUs", (req, res) => {
-  res.render("contactUs", { loggedIn: req.session.loggedIn });
-});
-
-router.get("/views/pairing", (req, res) => {
-  res.render("pairing", { loggedIn: req.session.loggedIn });
 });
 
 module.exports = router;

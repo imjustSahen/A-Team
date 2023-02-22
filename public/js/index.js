@@ -269,4 +269,19 @@ savePairingBtn.addEventListener("click", function (e) {
   console.log(savedBeer, savedFood);
 });
 
+//java for loading screen for funnies
+
+const loaderContainer = document.querySelector(".loader-container");
+window.addEventListener("load", () => {
+  loaderContainer.style.display = "none";
+});
+
+const displayLoading = () => {
+  loaderContainer.style.display = "block";
+};
+
+const hideLoading = () => {
+  loaderContainer.style.display = "none";
+};
+
 // randomBeer();
