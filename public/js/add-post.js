@@ -1,11 +1,15 @@
+const savePairing = document.getElementById("save-pairing-btn");
+
 async function savePairings(event) {
     event.preventDefault();
 
-    const beer_id = document.querySelector('#beer-id').innerHTML;
+    console.log('recieved')
+
+    const beer_id = document.getElementById('#beer-id').innerHTML;
     const beer_img = document.querySelector('#beer-img-url').innerHTML;
     const dish_id = document.querySelector('#dish-id').innerHTML;
     const dish_img = document.querySelector('#dish-img-url').innerHTML;
-
+    console.log(beer_id, dish_id, dish_img)
     const response = await fetch(`/api/pairing`, {
         method: 'POST',
         body: JSON.stringify({
@@ -22,10 +26,10 @@ async function savePairings(event) {
     // Needs to be updated
     if (response.ok) {
         console.log(response);
-        document.location.replace('/dashboard/');
+        // document.location.replace('/dashboard/');
     } else {
         alert(response.statusText);
     }
 }
 
-document.querySelector('.save-pairing-btn').addEventListener('submit', savePairings);
+savePairing.addEventListener('click', savePairings);
