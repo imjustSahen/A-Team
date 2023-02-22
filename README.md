@@ -34,12 +34,9 @@
   Enter password 
 
   <pre>SOURCE db/schema.sql</pre>
-  <pre>SOURCE db/seeds.sql</pre>
-  <pre>exit</pre>
+  <pre>quit</pre>
+  <pre>npm run seed</pre>
 
-  Run:
-
-  <pre>node server.js</pre>
 
 
   You can see a screenshot here: [Screenshot](https://github.com/imjustSahen/A-Team/blob/main/public/assets/Beer'n'Bites-screenshot.png)
