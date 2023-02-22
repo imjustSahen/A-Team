@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const path = require("path");
 const { User, Pairing, Comment, Review } = require("../models");
+const withAuth = require('../utils/auth');
 
 //getting all pairing data for carousel cards
 router.get("/", async (req, res) => {
@@ -16,12 +17,12 @@ router.get("/", async (req, res) => {
       ],
     });
 
-    const pairings = await pairingData.map((pairing) =>
+    const pairings =  pairingData.map((pairing) =>
       pairing.get({ plain: true })
     );
     const imagesArr = [{ number: 2 }, { number: 3 }, { number: 4 }];
     res.render("home", {
-      pairings,
+      // pairings,
       images: imagesArr,
       loggedIn: req.session.loggedIn,
     });
@@ -40,29 +41,30 @@ router.get("/contactUs", (req, res) => {
 });
 
 router.get("/pairing", async (req, res) => {
-  if (req.session.loggedIn) {
-    try {
-      const pairingData = await Pairing.findAll({
+  try {
+
+    if(req.session.loggedIn) {
+        const pairingData = await Pairing.findAll({
         //uses id from the session
         where: { user_id: req.session.user_id },
         attributes: { exclude: ["user_id"] },
         include: [
-          {
-            model: Review,
-            attributes: { exclude: ["pairing_id", "user_id"] },
-            include: [{ model: User, attributes: { exclude: ["id"] } }],
-          },
-        ],
-      });
+            {
+                model: Review,
+                attributes: { exclude: ['pairing_id', 'user_id'] },
+                include: [{ model: User, attributes: { exclude: ['id'] } }]
+            }
+        ]
+    });
+      const pairings = pairingData.map((pairing) => pairing.get({ plain: true }));
+    }
 
-      const pairings = pairingData.map((pairing) =>
-        pairing.get({ plain: true })
-      );
-      res.render("pairing", {
-        pairings,
-        loggedIn: req.session.loggedIn,
-      });
-    } catch (err) {
+    res.render("pairing", { 
+      // pairings,
+      loggedIn: req.session.loggedIn 
+    });
+
+} catch (err) {
     res.status(500).json(err);
     }
   } else {
