@@ -29,9 +29,12 @@ router.post('/', async (req, res) => {
     try {
         const pairingData = await Pairing.create({
           beer_id: req.body.beer_id,
+          beer_name: req.body.beer_name,
           beer_img: req.body.beer_img,
           dish_id: req.body.dish_id,
-          dish_img: req.body.beer_img,
+          dish_name: req.body.dish_name,
+          dish_img: req.body.dish_img,
+          dish_link: req.body.dish_link,
           user_id: req.session.user_id
         });
         
