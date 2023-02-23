@@ -843,6 +843,56 @@ textarea {
   margin-top: 20px; */
 }
 
+/* ---- Carousel ---- */
+/* Slideshow container */
+.cheers-block-carousel {
+  background: #e1c796;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  /* margin: auto; */
+  display: flex;
+}
+
+.mySlides {
+  display: none;
+  text-align: center;
+}
+
+#dots {
+  align-items: center;
+  text-align: center;
+  padding: 25px;
+}
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
 /* ---- Footer --- */
 footer {
   background-color: var(--colorBlack);

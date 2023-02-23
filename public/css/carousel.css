@@ -5,6 +5,13 @@
   max-width: 500px;
   position: relative;
   margin: auto;
+  /* display: inline-flex; */
+  text-decoration: none;
+  font-weight: 900;
+  color: #333;
+  padding: 5px;
+  border: 1px solid #333;
+
 }
 
 /* Hide the images by default */
@@ -27,7 +34,23 @@
    bottom:auto
 }
 /* Next & previous buttons */
-.prev, .next {
+.prev {
+  cursor: pointer;
+  position: absolute;
+  right: 92%;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
