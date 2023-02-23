@@ -1,12 +1,10 @@
-const spoonacularKey = "3d1a85ae117b432aa54f8a339a92c766";
+const spoonacularKey = "1391754ee9e9456bb811c8699181fa51";
 
 const randomBeerAPI = "https://api.punkapi.com/v2/beers/random";
 const randomBeerBtn = document.getElementById("get-beer-btn");
 const randomDishBtn = document.getElementById("get-dish-btn");
 const newPairingBtn = document.getElementById("new-pairing-btn");
 const savePairingBtn = document.getElementById("save-pairing-btn");
-
-// const savedEventResults = [];
 
 // ---- Login ----
 $(document).ready(function () {
@@ -24,12 +22,16 @@ $(document).ready(function () {
   });
 });
 
-$(".login-btn").click(function () {
-  $(".loginOverlay").toggle();
+$(document).ready(function () {
+  $(".login-btn").click(function () {
+    $(".loginOverlay").toggle();
+  });
 });
 
-$("#login-close").click(function () {
-  $(".loginOverlay").hide();
+$(document).ready(function () {
+  $("#login-close").click(function () {
+    $(".loginOverlay").hide();
+  });
 });
 
 // Sign up button from login
@@ -43,12 +45,16 @@ $(document).ready(function () {
   $(".signup-Overlay").hide();
 });
 
-$("#signup").click(function () {
-  $(".signup-Overlay").toggle();
+$(document).ready(function () {
+  $("#signup").click(function () {
+    $(".signup-Overlay").toggle();
+  });
 });
 
-$("#signup-close").click(function () {
-  $(".signup-Overlay").hide();
+$(document).ready(function () {
+  $("#signup-close").click(function () {
+    $(".signup-Overlay").hide();
+  });
 });
 
 // Star Review
@@ -103,7 +109,6 @@ function randomBeer() {
     })
     .then(function (data) {
       const beerContent = $("#beer-content .content");
-      console.log(data[0]);
       beerContent.children(".beer-name").text(data[0].name);
       let beerId = data[0].id;
       let beerImg = data[0].image_url;
@@ -119,7 +124,7 @@ function randomBeer() {
       beerContent.children("#beer-img-url").text(data[0].image_url);
       // console.log(beerContent.children("#beer-img-url").text(data[0].image_url));
       if (data[0].image_url === null) {
-        $(".beer-image img").attr("src", "../public/assets/BeerIcon.png");
+        $(".beer-image img").attr("src", "./assets/BeerIcon.png");
       } else {
         $(".beer-image img").attr("src", data[0].image_url);
       }
@@ -151,7 +156,6 @@ function getPairing(foodPairingString) {
         let dishId = data.results[0].id;
         let dishImg = data.results[0].image;
         foodBody.children("#dish-id").text(dishId);
-        console.log(dishId);
         saveFoodDetails(dishId, dishName, dishImg);
         getRecipe(dishId);
       }
@@ -175,6 +179,7 @@ function randomDish() {
     "vegetarian",
     "pasta",
     "hamburger",
+    "pizza",
   ];
   const randomDishOptions = Math.floor(Math.random() * dishOptions.length);
   console.log(dishOptions[randomDishOptions]);
