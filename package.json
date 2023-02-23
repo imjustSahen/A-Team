@@ -1,6 +1,9 @@
 {
   "name": "beer-n-bites",
   "version": "1.0.0",
+  "engines" : {
+    "node" : "16.18.0"
+  },
   "description": "beer and food pairing site",
   "main": "server.js",
   "scripts": {
