@@ -678,11 +678,6 @@ circle {
   box-shadow: 2px 4px 4px 0px rgba(27, 27, 27, 0.25);
 }
 
-/* .saved-container .card-circle {
-  z-index: 10;
-  margin: -10px;
-} */
-
 .saved-container .card .content1 {
   width: 400px;
   height: 150px;
@@ -966,6 +961,7 @@ textarea {
 .mySlides {
   display: none;
   text-align: center;
+  padding: 20px 0px;
 }
 
 #dots {
