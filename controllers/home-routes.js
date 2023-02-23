@@ -5,6 +5,7 @@ const { User, Pairing, Comment, Review } = require("../models");
 router.get("/", async (req, res) => {
   try {
     const pairingData = await Pairing.findAll({
+      limit: 2,
       attributes: { exclude: ["user_id"] },
       include: [
         {

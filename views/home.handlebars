@@ -18,11 +18,7 @@
             <img src="./assets/cheers-pic.jpg" alt="cheers-pic" width="100%">
         </div>
     </section>
-    <section class="combos">
-        <div class="combosTxt">
-            <h2>Random Combos Slider</h2>
-            {{#each images as |image| }}
-            {{> carousel-element image}}
-        {{/each}}
+    <section class="cheers-block-carousel">
+        {{> carousel-element}}
         </div>
     </section>
