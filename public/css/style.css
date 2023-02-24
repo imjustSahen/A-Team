@@ -665,19 +665,14 @@ circle {
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0.8;
   transition: 0.5s;
   padding-bottom: 60px;
-}
-
-.saved-container:hover {
-  opacity: 1;
 }
 
 .saved-container .card {
   position: relative;
   justify-content: center;
-  cursor: var(--cursor-pointer);
+  cursor: default;
 }
 
 .saved-container .drop-shadow {
@@ -706,12 +701,12 @@ circle {
   transform: translateY(0);
 }
 
-.saved-container .beer-image img {
+.saved-container .saved-beer-image img {
   transform: rotate(65deg);
   max-width: 70px;
 }
 
-.saved-container .dish-image img {
+.saved-container .saved-dish-image img {
   max-width: 175px;
   border-radius: 30px;
 }
@@ -746,6 +741,11 @@ circle {
 
 .saved-container .card .content2 .content a {
   text-decoration: none;
+}
+
+#delete-pairing-btn {
+  margin: 10px 15px;
+  padding: 5px 10px;
 }
 
 /* my saved container */

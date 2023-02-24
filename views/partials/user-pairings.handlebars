@@ -1,15 +1,16 @@
 <section class="hero-flex">
   <div class="saved-container">
+    <p class="pairing-id" hidden>{{id}}</p>
     <div class="card drop-shadow">
-      <div class="content1 beer-image">
-        <img id="beer-img-url" src="{{beer_img}}" alt="beer" />
+      <div class="content1 saved-beer-image">
+        <img id="" src="{{beer_img}}" alt="beer" />
       </div>
       <div class="content2">
         <h3 class="beer-name">{{beer_name}}</h3>
       </div>
     </div>
     <div class="card drop-shadow">
-      <div class="content1 dish-image">
+      <div class="content1 saved-dish-image">
         <img src="{{dish_img}}" />
       </div>
       <div class="content2">
@@ -21,6 +22,9 @@
           rel="noopener noreferrer"
         ><button>Get Recipe</button></a>
       </div>
+    </div>
+    <div>
+      <button id="delete-pairing-btn">Delete</button>
     </div>
   </div>
 </section>
