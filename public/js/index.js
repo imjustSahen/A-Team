@@ -121,7 +121,7 @@ function randomBeer() {
       beerContent.children(".beer-description").text(`${beerDescription}...`);
       beerContent.children(".beer-abv").text(`${data[0].abv} ABV`);
       beerContent.children(".beer-tagline").text(data[0].tagline);
-      beerContent.children("#beer-img-url").text(data[0].image_url);
+      // beerContent.children("#beer-img-url").text(data[0].image_url);
       // console.log(beerContent.children("#beer-img-url").text(data[0].image_url));
       if (data[0].image_url === null) {
         $(".beer-image img").attr("src", "./assets/BeerIcon.png");
@@ -274,4 +274,4 @@ savePairingBtn.addEventListener("click", function (e) {
   console.log(savedBeer, savedFood);
 });
 
-// randomBeer();
+randomBeer();

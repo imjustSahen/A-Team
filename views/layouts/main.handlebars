@@ -33,7 +33,7 @@
           <li><a href="/aboutUs" class="navLink"> About</a></li>
           <li><a href="/contactUs" class="navLink">Contact Us</a></li>
           {{#if loggedIn}}
-          <li><a id="logout" class="navLink">Logout</a></li>
+          <li><a id="logout" class="navLink logout">Logout</a></li>
           {{else}}
           <li><a href="#" class="navLink login-btn">Log in</a></li>
           {{/if}}
@@ -49,7 +49,7 @@
     {{! Footer }}
     <footer>
       <div class="footer-flex">
-        <a class="footerLogo" href="/views/home"><img
+        <a class="footerLogo" href="/"><img
             src="/assets/BeerNBites-Logo.png"
             width="100%"
             alt="BeerNBites-Logo"
@@ -61,7 +61,7 @@
           <li><a href="/aboutUs" class="footerLink"> About</a></li>
           <li><a href="/contactUs" class="footerLink">Contact Us</a></li>
           {{#if loggedIn}}
-          <li><a id="logout" class="footerLink">Logout</a></li>
+          <li><a id="logout-footer" class="footerLink logout">Logout</a></li>
           {{else}}
           <li><a href="#" class="footerLink login-btn">Log in</a></li>
           {{/if}}
@@ -108,5 +108,6 @@
   <script defer src="/js/login.js"><{{!}}/script>
   <script defer src="/js/logout.js"><{{!}}/script>
   <script defer src="/js/add-post.js"><{{!}}/script>
+  <script defer src="/js/delete-post.js"><{{!}}/script>
   <script defer src="/js/carousel.js"><{{!}}/script>
 </html>
