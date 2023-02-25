@@ -5,7 +5,7 @@ const randomBeerBtn = document.getElementById("get-beer-btn");
 const randomDishBtn = document.getElementById("get-dish-btn");
 const newPairingBtn = document.getElementById("new-pairing-btn");
 const savePairingBtn = document.getElementById("save-pairing-btn");
-
+var loaderMessage = require("loader-message");
 // ---- Login ----
 $(document).ready(function () {
   $(".loginOverlay").hide();
@@ -55,6 +55,33 @@ $(document).ready(function () {
   $("#signup-close").click(function () {
     $(".signup-Overlay").hide();
   });
+});
+
+//modal loading
+function showModal(message) {
+  // Get the modal element
+  const modal = document.getElementById("modal");
+
+  // Set the message in the modal
+  modal.querySelector(".modal-body").textContent = message;
+
+  // Show the modal
+  modal.classList.add("show");
+
+  // Hide the modal after 5 seconds
+  setTimeout(() => {
+    modal.classList.remove("show");
+  }, 5000);
+}
+
+// Event listener for newPairingBtn
+newPairingBtn.addEventListener("click", () => {
+  showModal(loaderMessage.phrase());
+});
+
+// Event listener for randomBeerBtn
+randomBeerBtn.addEventListener("click", () => {
+  showModal(loaderMessage.phrase());
 });
 
 // Star Review
