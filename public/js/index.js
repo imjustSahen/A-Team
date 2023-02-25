@@ -61,9 +61,17 @@ $(document).ready(function () {
 function showModal(message) {
   // Get the modal element
   const modal = document.getElementById("modal");
+  if (!modal) {
+    console.error("Modal element not found");
+    return;
+  }
 
   // Set the message in the modal
   modal.querySelector(".modal-body").textContent = message;
+  if (!modalBody) {
+    console.error("Modal body element not found");
+    return;
+  }
 
   // Show the modal
   modal.classList.add("show");
