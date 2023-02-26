@@ -23,6 +23,22 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
+  $("#new-pairing-btn").click(function () {
+    // Set the message in the modal
+    const message = loaderMessage.phrase();
+    $(".modal-body").text(message);
+
+    // Show the modal
+    $(".modal").show();
+
+    // Hide the modal after 5 seconds
+    setTimeout(function () {
+      $(".modal").hide();
+    }, 5000);
+  });
+});
+
+$(document).ready(function () {
   $(".login-btn").click(function () {
     $(".loginOverlay").toggle();
   });
@@ -57,6 +73,40 @@ $(document).ready(function () {
   });
 });
 
+function phraseModal() {
+  const modal = document.getElementById("myModal");
+  modal.style.display = "block";
+
+  setTimeout(function () {
+    modal.style.display = "none";
+  }, 5000);
+}
+// Function to show modal with message for 5 seconds
+function showModal(message) {
+  // Get the modal element
+  const modal = document.getElementById("modal");
+
+  // Set the message in the modal
+  modal.querySelector(".modal-body").textContent = message;
+
+  // Show the modal
+  modal.classList.add("show");
+
+  // Hide the modal after 5 seconds
+  setTimeout(() => {
+    modal.classList.remove("show");
+  }, 5000);
+}
+
+// Event listener for newPairingBtn
+newPairingBtn.addEventListener("click", () => {
+  showModal(loaderMessage.phrase());
+});
+
+// Event listener for randomBeerBtn
+randomBeerBtn.addEventListener("click", () => {
+  showModal(loaderMessage.phrase());
+});
 // Star Review
 // const ratingStars = [...document.getElementsByClassName("rating-star")];
 // const ratingResult = document.querySelector(".rating-result");
