@@ -19,7 +19,7 @@ function randomFunny() {
       $("#funny-message").text(data.messages[randomIndex]);
       console.log(data.messages[randomIndex]);
       const funnyParent = $(".funny-modal");
-      funnyParent.children("#funny-message").text(data.messages[255]);
+      funnyParent.children("#funny-message").text(randomIndex[0]);
     })
     .then(function () {
       setTimeout(function () {
