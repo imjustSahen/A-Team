@@ -8,20 +8,22 @@ const savePairingBtn = document.getElementById("save-pairing-btn");
 const funnyMessageAPI =
   "https://cdn.jsdelivr.net/gh/maddhruv/loading-messages/messages.json";
 function randomFunny() {
+  $(".funny-modal").show();
   fetch(funnyMessageAPI)
     .then(function (response) {
       return response.json();
     })
     .then(function (data) {
       console.log(data);
-      $("#funny-message").text(data.messages[0]);
-      console.log(data.messages[0]);
+      const randomIndex = Math.floor(Math.random() * data.messages.length);
+      $("#funny-message").text(data.messages[randomIndex]);
+      console.log(data.messages[randomIndex]);
       const funnyParent = $(".funny-modal");
       funnyParent.children("#funny-message").text(data.messages[255]);
     })
     .then(function () {
       setTimeout(function () {
-        $(".funny-modal").show();
+        $(".funny-modal").hide(); // hide the modal after 3 seconds
       }, 3000);
     })
     .then(function () {
@@ -31,6 +33,7 @@ function randomFunny() {
       console.error(error);
     });
 }
+
 // ---- Login ----
 $(document).ready(function () {
   $(".login-modal").hide();
@@ -154,11 +157,11 @@ $(document).ready(function () {
 
 // API Calls
 newPairingBtn.addEventListener("click", function getNewPairing() {
-  return randomFunny();
+  randomFunny();
 });
 
 randomBeerBtn.addEventListener("click", function getRandomBeer() {
-  return randomFunny();
+  randomFunny();
 });
 
 function randomBeer() {
