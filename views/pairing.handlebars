@@ -1,3 +1,7 @@
+
+
+
+
 {{! <!-- CARDS --> }}
 <section class="heroPic heroPicDarker hero-content">
   <div class="hero-flex">
@@ -10,6 +14,7 @@
             <p hidden id="beer-img-url"></p>
           </div>
         </div>
+
         <div class="face face2" id="beer-content">
           <div class="content">
             <h3 class="beer-name"></h3>
@@ -21,6 +26,7 @@
           </div>
         </div>
       </div>
+      
       <div class="card card-circle">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -36,6 +42,7 @@
           ></path>
         </svg>
       </div>
+      
       <div class="card">
         <div class="face face1" id="food-face">
           <div class="content dish-image">
@@ -60,6 +67,9 @@
       </div>
     </div>
 
+
+
+
     {{! <!--   ---- Buttons----  --> }}
     <div class="comboBtnBox">
       {{!-- <div class="rating">
@@ -76,10 +86,15 @@
       <button class="pairing-btn" id="save-pairing-btn" type="submit">
         <h2>Save Your Pairing</h2>
       </button>
+ 
     </div>
     </div>
 </section>
+
+
+
 <section class="savedPairs">
+
   <div class="savedTxt">
     <h2>My Saved Pairs</h2>
     {{#if loggedIn}}
@@ -93,4 +108,11 @@
     </div>
     {{/if}}
   </div>
+</section>
+
+<section class ="funny-modal">
+    <img id="funny-icon" src="./assets/1485.gif">
+  <h3 id="funny-message"></h3>
+   <img id="funny-icon" src="./assets/1485.gif">
+ 
 </section>

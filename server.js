@@ -12,6 +12,9 @@ const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
 const routes = require("./controllers");
 const helpers = require("./utils/helpers");
+// var loaderMessage = require("loader-message");
+// var funnyMessage = loaderMessage.generate();
+// console.log(funnyMessage);
 
 const hbs = exphbs.create({ helpers });
 //set up sessions
