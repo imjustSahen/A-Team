@@ -1,24 +1,20 @@
 <!-- Hero Pic Section -->
-    <section class="heroPic hero-content">
-        <div class="heroPic-label hero-flex">
-            <h3 class="smallTle hero-items" id="tagline-title">EAT, DRINK, ENJOY</h3>
-            <h1 class="heroTxt hero-items" id="hero-title">Explore enticing combinations of eats and brews.</h1>
-        </div>
-        <button id="GenBtn" onClick="location.href='/pairing'">Generate your combo <img src="./assets/BeerIcon.png" width="30px" alt="beerIcon"><span> + </span><img
-                    src="./assets/FoodIcon.png" width="26px" alt="foodIcon">
-        </button>
-    </section>
-    <!-- Second block img and text -->
-    <section class="cheersBlock">
-        <div class="cheersTxt">
-            <h2>We love beer and food.</h2>
-            <p>"Great beer and delicious food - a perfect pairing for those who love to savor life's flavors!"</p>
-        </div>
-        <div class="cheersImg">
-            <img src="./assets/cheers-pic.jpg" alt="cheers-pic" width="100%">
-        </div>
-    </section>
-    <section class="cheers-block-carousel">
-        {{> carousel-element}}
-        </div>
-    </section>
+<section class="hero-content hero-content-darker">
+    <h3 id="home-tagline">EAT, DRINK, ENJOY</h3>
+    <h1 id="hero-title">Explore enticing combinations of eats and brews.</h1>
+    <button id="pairing-page-btn" onClick="location.href='/pairing'">Generate your combo <img src="./assets/BeerIcon.png" width="30px" alt="beerIcon"><span> + </span><img
+            src="./assets/FoodIcon.png" width="26px" alt="foodIcon">
+    </button>
+</section>
+<section class="cheers-container">
+    <div class="cheers-content">
+        <h2>We love beer and food.</h2>
+        <p>"Great beer and delicious food - a perfect pairing for those who love to savor life's flavors!"</p>
+    </div>
+    <div id="cheers-img">
+        <img src="./assets/cheers-pic.jpg" alt="Friends cheersing beer at lunch" width="100%">
+    </div>
+</section>
+<section class="cheers-block-carousel">
+    {{> carousel-element}}
+</section>

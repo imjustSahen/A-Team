@@ -6,16 +6,19 @@ const randomDishBtn = document.getElementById("get-dish-btn");
 const newPairingBtn = document.getElementById("new-pairing-btn");
 const savePairingBtn = document.getElementById("save-pairing-btn");
 
+const savedBeer = [];
+const savedFood = [];
+
 // ---- Login ----
 $(document).ready(function () {
-  $(".loginOverlay").hide();
+  $(".login-modal").hide();
+  $(".signup-modal").hide();
 
   $(function stickyNav() {
     $(window).on("scroll", function () {
       if ($(window).scrollTop() > 20) {
         $("header").addClass("sticky");
       } else {
-        //remove the background property so it comes transparent again (defined in your css)
         $("header").removeClass("sticky");
       }
     });
@@ -24,36 +27,22 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $(".login-btn").click(function () {
-    $(".loginOverlay").toggle();
+    $(".login-modal").toggle();
   });
-});
-
-$(document).ready(function () {
   $("#login-close").click(function () {
-    $(".loginOverlay").hide();
+    $(".login-modal").hide();
   });
 });
 
 // Sign up button from login
 $("#signup-modal").click(function () {
-  $(".loginOverlay").hide();
-  $(".signup-Overlay").toggle();
-});
-
-// ---- Sign Up
-$(document).ready(function () {
-  $(".signup-Overlay").hide();
-});
-
-$(document).ready(function () {
-  $("#signup").click(function () {
-    $(".signup-Overlay").toggle();
-  });
+  $(".login-modal").hide();
+  $(".signup-modal").toggle();
 });
 
 $(document).ready(function () {
   $("#signup-close").click(function () {
-    $(".signup-Overlay").hide();
+    $(".signup-modal").hide();
   });
 });
 
@@ -121,8 +110,6 @@ function randomBeer() {
       beerContent.children(".beer-description").text(`${beerDescription}...`);
       beerContent.children(".beer-abv").text(`${data[0].abv} ABV`);
       beerContent.children(".beer-tagline").text(data[0].tagline);
-      // beerContent.children("#beer-img-url").text(data[0].image_url);
-      // console.log(beerContent.children("#beer-img-url").text(data[0].image_url));
       if (data[0].image_url === null) {
         $(".beer-image img").attr("src", "./assets/BeerIcon.png");
       } else {
@@ -182,9 +169,7 @@ function randomDish() {
     "pizza",
   ];
   const randomDishOptions = Math.floor(Math.random() * dishOptions.length);
-  console.log(dishOptions[randomDishOptions]);
   const randomDish = dishOptions[randomDishOptions];
-
   const foodPairingAPI = `https://api.spoonacular.com/food/search?query=${randomDish}&number=20&apiKey=${spoonacularKey}`;
 
   fetch(foodPairingAPI)
@@ -193,10 +178,7 @@ function randomDish() {
     })
     .then(function (data) {
       const foodBody = $("#food-content .content");
-      console.log(data);
-
       let i = Math.floor(Math.random() * 20);
-      console.log(i);
       foodBody
         .children(".dish-name")
         .text(data.searchResults[0].results[i].name);
@@ -233,14 +215,8 @@ function getRecipe(recipeId) {
       let foodSummary = data.summary.split(" ").slice(0, 25).join(" ");
       foodBody.children(".dish-summary").html(`${foodSummary}...`);
       $("#recipe-link").attr("href", data.sourceUrl);
-      console.log(data);
     });
 }
-
-// Not complete yet
-const savedEventResults = [];
-const savedBeer = [];
-const savedFood = [];
 
 function saveBeerDetails(beerId, beerName, beerImg) {
   let beerDetails = {
@@ -269,8 +245,6 @@ function saveFoodDetails(dishId, dishName, dishImg) {
 savePairingBtn.addEventListener("click", function (e) {
   e.preventDefault();
 
-  // localStorage.getItem("savedBeers", JSON.stringify([savedBeer, savedFood]))
-  // localStorage.getItem("savedFood", JSON.stringify(savedFood))
   console.log(savedBeer, savedFood);
 });
 

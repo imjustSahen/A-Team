@@ -8,8 +8,11 @@
     <script
       src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"
     ></script>
-    <script src="https://kit.fontawesome.com/98a738832b.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="/css/style.css" >
+    <script
+      src="https://kit.fontawesome.com/98a738832b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
 
     <link
       href="https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins:300"
@@ -17,25 +20,21 @@
     />
     <title>Beer 'n' Bites</title>
   </head>
-{{!-- Loading popup for funnies --}}
-  {{!-- <div class="loader-container">
-    <div class="funny"></div>
-</div> --}}
   <body>
     <header>
-      <a href="/" class="logoImg"><img
+      <a href="/" class="logo-img"><img
           src="/assets/BeerNBites-Logo.png"
           width="100%"
-          alt="BeerNBites-Logo"
+          alt="Beer-N-Bites-Logo"
         /></a>
       <nav>
         <ul>
-          <li><a href="/aboutUs" class="navLink"> About</a></li>
-          <li><a href="/contactUs" class="navLink">Contact Us</a></li>
+          <li><a href="/about-us" class="nav-btn">About</a></li>
+          <li><a href="/contact-us" class="nav-btn">Contact Us</a></li>
           {{#if loggedIn}}
-          <li><a id="logout" class="navLink logout">Logout</a></li>
+            <li><a id="logout" class="nav-btn">Logout</a></li>
           {{else}}
-          <li><a href="#" class="navLink login-btn">Log in</a></li>
+            <li><a href="#" class="nav-btn login-btn">Log in</a></li>
           {{/if}}
         </ul>
       </nav>
@@ -43,71 +42,76 @@
 
     {{! This is where the handlebars will be injected }}
     <main>
-    {{{body}}}
+      {{{body}}}
     </main>
 
     {{! Footer }}
     <footer>
-      <div class="footer-flex">
-        <a class="footerLogo" href="/"><img
+      <div>
+        <a class="footer-logo" href="/"><img
             src="/assets/BeerNBites-Logo.png"
             width="100%"
             alt="BeerNBites-Logo"
           /></a>
         <h4>2023 Beer ‘n’ Bites Full Stack Student Project </h4>
       </div>
-      <div class="footer-flex">
+      <div>
         <ul>
-          <li><a href="/aboutUs" class="footerLink"> About</a></li>
-          <li><a href="/contactUs" class="footerLink">Contact Us</a></li>
+          <li><a href="/about-us" class="footer-nav-btn"> About</a></li>
+          <li><a href="/contact-us" class="footer-nav-btn">Contact Us</a></li>
           {{#if loggedIn}}
-          <li><a id="logout-footer" class="footerLink logout">Logout</a></li>
+            <li><a id="logout-footer" class="footer-nav-btn">Logout</a></li>
           {{else}}
-          <li><a href="#" class="footerLink login-btn">Log in</a></li>
+            <li><a href="#" class="footer-nav-btn login-btn">Log in</a></li>
           {{/if}}
         </ul>
       </div>
     </footer>
-    {{!-- login  --}}
-    <section class="loginOverlay">
-        <div class="loginBox">
-            <a id="login-close"><img src="/assets/close-x.png" alt="exit" width="100%"></a>
-            <div class="loginTxt">LOGIN</div>
-            <form class="login-form">
-            <input id="email-login" placeholder="Email"></input>
-            <input id="password-login" placeholder="Password" type="password"></input>
-            <h3 class="text-login" id="signup-modal"><a href="#signup-modal">Create Account</a></h3>
-            <button type="submit" id="signinBtn">
-                <h2>Login</h2>
-            </button>
-            </form>
-        </div>
-    </section> 
-    {{!-- create account --}}
-    <section class="signup-Overlay" id="signup-modal">
-        <div class="signup-Box">
-            <a id="signup-close"><img src="/assets/close-x.png" alt="exit" width="100%"></a>
-            <div class="signup-Txt">Create Account</div>
-            <form class="signup-form">
-            <input placeholder="Username" id="username-signup"></input>
-            <input placeholder="Email" id="email-signup"></input>
-            <input placeholder="Password" id="password-signup" type="password"></input>
-            <button type="submit" class="signup-btn" id="signupBtn">
-                <h2>SIGNUP</h2>
-            </button>
-            </form>
-        </div>
+    {{! login  }}
+    <section class="login-modal">
+      <div class="login-box">
+        <a id="login-close"><img
+            src="/assets/close-x.png"
+            alt="exit"
+            width="100%"
+          /></a>
+        <div class="login-txt">LOGIN</div>
+        <input id="email-login" placeholder="Email" />
+        <input id="password-login" placeholder="Password" type="password" />
+        <button type="submit" id="login-btn">
+          <h2>Login</h2>
+        </button>
+        <h3 class="create-account-txt" id="signup-modal">Create Account</h3>
+      </div>
+    </section>
+    {{! create account }}
+    <section class="signup-modal">
+      <div class="signup-box">
+        <a id="signup-close"><img
+            src="/assets/close-x.png"
+            alt="exit"
+            width="100%"
+          /></a>
+        <div class="signup-txt">Create Account</div>
+        <input placeholder="Username" id="username-signup" />
+        <input placeholder="Email" id="email-signup" />
+        <input placeholder="Password" id="password-signup" type="password" />
+        <button type="submit" id="signup-btn">
+          <h2>SIGNUP</h2>
+        </button>
+      </div>
     </section>
   </body>
   <script
     defer
     src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"
-  ><{{!}}/script>
-  
-  <script defer src="/js/index.js"><{{!}}/script>
-  <script defer src="/js/login.js"><{{!}}/script>
-  <script defer src="/js/logout.js"><{{!}}/script>
-  <script defer src="/js/add-post.js"><{{!}}/script>
-  <script defer src="/js/delete-post.js"><{{!}}/script>
-  <script defer src="/js/carousel.js"><{{!}}/script>
+  ></script>
+  <script defer src="/js/index.js"></script>
+  <script defer src="/js/login.js"></script>
+  <script defer src="/js/carousel.js"></script>
+  {{#if loggedIn}}
+    <script defer src="/js/logout.js"></script>
+    <script defer src="/js/add-post.js"></script>
+    <script defer src="/js/delete-post.js"></script>
+  {{/if}}
 </html>

@@ -1,8 +1,8 @@
 {
   "name": "beer-n-bites",
   "version": "1.0.0",
-  "engines" : {
-    "node" : "16.18.0"
+  "engines": {
+    "node": "16.18.0"
   },
   "description": "beer and food pairing site",
   "main": "server.js",
@@ -22,13 +22,13 @@
   },
   "homepage": "https://github.com/imjustSahen/A-Team#readme",
   "dependencies": {
-    "@planprice/funnies": "^1.0.0",
     "bcrypt": "^5.0.0",
     "connect-session-sequelize": "^7.0.4",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
     "express-session": "^1.17.1",
+    "loading-messages": "^0.1.0",
     "mysql2": "^2.2.5",
     "sequelize": "^6.3.5"
   },

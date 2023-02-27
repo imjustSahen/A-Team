@@ -22,4 +22,4 @@ async function deleteFormHandler(event) {
   }
 }
 
-document.querySelector('#delete-pairing-btn').addEventListener("click", deleteFormHandler);
+document.querySelector('.delete-pairing-btn').addEventListener("click", deleteFormHandler);
