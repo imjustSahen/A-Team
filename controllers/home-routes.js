@@ -30,11 +30,11 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/aboutUs", (req, res) => {
+router.get("/about-us", (req, res) => {
   res.render("aboutUs", { loggedIn: req.session.loggedIn });
 });
 
-router.get("/contactUs", (req, res) => {
+router.get("/contact-us", (req, res) => {
   res.render("contactUs", { loggedIn: req.session.loggedIn });
 });
 

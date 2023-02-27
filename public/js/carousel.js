@@ -1,10 +1,10 @@
-//CAROUSEL AUTMATEDSLIDER 
+// CAROUSEL 
 let slideIndex = 0;
 showSlides();
 
 function showSlides() {
   let i;
-  let slides = document.getElementsByClassName("mySlides");
+  let slides = document.getElementsByClassName("carousel");
   let dots = document.getElementsByClassName("dot");
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";  
@@ -16,5 +16,5 @@ function showSlides() {
   }
   slides[slideIndex-1].style.display = "flex";  
   dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 5000); // Change image every 2 seconds
+  setTimeout(showSlides, 5000); // Change image every 5 seconds
 }

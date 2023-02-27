@@ -3,10 +3,9 @@
 
 
 {{! <!-- CARDS --> }}
-<section class="heroPic heroPicDarker hero-content">
+<section class="hero-content hero-content-dark">
   <div class="hero-flex">
-    {{!-- <h1 class="pair-intro">Try this pair</h1> --}}
-    <div class="container">
+    <div class="pairing-container">
       <div class="card">
         <div class="face face1" id="beer-face">
           <div class="content beer-image">
@@ -66,12 +65,7 @@
         </div>
       </div>
     </div>
-
-
-
-
-    {{! <!--   ---- Buttons----  --> }}
-    <div class="comboBtnBox">
+    <div class="pairing-btn-container">
       {{!-- <div class="rating">
           <span class="rating-result"></span>
           <i class="rating-star far fa-star"></i>
@@ -90,20 +84,16 @@
     </div>
     </div>
 </section>
-
-
-
-<section class="savedPairs">
-
-  <div class="savedTxt">
+<section class="user-pairings-container">
+  <div class="user-pairings-card">
     <h2>My Saved Pairs</h2>
     {{#if loggedIn}}
       {{#each pairings}}
       {{> user-pairings}}
       {{/each}}
     {{else}}
-    <div class="loginSavedContainer">
-      <p class="Login--signup-text">Login or Sign Up to save pairings!</p>
+    <div class="login-pairings-container">
+      <p class="login-pairings-text">Login or Sign Up to save pairings!</p>
       <a href="#" class="login-btn"><button class="login-pairs-btn">LOGIN</button></a>
     </div>
     {{/if}}

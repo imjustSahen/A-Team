@@ -8,8 +8,8 @@
   -o-transition: all ease-out 0.25s;
   transition: all ease-out 0.25s;
 }
-/*  ----Variables---- */
 
+/*  ----Variables---- */
 :root {
   --main-bg-color: white;
   --main-dp: block;
@@ -30,75 +30,6 @@
   --cursor-pointer: pointer;
 }
 
-.funny-modal {
-  background-color: rgba(38, 38, 38, 0.75);
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  z-index: 30;
-  display: var(--display-flex);
-  justify-content: var(--justify-content-center);
-  align-items: var(--align-items-center);
-}
-#funny-message {
-  padding: 50px;
-  font-size: 30px;
-
-  background-color: #a44e29;
-  font-family: "Poppins", Sans-Serif;
-  position: relative;
-  border-radius: 40px;
-  text-align: var(--text-align-center);
-  align-items: center;
-  color: #eabba6;
-}
-#funny-image {
-  display: flex;
-}
-
-/* phrase modal */
-/* The Modal (background) */
-/* .modal {
-  display: none;
-  position: fixed;
-  z-index: 3;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0);
-} */
-
-/* Modal Content/Box */
-/* .modal-content {
-  background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  z-index: 4;
-} */
-/* .phrase-container {
-  background-color: #fefefe00;
-
-  padding: 20px;
-  border: 1px solid #888;
-  width: 100%;
-  height: 50px;
-  z-index: 4;
-}
-#phrase {
-  background-color: #fefefe00;
-  font-family: var(--font-poppins);
-  font-weight: normal;
-  padding: 20px;
-  border: 1px solid #88888800;
-  z-index: 4;
-  text-align: center;
-} */
 a {
   cursor: var(--cursor-pointer);
 }
@@ -116,7 +47,6 @@ h2 {
 h3 {
   font-family: var(--font-poppins);
   cursor: default;
-  /* Font-Size: 25px; */
 }
 
 h3 {
@@ -156,8 +86,7 @@ img {
   display: var(--main-dp);
 }
 
-/* ----website container----- */
-
+/*--- Website Container ---*/
 header {
   padding-left: 20px;
   position: fixed;
@@ -182,7 +111,7 @@ header nav {
   font-family: var(--font-poppins);
 }
 
-header .navLink {
+header .nav-btn {
   text-decoration: none;
   color: var(--colorBlack);
   padding-top: 8px;
@@ -196,7 +125,7 @@ header .navLink {
   transition: all ease 250ms;
 }
 
-header .navLink:hover {
+header .nav-btn:hover {
   background-color: var(--main-color-beer);
   color: var(--colorBlack);
 }
@@ -206,19 +135,20 @@ header .navLink:hover {
   padding-bottom: 20px;
 }
 
-.sticky .logoImg {
+.sticky .logo-img {
   width: 180px;
 }
-.sticky .navLink {
+
+.sticky .nav-btn {
   font-size: 18px;
 }
 
-.logoImg {
+.logo-img {
   width: 300px;
   padding-top: 20px;
 }
 
-/* --- Navigation list--- */
+/*--- Navigation List ---*/
 header ul {
   display: var(--display-flex);
   justify-content: var(--justify-content-center);
@@ -230,7 +160,8 @@ header ul li {
   flex-shrink: 0;
 }
 
-.heroPic {
+/*--- Page Hero ---*/
+.hero-content {
   width: 100%;
   background-color: rgb(0, 0, 0);
   background-size: cover;
@@ -245,11 +176,12 @@ header ul li {
   box-shadow: 2px 4px 4px 0px rgba(27, 27, 27, 0.25);
 }
 
-.heroPicDarker {
+/*--- Secondary Page Hero Styling ---*/
+.hero-content-dark {
   background-blend-mode: luminosity;
 }
 
-.heroPicDarker::before {
+.hero-content-dark::before {
   content: "";
   position: absolute;
   top: 0px;
@@ -259,12 +191,13 @@ header ul li {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.smallTle {
+/*--- Home Page ---*/
+#home-tagline {
   font-size: 28px;
   color: var(--main-color-beer);
 }
 
-.heroTxt {
+#hero-title {
   font-size: 72px;
   color: #eee0cc;
   margin: var(--margin-auto);
@@ -273,7 +206,7 @@ header ul li {
   line-height: 105%;
 }
 
-#GenBtn {
+#pairing-page-btn {
   display: var(--main-dp);
   background: var(--main-color-beer);
   padding: 24px;
@@ -288,7 +221,7 @@ header ul li {
   font-size: 28px;
 }
 
-#GenBtn:hover {
+#pairing-page-btn:hover {
   background-color: #ffffff;
   transform: scale(1.05);
   box-shadow: 0px 7px 15px 3px rgba(110, 92, 46, 0.66);
@@ -297,36 +230,36 @@ header ul li {
   background-position: center top;
 }
 
-#GenBtn h2 {
+#pairing-page-btn h2 {
   margin-top: -6px;
 }
 
-#GenBtn img {
+#pairing-page-btn img {
   display: inline;
   margin-bottom: -10px;
 }
 
-.cheersBlock {
+.cheers-container {
   background: #ded1b9;
   display: var(--display-flex);
   justify-content: space-around;
 }
 
-.cheersBlock > *:first-child {
+.cheers-container > *:first-child {
   align-self: flex-start;
 }
 
-.cheersBlock > *:last-child {
+.cheers-container > *:last-child {
   align-self: flex-end;
 }
 
-.cheersTxt {
+.cheers-content {
   max-width: 360px;
   padding-top: 110px;
   padding-left: 20px;
 }
 
-.cheersBlock h2 {
+.cheers-content h2 {
   font-family: var(--font-abril);
   font-size: 56px;
   font-weight: normal;
@@ -334,265 +267,26 @@ header ul li {
   margin-bottom: 40px;
 }
 
-.cheersBlock p {
+.cheers-content p {
   font-size: 25px;
   font-family: var(--font-poppins);
 }
 
-.cheersImg {
+#cheers-img {
   max-width: 700px;
   padding-top: 70px;
   padding-left: 20px;
 }
 
-.combos {
-  height: 450px;
-  width: 100%;
-  background-color: rgb(204, 204, 204);
-}
-
-.combosTxt {
-  margin: var(--margin-auto);
-  max-width: 450px;
-  padding-top: 200px;
-  text-align: var(--text-align-center);
-}
-
-/* -----pairing page------- */
-
-.pairContainer {
-  display: var(--display-flex);
-  justify-content: var(--justify-content-center);
-  max-width: 1000px;
-  align-items: var(--align-items-center);
-  margin: var(--margin-auto);
-  position: relative;
-  padding: 10px;
-}
-
-.contentCard {
-  background-color: #ffffff;
-  padding: 20px;
-  width: 400px;
-  min-height: 300px;
-  font-family: var(--font-abril);
-  font-size: 35px;
-  color: var(--colorBlack);
-}
-
-.circlePlus {
-  padding: 10px;
-  color: #ffffff;
-  border-radius: 100px;
-  margin-left: -20px;
-  margin-right: -20px;
-  z-index: 20;
-}
-
-.pairMsg {
-  font-family: var(--font-abril);
-  margin: var(--margin-auto);
-  font-size: 40px;
-  color: #eee0cc;
-  padding-bottom: 20px;
-}
-
-/* ---buttons for pairing page----- */
-
-.comboBtnBox {
-  max-width: 900px;
-  margin: var(--margin-auto);
-  margin-top: 30px;
-  padding-bottom: 50px;
-  display: var(--display-flex);
-  justify-content: space-between;
-}
-.comboBtnBox button {
-  font-size: 12px !important;
-}
-
-/* Stars */
-
-.rating {
-  position: relative;
-  width: 180px;
-  background: transparent;
+/*--- Pairing Page ---*/
+.pairing-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.3em;
-  padding: 5px;
-  overflow: hidden;
-  border-radius: 20px;
-  box-shadow: 0 0 2px #b3acac;
-}
-
-.rating__result {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translateY(-10px) translateX(-5px);
-  z-index: -9;
-  font: 3em Arial, Helvetica, sans-serif;
-  color: #ebebeb8e;
-  pointer-events: none;
-}
-
-.rating__star {
-  font-size: 1.3em;
-  cursor: pointer;
-  color: #dabd18b2;
-  transition: filter linear 0.3s;
-}
-
-.rating__star:hover {
-  filter: drop-shadow(1px 1px 4px gold);
-}
-
-.Login--signup-text {
-  font-family: var(--font-poppins);
-  font-size: var(--main-bg-size);
-  margin-top: 30px;
-  text-align: var(--text-align-center);
-}
-
-/* --- Log in --- */
-.loginBox #login-close {
-  width: 25px;
-  position: absolute;
-  top: 34px;
-  right: 34px;
-}
-
-.loginOverlay {
-  background-color: rgba(0, 0, 0, 0.8);
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  z-index: 10;
-  display: var(--display-flex);
-  justify-content: var(--justify-content-center);
-  align-items: var(--align-items-center);
-  /* visibility: hidden; */
-}
-
-.loginBox {
-  padding: 50px;
-  max-width: 420px;
-  background-color: #ffffff;
-  font-family: var(--font-abril);
-  font-size: 20px;
-  position: relative;
-  border-radius: 40px;
-  text-align: var(--text-align-center);
-}
-
-.loginTxt {
-  text-align: var(--text-align-center);
-  padding: 10px;
-  font-size: 35px;
-}
-
-.loginBox input {
-  background-color: rgb(228, 228, 228);
-  font-family: var(--font-poppins);
-  padding-top: 14px;
-  padding-bottom: 14px;
-  margin-top: 10px;
-  width: 316px;
-  border-radius: 15px;
-  padding-left: 20px;
-  border: none;
-  font-size: 20px;
-  color: var(--colorBlack);
-}
-
-.text-login {
-  font-size: 20px;
-  padding-top: 30px;
-  text-align: var(--text-align-center);
-  color: #ed6541;
-  display: block;
-  text-decoration: solid;
-  font-family: var(--font-poppins);
-  font-weight: bold;
-}
-
-/*  --- Sign Up ---- */
-.signup-Box a {
-  width: 25px;
-  position: absolute;
-  top: 34px;
-  right: 34px;
-}
-
-.signup-Overlay {
-  background-color: rgba(0, 0, 0, 0.8);
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  z-index: 10;
-  display: var(--display-flex);
-  justify-content: var(--justify-content-center);
-  align-items: var(--align-items-center);
-  visibility: visible;
-}
-
-.signup-Box {
-  padding: 50px;
-  max-width: 420px;
-  background-color: #ffffff;
-  max-height: 450px;
-  font-family: var(--font-abril);
-  font-size: 20px;
-  position: relative;
-  border-radius: 40px;
-  text-align: var(--text-align-center);
-}
-
-.signup-Txt {
-  text-align: var(--text-align-center);
-  padding: 10px;
-  font-size: 25px;
-}
-
-.signup-Box input {
-  background-color: rgb(228, 228, 228);
-  font-family: var(--font-poppins);
-  padding-top: 14px;
-  padding-bottom: 14px;
-  margin-top: 10px;
-  width: 316px;
-  border-radius: 15px;
-  padding-left: 20px;
-  border: none;
-  font-size: 20px;
-  color: var(--colorBlack);
-}
-
-#signupBtn {
-  color: var(--colorBlack);
-  background-color: var(--main-color-beer);
-  border-radius: 50px;
-  width: 150px;
-  align-items: var(--align-items-center);
-  display: var(--main-dp);
-  margin: var(--margin-auto);
-  padding: 15px;
-}
-
-/* Card Hover Styling */
-.container {
   flex-flow: row wrap;
-  display: flex;
   justify-content: center;
   align-items: center;
-  /* padding-bottom: 50px; */
 }
 
-.container .card {
+.pairing-container .card {
   position: relative;
   justify-content: center;
   cursor: var(--cursor-pointer);
@@ -607,13 +301,13 @@ circle {
   box-shadow: 0px 2px 5px 2px rgba(27, 27, 27, 0.493);
 }
 
-.container .card .face {
+.pairing-container .card .face {
   width: 450px;
   height: 260px;
   transition: 0.5s;
 }
 
-.container .card .face.face1 {
+.pairing-container .card .face.face1 {
   position: relative;
   background: #333;
   display: flex;
@@ -621,21 +315,20 @@ circle {
   align-items: center;
   z-index: 1;
   transform: translateY(0);
-  /* border-right: 3px solid var(--colorBlack); */
   border-top-right-radius: 10px;
   box-shadow: 5px 3px 8px 2px rgba(49, 49, 49, 0.505);
 }
 
-.container .card:hover .face.face1 {
+.pairing-container .card:hover .face.face1 {
   background: #a44e29;
   transform: translateY(0);
 }
 
-.container .card .face.face1 .content {
+.pairing-container .card .face.face1 .content {
   transition: 0.5s;
 }
 
-.container .card:hover .face.face1 .content {
+.pairing-container .card:hover .face.face1 .content {
   opacity: 1;
 }
 
@@ -650,7 +343,7 @@ circle {
   box-shadow: 0px 2px 5px 2px rgba(27, 27, 27, 0.493);
 }
 
-.container .card .face.face2 {
+.pairing-container .card .face.face2 {
   position: relative;
   background: #fff;
   display: flex;
@@ -667,11 +360,11 @@ circle {
   font-family: var(--font-poppins);
 }
 
-.container .card:hover .face.face2 {
+.pairing-container .card:hover .face.face2 {
   transform: translateY(0);
 }
 
-.container .card .face.face2 .content h3 {
+.pairing-container .card .face.face2 .content h3 {
   margin: 0px;
   padding: 0px;
   color: rgb(49, 49, 49);
@@ -681,7 +374,7 @@ circle {
   padding-bottom: 10px;
 }
 
-.container .card .face.face2 .content p {
+.pairing-container .card .face.face2 .content p {
   color: black;
   margin: 0;
   padding: 0px 8px 0px 8px;
@@ -708,15 +401,59 @@ circle {
   padding-bottom: 20px !important;
 }
 
-.container .card .face.face2 .content button {
+.pairing-container .card .face.face2 .content button {
   padding: 5px 10px;
   align-items: center;
   font-size: 14px;
 }
 
-.container .card .face.face2 .content a {
+.pairing-container .card .face.face2 .content a {
   text-decoration: none;
 }
+
+/*--- Buttons for Pairing Page ---*/
+.pairing-btn-container {
+  max-width: 900px;
+  margin: var(--margin-auto);
+  margin-top: 30px;
+  padding-bottom: 50px;
+  display: var(--display-flex);
+  justify-content: space-between;
+}
+
+.pairing-btn-container button {
+  font-size: 12px !important;
+}
+
+/*--- Funny Modal Overlay ---*/
+.funny-modal {
+  background-color: rgba(38, 38, 38, 0.75);
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  z-index: 30;
+  display: var(--display-flex);
+  justify-content: var(--justify-content-center);
+  align-items: var(--align-items-center);
+}
+
+#funny-message {
+  padding: 50px;
+  font-size: 30px;
+  background-color: #a44e29;
+  font-family: "Poppins", Sans-Serif;
+  position: relative;
+  border-radius: 40px;
+  text-align: var(--text-align-center);
+  align-items: center;
+  color: #eabba6;
+}
+
+#funny-image {
+  display: flex;
+}
+
 
 /* User's saved pairings */
 .saved-container {
@@ -802,17 +539,24 @@ circle {
   text-decoration: none;
 }
 
-#delete-pairing-btn {
+.delete-pairing-btn {
   margin: 10px 15px;
   padding: 5px 10px;
 }
 
-/* my saved container */
-.loginSavedContainer {
+/* User Pairings Container */
+.login-pairings-container {
   background-color: #eee4d2;
   max-width: 700px;
   margin: var(--margin-auto);
   padding: 40px;
+  text-align: var(--text-align-center);
+}
+
+.login-pairings-text {
+  font-family: var(--font-poppins);
+  font-size: var(--main-bg-size);
+  margin-top: 30px;
   text-align: var(--text-align-center);
 }
 
@@ -821,12 +565,18 @@ circle {
   font-weight: normal;
 }
 
-.savedPairs {
+.user-pairings-container {
   background: #ded1b9;
   padding-bottom: 60px;
 }
 
-.savedPairs h2 {
+.user-pairings-card {
+  font-family: var(--font-poppins);
+  font-size: 40px;
+  color: #3d2e2a;
+}
+
+.user-pairings-card h2 {
   font-family: var(--font-abril);
   text-align: var(--text-align-center);
   padding-top: 45px;
@@ -836,13 +586,7 @@ circle {
   font-weight: normal;
 }
 
-.savedTxt {
-  font-family: var(--font-poppins);
-  font-size: 40px;
-  color: #3d2e2a;
-}
-
-.savedTxt p {
+.user-pairings-card p {
   color: #a1857e;
   font-weight: bolder;
   font-size: 30px;
@@ -864,35 +608,158 @@ circle {
   transform: scale(1.05);
   box-shadow: 0px 7px 15px 3px rgba(110, 92, 46, 0.66);
 }
-/* ---- Contact Us ---- */
-#contactUs,
-.aboutUs {
+
+/* Stars / Incomplete */
+.rating {
   position: relative;
+  width: 180px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3em;
+  padding: 5px;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 0 2px #b3acac;
 }
 
-/* "About Us" */
-.cntc,
-.aboutSmllMsg {
+.rating__result {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-10px) translateX(-5px);
+  z-index: -9;
+  font: 3em Arial, Helvetica, sans-serif;
+  color: #ebebeb8e;
+  pointer-events: none;
+}
+
+.rating__star {
+  font-size: 1.3em;
+  cursor: pointer;
+  color: #dabd18b2;
+  transition: filter linear 0.3s;
+}
+
+.rating__star:hover {
+  filter: drop-shadow(1px 1px 4px gold);
+}
+
+/*--- About Us Page / Contact Us Page ---*/
+.page-name {
   font-family: var(--font-abril);
   font-size: 72px;
   color: #eee0cc;
 }
 
-/* About us small subtitle */
-.msgCU,
-.msgAu {
+.page-tagline {
   font-family: var(--font-poppins);
   font-size: 25px;
   color: var(--main-color-beer);
   margin-bottom: 16px;
 }
-.InputBox {
+
+/*--- About Us Page - ONLY ---*/
+#about-hero {
+  position: relative;
+  max-width: 800px;
+  margin: var(--margin-auto);
+}
+
+#about-description {
+  display: var(--main-dp);
+  font-size: 20px;
+  font-family: var(--font-poppins);
+  line-height: 36px;
+}
+
+.connect-container {
+  background: #ded1b9;
+  padding-bottom: 120px;
+}
+
+.connect-intro {
+  text-align: var(--text-align-center);
+  padding-top: 100px;
+}
+
+.connect-intro h2 {
+  font-family: var(--font-abril);
+  font-size: 56px;
+  font-weight: normal;
+  line-height: 56px;
+  margin-bottom: 10px;
+  color: #3d2e2a;
+}
+
+.connect-intro p {
+  font-size: 28px;
+  font-weight: bolder;
+  font-family: var(--font-poppins);
+  color: #a1857e;
+}
+
+.connect-card-container {
+  padding: 20px;
+  display: var(--display-flex);
+  justify-content: var(--justify-content-center);
+  margin-top: 40px;
+}
+
+.connect-card {
+  background-color: #eee4d2;
+  width: 300px;
+  padding: 30px;
+  text-align: var(--text-align-center);
+  margin: 0px 10px;
+}
+
+.card-name {
+  font-family: var(--font-abril);
+  font-size: 26px;
+  color: #3d2e2a;
+  line-height: 26px;
+}
+
+.card-role {
+  font-family: var(--font-poppins);
+  font-size: 16px;
+  color: #a1857e;
+  padding-top: 5px;
+}
+
+.card-separator {
+  background-color: #d9c9b2;
+  height: 4px;
+  width: 50px;
+  margin: 20px auto;
+}
+
+.card-title {
+  font-family: var(--font-poppins);
+  font-size: 16px;
+  color: #a1857e;
+}
+
+.card-links {
+  display: var(--display-flex);
+  justify-content: space-between;
+  max-width: 200px;
+  margin: 20px auto 0px;
+}
+
+/* --- Contact Us Page - ONLY --- */
+#contact-hero {
+  position: relative;
+}
+
+.contact-form {
   max-width: 500px;
   margin: var(--margin-auto);
 }
 
-.contInput,
-input {
+.contact-input {
   width: 100%;
   border-radius: 20px;
   border: 2px solid #a48178;
@@ -905,113 +772,128 @@ input {
   padding-left: 24px;
 }
 
-.ontInput,
-.msg {
+#input-filler {
   height: 130px;
 }
 
-textarea {
-  padding-top: 20px;
-}
-
-#aboutUs {
-  position: relative;
-  max-width: 800px;
-  margin: var(--margin-auto);
-}
-
-.aboutUsTxt {
-  display: var(--main-dp);
-  font-size: 20px;
-  font-family: var(--font-poppins);
-  line-height: 36px;
-}
-
-.connect {
-  background: #ded1b9;
-  padding-bottom: 120px;
-}
-
-.connectTxt {
-  text-align: var(--text-align-center);
-  padding-top: 100px;
-}
-
-.connect h2 {
-  font-family: var(--font-abril);
-  font-size: 56px;
-  font-weight: normal;
-  line-height: 56px;
-  margin-bottom: 10px;
-  color: #3d2e2a;
-}
-
-.connectTxt p {
-  font-size: 28px;
-  font-weight: bolder;
-  font-family: var(--font-poppins);
-  color: #a1857e;
-}
-
-/*  -----connect cards - about us ----*/
-.connectCards {
-  padding: 20px;
+/*--- Login Modal ---*/
+.login-modal {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  z-index: 10;
   display: var(--display-flex);
   justify-content: var(--justify-content-center);
-  margin-top: 40px;
+  align-items: var(--align-items-center);
 }
 
-.infoCard {
-  background-color: #eee4d2;
-  width: 300px;
-  padding: 30px;
-  text-align: var(--text-align-center);
-  margin: 0px 10px;
-  /* margin-left: 10px;
-  margin-right: 10px; */
-}
-
-.infoCardName {
+.login-box {
+  padding: 50px;
+  max-width: 420px;
+  background-color: #ffffff;
   font-family: var(--font-abril);
-  font-size: 26px;
-  color: #3d2e2a;
-  line-height: 26px;
+  font-size: 20px;
+  position: relative;
+  border-radius: 40px;
+  text-align: var(--text-align-center);
 }
 
-.infoCardRole {
+.login-box input {
+  background-color: rgb(228, 228, 228);
   font-family: var(--font-poppins);
-  font-size: 16px;
-  color: #a1857e;
-  padding-top: 5px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  margin-top: 10px;
+  width: 316px;
+  border-radius: 15px;
+  padding-left: 20px;
+  border: none;
+  font-size: 20px;
+  color: var(--colorBlack);
 }
 
-.infoCardSeparator {
-  background-color: #d9c9b2;
-  height: 4px;
-  width: 50px;
-  margin: 20px auto;
-  /* margin: var(--margin-auto);
-  margin-top: 20px;
-  margin-bottom: 20px; */
+#login-btn {
+  margin-top: 15px;
 }
 
-.infoCardTitle {
+.login-box #login-close {
+  width: 25px;
+  position: absolute;
+  top: 34px;
+  right: 34px;
+}
+
+.login-txt {
+  text-align: var(--text-align-center);
+  padding: 10px;
+  font-size: 35px;
+}
+
+.create-account-txt {
+  font-size: 20px;
+  padding-top: 30px;
+  text-align: var(--text-align-center);
+  color: #ed6541;
+  text-decoration: solid;
   font-family: var(--font-poppins);
-  font-size: 16px;
-  color: #a1857e;
+  font-weight: bold;
 }
 
-.infoCardLinkBox {
+/*--- Sign Up Modal ---*/
+.signup-modal {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  z-index: 10;
   display: var(--display-flex);
-  justify-content: space-between;
-  max-width: 200px;
-  margin: 20px auto 0px;
-  /* margin: var(--margin-auto);
-  margin-top: 20px; */
+  justify-content: var(--justify-content-center);
+  align-items: var(--align-items-center);
 }
 
-/* ---- Carousel ---- */
-/* Slideshow container */
+.signup-box {
+  padding: 50px;
+  max-width: 420px;
+  background-color: #ffffff;
+  max-height: 450px;
+  font-family: var(--font-abril);
+  font-size: 20px;
+  position: relative;
+  border-radius: 40px;
+  text-align: var(--text-align-center);
+}
+
+.signup-box a {
+  width: 25px;
+  position: absolute;
+  top: 34px;
+  right: 34px;
+}
+
+.signup-box input {
+  border: none;
+  border-radius: 15px;
+  color: var(--colorBlack);
+  background-color: rgb(228, 228, 228);
+  font-family: var(--font-poppins);
+  font-size: 20px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 20px;
+  margin-top: 10px;
+  width: 316px;
+}
+
+.signup-txt {
+  font-size: 25px;
+  text-align: var(--text-align-center);
+  padding: 10px;
+}
+
+/*--- Carousel ---*/
 .cheers-block-carousel {
   background: #eee4d2;
 }
@@ -1023,18 +905,18 @@ textarea {
   display: flex;
 }
 
-.mySlides {
+.carousel {
   display: none;
   text-align: center;
   padding: 60px 0px 0px;
 }
 
-#dots {
+#carousel-dot-container {
   align-items: center;
   text-align: center;
   padding: 25px;
 }
-/* The dots/bullets/indicators */
+
 .dot {
   cursor: pointer;
   height: 15px;
@@ -1092,7 +974,7 @@ footer ul {
   padding-top: 10px;
 }
 
-.footerLink {
+.footer-nav-btn {
   text-decoration: none;
   color: var(--main-color-beer);
   font-size: 18px;
@@ -1100,41 +982,43 @@ footer ul {
   display: inline-block;
 }
 
-.footerLink:hover {
+.footer-nav-btn:hover {
   color: white;
   transform: scale(1.05);
   font-size: large;
 }
 
-.footerLogo {
+.footer-logo {
   display: inline-block;
   width: 200px;
 }
 
-/*  -----Responsive  - Media Queries ---- */
-
+/*--- Responsive - Media Queries ---*/
 @media screen and (max-width: 1080px) {
-  .connectCards {
+  .connect-card-container {
     flex-wrap: wrap;
   }
 
-  .infoCard {
+  .connect-card {
     width: 47%;
     margin-bottom: 20px;
   }
+
   .card-circle {
     flex-basis: 100%;
   }
-  .container .card .face {
+
+  .pairing-container .card .face {
     width: 100%;
     height: auto;
   }
-  .container .card {
+
+  .pairing-container .card {
     width: 100%;
   }
 }
 
-/*  Browser window is 768 or smaller */
+/*--- Browser Window 768px or Smaller ---*/
 @media screen and (max-width: 768px) {
   header {
     padding-left: 0px;
@@ -1149,24 +1033,24 @@ footer ul {
     padding-top: 20px;
   }
 
-  header .navLink {
+  header .nav-btn {
     font-size: 18px;
   }
 
-  #GenBtn img,
+  #pairing-page-btn img,
   span {
     display: none;
   }
 
-  .logoImg {
+  .logo-img {
     width: 220px;
   }
 
-  .heroPic {
+  .hero-content {
     padding-top: 160px;
   }
 
-  .infoCard {
+  .connect-card {
     width: 100%;
     margin-bottom: 20px;
   }
@@ -1182,7 +1066,7 @@ footer ul {
     padding-top: 20px;
   }
 
-  .footerLogo {
+  .footer-logo {
     display: var(--main-dp);
     width: 200px;
     margin: var(--margin-auto);
@@ -1193,11 +1077,11 @@ footer ul {
     font-size: 12px;
   }
 
-  .cheersBlock {
+  .cheers-container {
     display: var(--main-dp);
   }
 
-  .cheersTxt {
+  .cheers-content {
     max-width: 100%;
     padding-left: 20px;
     padding-right: 20px;
@@ -1205,83 +1089,79 @@ footer ul {
     padding-bottom: 0px;
   }
 
-  .cheersImg {
+  #cheers-img {
     max-width: 100%;
     padding-top: 70px;
     padding-left: 0px;
   }
 
-  .smallTle {
+  #home-tagline {
     font-size: 22px;
   }
 
-  .heroTxt {
+  #hero-title {
     font-size: 45px;
   }
 
-  .comboBtnBox {
+  .pairing-btn-container {
     justify-content: var(--justify-content-center);
     flex-wrap: wrap;
     gap: 40px;
   }
 }
 
-/* Mobil queries */
+/*--- Mobile queries ---*/
 @media screen and (max-width: 500px) {
   p {
     font-size: 18px;
     line-height: 32px;
   }
 
-  .heroPic {
+  .hero-content {
     padding-top: 120px;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 80px;
   }
 
-  .smallTle {
+  #home-tagline {
     font-size: 18px;
     padding-bottom: 10px;
   }
 
-  .heroTxt {
+  #hero-title {
     font-size: 40px;
   }
 
-  .heroTxt {
-    font-size: 45px;
-  }
-  #GenBtn {
+  #pairing-page-btn {
     font-size: 18px;
     margin-top: 32px;
     padding: 20px;
   }
-  .cheersTxt {
+
+  .cheers-content {
     padding-top: 62px;
   }
 
-  .cheersBlock h2 {
+  .cheers-content h2 {
     font-size: 36px;
     line-height: 36px;
   }
 
-  .cheersBlock p {
+  .cheers-content p {
     font-size: 18px;
   }
 
-  #aboutUs,
-  #contactUs {
+  #about-hero,
+  #contact-hero {
     padding-top: 20px;
   }
 
-  .cntc,
-  .aboutSmllMsg {
+  .page-name {
     font-size: 48px;
   }
 
-  .msgCU,
-  .msgAu {
+  .page-tagline {
     font-size: 18px;
     padding: 0px;
     line-height: 23px;
@@ -1289,37 +1169,41 @@ footer ul {
     margin-bottom: 30px;
   }
 
-  .connect {
+  .connect-container {
     padding-bottom: 60px;
   }
 
-  .connectTxt {
+  .connect-intro {
     padding-top: 60px;
   }
 
-  .connect h2 {
+  .connect-intro h2 {
     font-size: 36px;
     margin-bottom: 0px;
   }
 
-  .connectTxt p {
+  .connect-intro p {
     font-size: 18px;
   }
 
-  .connectCards {
+  .connect-container {
     margin-top: 20px;
   }
-  .savedPairs h2 {
-    font-size: 36px;
-  }
-  .Login--signup-text {
+
+  .login-pairings-text {
     margin: 10px;
   }
-  .savedTxt p {
+
+  .user-pairings-card h2 {
+    font-size: 36px;
+  }
+
+  .user-pairings-card p {
     font-size: 18px;
     line-height: 24px;
   }
-  .comboBtnBox {
+
+  .pairing-btn-container {
     margin-top: 20px;
     padding-bottom: 20px;
   }

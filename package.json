@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/imjustSahen/A-Team#readme",
   "dependencies": {
-    "@planprice/funnies": "^1.0.0",
     "bcrypt": "^5.0.0",
     "connect-session-sequelize": "^7.0.4",
     "dotenv": "^8.2.0",
