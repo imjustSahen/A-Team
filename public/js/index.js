@@ -5,6 +5,34 @@ const randomBeerBtn = document.getElementById("get-beer-btn");
 const randomDishBtn = document.getElementById("get-dish-btn");
 const newPairingBtn = document.getElementById("new-pairing-btn");
 const savePairingBtn = document.getElementById("save-pairing-btn");
+const funnyMessageAPI =
+  "https://cdn.jsdelivr.net/gh/maddhruv/loading-messages/messages.json";
+function randomFunny() {
+  $(".funny-modal").show();
+  fetch(funnyMessageAPI)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+      const randomIndex = Math.floor(Math.random() * data.messages.length);
+      $("#funny-message").text(data.messages[randomIndex]);
+      console.log(data.messages[randomIndex]);
+      const funnyParent = $(".funny-modal");
+      funnyParent.children("#funny-message").text(randomIndex[0]);
+    })
+    .then(function () {
+      setTimeout(function () {
+        $(".funny-modal").hide(); // hide the modal after 3 seconds
+      }, 3000);
+    })
+    .then(function () {
+      randomBeer();
+    })
+    .catch(function (error) {
+      console.error(error);
+    });
+}
 
 const savedBeer = [];
 const savedFood = [];
@@ -13,6 +41,7 @@ const savedFood = [];
 $(document).ready(function () {
   $(".login-modal").hide();
   $(".signup-modal").hide();
+  $(".funny-modal").hide();
 
   $(function stickyNav() {
     $(window).on("scroll", function () {
@@ -45,6 +74,40 @@ $(document).ready(function () {
     $(".signup-modal").hide();
   });
 });
+// // Get the modal
+// var modal = document.getElementById("myModal");
+
+// // Get the button that opens the modal
+// var btn = document.getElementById("myBtn");
+
+// // When the user clicks on the button, open the modal
+// "pairing-btn".onclick = function () {
+//   modal.style.display = "block";
+// };
+// function phraseModal() {
+//   const modal = document.getElementById("myModal");
+//   modal.style.display = "block";
+
+//   setTimeout(function () {
+//     modal.style.display = "none";
+//   }, 5000);
+// }
+// Function to show modal with message for 5 seconds
+// function showModal(message) {
+//   // Get the modal element
+//   const modal = document.getElementById("modal");
+
+//   // Set the message in the modal
+//   modal.querySelector(".modal-body").textContent = message;
+
+//   // Show the modal
+//   modal.classList.add("show");
+
+//   // Hide the modal after 5 seconds
+//   setTimeout(() => {
+//     modal.classList.remove("show");
+//   }, 5000);
+// }
 
 // Star Review
 // const ratingStars = [...document.getElementsByClassName("rating-star")];
@@ -84,11 +147,11 @@ $(document).ready(function () {
 
 // API Calls
 newPairingBtn.addEventListener("click", function getNewPairing() {
-  return randomBeer();
+  randomFunny();
 });
 
 randomBeerBtn.addEventListener("click", function getRandomBeer() {
-  return randomBeer();
+  randomFunny();
 });
 
 function randomBeer() {
