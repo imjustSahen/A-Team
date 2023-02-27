@@ -1,13 +1,3 @@
-         {{!-- The Modal  --}}
-<div id="myModal" class="modal">
-
-{{!-- Modal content --}}
-  <div class="modal-content">
-
-    <p class="phrase"></p>
-  </div>
-
-</div>
 
 
 
@@ -36,6 +26,7 @@
           </div>
         </div>
       </div>
+      
       <div class="card card-circle">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -51,6 +42,7 @@
           ></path>
         </svg>
       </div>
+      
       <div class="card">
         <div class="face face1" id="food-face">
           <div class="content dish-image">
@@ -75,6 +67,9 @@
       </div>
     </div>
 
+
+
+
     {{! <!--   ---- Buttons----  --> }}
     <div class="comboBtnBox">
       {{!-- <div class="rating">
@@ -91,14 +86,15 @@
       <button class="pairing-btn" id="save-pairing-btn" type="submit">
         <h2>Save Your Pairing</h2>
       </button>
-      {{!-- loader --}}
-      <div id="modal" class="hidden">
-        <div id="loading-phrases"></div>
-      </div>
+ 
     </div>
     </div>
 </section>
+
+
+
 <section class="savedPairs">
+
   <div class="savedTxt">
     <h2>My Saved Pairs</h2>
     {{#if loggedIn}}
@@ -112,4 +108,8 @@
     </div>
     {{/if}}
   </div>
+</section>
+
+<section class ="funny-modal">
+  <h3 id="funny-message"></h3>
 </section>

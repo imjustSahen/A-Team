@@ -5,36 +5,45 @@ const randomBeerBtn = document.getElementById("get-beer-btn");
 const randomDishBtn = document.getElementById("get-dish-btn");
 const newPairingBtn = document.getElementById("new-pairing-btn");
 const savePairingBtn = document.getElementById("save-pairing-btn");
-
+const funnyMessageAPI =
+  "https://cdn.jsdelivr.net/gh/maddhruv/loading-messages/messages.json";
+function randomFunny() {
+  fetch(funnyMessageAPI)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+      $("#funny-message").text(data.messages[0]);
+      console.log(data.messages[0]);
+      const funnyParent = $(".funny-modal");
+      funnyParent.children("#funny-message").text(data.messages[255]);
+    })
+    .then(function () {
+      setTimeout(function () {
+        $(".funny-modal").show();
+      }, 3000);
+    })
+    .then(function () {
+      randomBeer();
+    })
+    .catch(function (error) {
+      console.error(error);
+    });
+}
 // ---- Login ----
 $(document).ready(function () {
-  $(".loginOverlay").hide();
-
+  $(".login-modal").hide();
+  $(".signup-modal").hide();
+  $(".funny-modal").hide();
   $(function stickyNav() {
     $(window).on("scroll", function () {
       if ($(window).scrollTop() > 20) {
         $("header").addClass("sticky");
       } else {
-        //remove the background property so it comes transparent again (defined in your css)
         $("header").removeClass("sticky");
       }
     });
-  });
-});
-
-$(document).ready(function () {
-  $("#new-pairing-btn").click(function () {
-    // Set the message in the modal
-    const message = loaderMessage.phrase();
-    $(".modal-body").text(message);
-
-    // Show the modal
-    $(".modal").show();
-
-    // Hide the modal after 5 seconds
-    setTimeout(function () {
-      $(".modal").hide();
-    }, 5000);
   });
 });
 
@@ -72,41 +81,41 @@ $(document).ready(function () {
     $(".signup-Overlay").hide();
   });
 });
+// // Get the modal
+// var modal = document.getElementById("myModal");
 
-function phraseModal() {
-  const modal = document.getElementById("myModal");
-  modal.style.display = "block";
+// // Get the button that opens the modal
+// var btn = document.getElementById("myBtn");
 
-  setTimeout(function () {
-    modal.style.display = "none";
-  }, 5000);
-}
+// // When the user clicks on the button, open the modal
+// "pairing-btn".onclick = function () {
+//   modal.style.display = "block";
+// };
+// function phraseModal() {
+//   const modal = document.getElementById("myModal");
+//   modal.style.display = "block";
+
+//   setTimeout(function () {
+//     modal.style.display = "none";
+//   }, 5000);
+// }
 // Function to show modal with message for 5 seconds
-function showModal(message) {
-  // Get the modal element
-  const modal = document.getElementById("modal");
+// function showModal(message) {
+//   // Get the modal element
+//   const modal = document.getElementById("modal");
 
-  // Set the message in the modal
-  modal.querySelector(".modal-body").textContent = message;
+//   // Set the message in the modal
+//   modal.querySelector(".modal-body").textContent = message;
 
-  // Show the modal
-  modal.classList.add("show");
+//   // Show the modal
+//   modal.classList.add("show");
 
-  // Hide the modal after 5 seconds
-  setTimeout(() => {
-    modal.classList.remove("show");
-  }, 5000);
-}
+//   // Hide the modal after 5 seconds
+//   setTimeout(() => {
+//     modal.classList.remove("show");
+//   }, 5000);
+// }
 
-// Event listener for newPairingBtn
-newPairingBtn.addEventListener("click", () => {
-  showModal(loaderMessage.phrase());
-});
-
-// Event listener for randomBeerBtn
-randomBeerBtn.addEventListener("click", () => {
-  showModal(loaderMessage.phrase());
-});
 // Star Review
 // const ratingStars = [...document.getElementsByClassName("rating-star")];
 // const ratingResult = document.querySelector(".rating-result");
@@ -145,11 +154,11 @@ randomBeerBtn.addEventListener("click", () => {
 
 // API Calls
 newPairingBtn.addEventListener("click", function getNewPairing() {
-  return randomBeer();
+  return randomFunny();
 });
 
 randomBeerBtn.addEventListener("click", function getRandomBeer() {
-  return randomBeer();
+  return randomFunny();
 });
 
 function randomBeer() {
